@@ -1,4 +1,6 @@
 /.venv
+/venv
 site/
 kopie/
 *.pdf
+node_modules/
