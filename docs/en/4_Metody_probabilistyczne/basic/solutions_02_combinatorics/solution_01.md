@@ -16,7 +16,7 @@ For each situation, determine the appropriate combinatorial model.
 **2. Choosing 4 members of a committee from 12 people.**
 
 - Only some objects chosen ($k = 4$ from $n = 12$), order does NOT matter → **Combination**
-- Answer model: $\binom{12}{4}$
+- Answer: $\binom{12}{4} = \frac{12!}{4! \cdot 8!} = \frac{12 \cdot 11 \cdot 10 \cdot 9}{4 \cdot 3 \cdot 2 \cdot 1} = 495$
 
 **3. Assigning gold, silver, and bronze medals among 15 athletes.**
 
