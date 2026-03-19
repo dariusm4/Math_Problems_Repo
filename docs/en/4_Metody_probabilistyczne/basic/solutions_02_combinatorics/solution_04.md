@@ -1,5 +1,7 @@
 # Solution — Task 4: Circular Permutations
 
+![Circular Permutations: Opposite Seats](circular_permutations.png)
+
 ## 1. 7 people around a round table
 
 Circular permutation of 7 distinct objects:
