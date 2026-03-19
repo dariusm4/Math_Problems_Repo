@@ -32,4 +32,4 @@ With **8 seats** around a round table, each seat has exactly one seat directly o
 
 $$1 \cdot 1 \cdot 6! = 720$$
 
-<img src="circular_permutations.png" alt="Circular Permutations: Opposite Seats" width="400">
+<img src="../circular_permutations.png" alt="Circular Permutations: Opposite Seats" width="400">
