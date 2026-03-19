@@ -8,17 +8,11 @@ $$(7 - 1)! = 6! = 720$$
 
 ## 2. Two particular people must sit next to each other
 
-Treat the two people as a single block → **6 objects** around a circle:
+Treat the two people as a single block → **6 objects** around a circle.
 
-$$(6 - 1)! = 5! = 120$$
+The block can be internally arranged in $2$ ways (A-B or B-A).
 
-Within the block, the two can swap:
-
-$$2! = 2$$
-
-Total:
-
-$$5! \cdot 2 = 120 \cdot 2 = 240$$
+$$(6 - 1)! \cdot 2 = 5! \cdot 2 = 120 \cdot 2 = 240$$
 
 ## 3. Two particular people must sit opposite each other
 
@@ -28,4 +22,12 @@ Therefore, **this arrangement is impossible** and the answer is:
 
 $$0$$
 
-> **Note:** If the problem intended an even number of seats (e.g., 8), then: fix one person, the opposite person has 1 choice, and the remaining people arrange freely, giving $(n-2)! \cdot 1$. With 7 seats, no exact opposite exists.
+### Bonus: What if there were 8 people?
+
+With **8 seats** around a round table, each seat has exactly one seat directly opposite.
+
+- Fix person A at any seat (removes rotational symmetry) → **1 way**
+- Person B must sit directly opposite A → **1 way**
+- The remaining **6 people** fill the remaining 6 seats freely → $6!$ ways
+
+$$1 \cdot 1 \cdot 6! = 720$$

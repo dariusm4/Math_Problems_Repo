@@ -8,17 +8,11 @@ $$P_8 = 8! = 40\,320$$
 
 ## 2. Two particular people must sit next to each other
 
-Treat the two people as a single block. We now have **7 objects** (6 people + 1 block):
+Treat the two people as a single block. We now have **7 objects** (6 people + 1 block).
 
-$$7! \text{ arrangements of the 7 objects}$$
+The block can be internally arranged in $2$ ways (person A-B or B-A).
 
-Within the block, the two people can swap places:
-
-$$2! = 2$$
-
-Total:
-
-$$7! \cdot 2 = 5040 \cdot 2 = 10\,080$$
+$$7! \cdot 2 = 5\,040 \cdot 2 = 10\,080$$
 
 ## 3. Two particular people must NOT sit next to each other
 
