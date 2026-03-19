@@ -1,7 +1,5 @@
 # Solution — Task 4: Circular Permutations
 
-![Circular Permutations: Opposite Seats](circular_permutations.png)
-
 ## 1. 7 people around a round table
 
 Circular permutation of 7 distinct objects:
@@ -33,3 +31,5 @@ With **8 seats** around a round table, each seat has exactly one seat directly o
 - The remaining **6 people** fill the remaining 6 seats freely → $6!$ ways
 
 $$1 \cdot 1 \cdot 6! = 720$$
+
+<img src="circular_permutations.png" alt="Circular Permutations: Opposite Seats" width="400">
