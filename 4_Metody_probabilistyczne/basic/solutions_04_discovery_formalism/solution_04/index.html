@@ -3594,8 +3594,17 @@ Checking the first die (<span class="arithmatex">\(i=6\)</span>):
 <blockquote>
 <p><strong>Question:</strong> Mark: <em>the sum is 7 </em><em>or</em><em> at least one die shows 6</em></p>
 </blockquote>
-<p>This is the union of <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(C\)</span>. A cell is marked if it belongs to <span class="arithmatex">\(A\)</span> <strong>or</strong> <span class="arithmatex">\(C\)</span> (or both).</p>
-<pre><code>      1 2 3 4 5 6
+<p><strong>Step-by-step thinking:</strong>
+We need to find all <span class="arithmatex">\((i,j)\)</span> pairs that satisfy <strong>either</strong> condition <span class="arithmatex">\(A\)</span> <strong>or</strong> condition <span class="arithmatex">\(C\)</span> (or both).</p>
+<p><strong>The condition:</strong>
+Which <span class="arithmatex">\((i,j)\)</span> pairs satisfy: <span class="arithmatex">\(i+j=7\)</span> OR <span class="arithmatex">\(i=6\)</span> OR <span class="arithmatex">\(j=6\)</span> ?</p>
+<p>Let's combine the pairs we found earlier:
+- From <span class="arithmatex">\(A\)</span>: <span class="arithmatex">\((1,6), (2,5), (3,4), (4,3), (5,2), (6,1)\)</span>
+- From <span class="arithmatex">\(C\)</span>: <span class="arithmatex">\((6,1), (6,2), (6,3), (6,4), (6,5), (6,6)\)</span> and the right column <span class="arithmatex">\((1,6), (2,6), (3,6), (4,6), (5,6)\)</span></p>
+<p>Notice that <span class="arithmatex">\((1,6)\)</span> and <span class="arithmatex">\((6,1)\)</span> are in both lists. In a union, we don't count duplicates twice.</p>
+<p><span class="arithmatex">\(|A \cup C| = |A| + |C| - |A \cap C| = 6 + 11 - 2 = 15\)</span>.</p>
+<p>If we mark all these pairs, we get both the anti-diagonal and the L-shape:</p>
+<pre><code class="language-text">      1 2 3 4 5 6
 1     . . . . . X
 2     . . . . X X
 3     . . . X . X
@@ -3603,8 +3612,6 @@ Checking the first die (<span class="arithmatex">\(i=6\)</span>):
 5     . X . . . X
 6     X X X X X X
 </code></pre>
-<p><span class="arithmatex">\(|A \cup C| = |A| + |C| - |A \cap C| = 6 + 11 - 2 = 15\)</span>.</p>
-<p>(The overlapping cells are <span class="arithmatex">\((1,6)\)</span> and <span class="arithmatex">\((6,1)\)</span>, which satisfy both conditions.)</p>
 <p><strong>Java — for loop:</strong></p>
 <pre><code class="language-java">for (int i = 1; i &lt;= 6; i++) {
     for (int j = 1; j &lt;= 6; j++) {
@@ -3622,11 +3629,20 @@ Checking the first die (<span class="arithmatex">\(i=6\)</span>):
 <blockquote>
 <p><strong>Question:</strong> Mark: <em>the sum is 7 </em><em>and</em><em> at least one die shows 6</em></p>
 </blockquote>
-<p>A cell must be in <strong>both</strong> <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(C\)</span>: the sum is 7 and at least one die is 6.</p>
-<p>If <span class="arithmatex">\(i + j = 7\)</span> and (<span class="arithmatex">\(i = 6\)</span> or <span class="arithmatex">\(j = 6\)</span>):
-- <span class="arithmatex">\(i = 6 \Rightarrow j = 1\)</span>: <span class="arithmatex">\((6,1)\)</span> ✅
-- <span class="arithmatex">\(j = 6 \Rightarrow i = 1\)</span>: <span class="arithmatex">\((1,6)\)</span> ✅</p>
-<pre><code>      1 2 3 4 5 6
+<p><strong>Step-by-step thinking:</strong>
+We need to find all <span class="arithmatex">\((i,j)\)</span> pairs that satisfy <strong>both</strong> condition <span class="arithmatex">\(A\)</span> <strong>and</strong> condition <span class="arithmatex">\(C\)</span> at the same time.</p>
+<p><strong>The condition:</strong>
+Which <span class="arithmatex">\((i,j)\)</span> pairs satisfy: <span class="arithmatex">\(i+j=7\)</span> AND (<span class="arithmatex">\(i=6\)</span> OR <span class="arithmatex">\(j=6\)</span>) ?</p>
+<p>Let's check our <span class="arithmatex">\(A\)</span> list: <span class="arithmatex">\((1,6), (2,5), (3,4), (4,3), (5,2), (6,1)\)</span>.
+Which of these also have a 6 in them?
+- <span class="arithmatex">\((1,6)\)</span>: Yes, <span class="arithmatex">\(j=6\)</span> ✅
+- <span class="arithmatex">\((2,5)\)</span>: No 6 here ❌
+- <span class="arithmatex">\((3,4)\)</span>: No 6 here ❌
+- <span class="arithmatex">\((4,3)\)</span>: No 6 here ❌
+- <span class="arithmatex">\((5,2)\)</span>: No 6 here ❌
+- <span class="arithmatex">\((6,1)\)</span>: Yes, <span class="arithmatex">\(i=6\)</span> ✅</p>
+<p><span class="arithmatex">\(A \cap C = \{(1,6),(6,1)\}\)</span>, <span class="arithmatex">\(|A \cap C| = 2\)</span>.</p>
+<pre><code class="language-text">      1 2 3 4 5 6
 1     . . . . . X
 2     . . . . . .
 3     . . . . . .
@@ -3634,7 +3650,6 @@ Checking the first die (<span class="arithmatex">\(i=6\)</span>):
 5     . . . . . .
 6     X . . . . .
 </code></pre>
-<p><span class="arithmatex">\(A \cap C = \{(1,6),(6,1)\}\)</span>, <span class="arithmatex">\(|A \cap C| = 2\)</span>.</p>
 <p><strong>Java — for loop:</strong></p>
 <pre><code class="language-java">for (int i = 1; i &lt;= 6; i++) {
     for (int j = 1; j &lt;= 6; j++) {
@@ -3652,8 +3667,17 @@ Checking the first die (<span class="arithmatex">\(i=6\)</span>):
 <blockquote>
 <p><strong>Question:</strong> Mark: <em>the first die is greater than the second </em><em>and</em><em> at least one die shows 6</em></p>
 </blockquote>
-<p>We need <span class="arithmatex">\(i &gt; j\)</span> and (<span class="arithmatex">\(i = 6\)</span> or <span class="arithmatex">\(j = 6\)</span>). Since <span class="arithmatex">\(i &gt; j\)</span>, having <span class="arithmatex">\(j = 6\)</span> would require <span class="arithmatex">\(i &gt; 6\)</span>, which is impossible. So we must have <span class="arithmatex">\(i = 6\)</span> and <span class="arithmatex">\(j &lt; 6\)</span>.</p>
-<pre><code>      1 2 3 4 5 6
+<p><strong>Step-by-step thinking:</strong>
+We are looking for pairs that satisfy <strong>both</strong> conditions.</p>
+<p><strong>The condition:</strong>
+Which <span class="arithmatex">\((i,j)\)</span> pairs satisfy: <span class="arithmatex">\(i &gt; j\)</span> AND (<span class="arithmatex">\(i=6\)</span> OR <span class="arithmatex">\(j=6\)</span>) ?</p>
+<p>We know we must have a 6. Let's analyze:
+- What if the second die is 6 (<span class="arithmatex">\(j=6\)</span>)? Then for <span class="arithmatex">\(i &gt; j\)</span> to work, we need <span class="arithmatex">\(i &gt; 6\)</span>. But 6 is the max roll on a standard die! So <span class="arithmatex">\(j=6\)</span> yields no solutions.
+- What if the first die is 6 (<span class="arithmatex">\(i=6\)</span>)? Then for <span class="arithmatex">\(i &gt; j\)</span> to work, we need <span class="arithmatex">\(6 &gt; j\)</span>. This means <span class="arithmatex">\(j\)</span> can be <span class="arithmatex">\(1, 2, 3, 4\)</span>, or <span class="arithmatex">\(5\)</span>.</p>
+<p>Let's list them:
+<span class="arithmatex">\((6,1), (6,2), (6,3), (6,4), (6,5)\)</span>.</p>
+<p><span class="arithmatex">\(B \cap C = \{(6,1),(6,2),(6,3),(6,4),(6,5)\}\)</span>, <span class="arithmatex">\(|B \cap C| = 5\)</span>.</p>
+<pre><code class="language-text">      1 2 3 4 5 6
 1     . . . . . .
 2     . . . . . .
 3     . . . . . .
@@ -3661,7 +3685,6 @@ Checking the first die (<span class="arithmatex">\(i=6\)</span>):
 5     . . . . . .
 6     X X X X X .
 </code></pre>
-<p><span class="arithmatex">\(B \cap C = \{(6,1),(6,2),(6,3),(6,4),(6,5)\}\)</span>, <span class="arithmatex">\(|B \cap C| = 5\)</span>.</p>
 <p><strong>Java — for loop:</strong></p>
 <pre><code class="language-java">for (int i = 1; i &lt;= 6; i++) {
     for (int j = 1; j &lt;= 6; j++) {
@@ -3679,15 +3702,19 @@ Checking the first die (<span class="arithmatex">\(i=6\)</span>):
 <blockquote>
 <p><strong>Question:</strong> Mark: <em>the sum is 7, </em><em>but</em><em> the first die is not greater than the second</em></p>
 </blockquote>
-<p>We need <span class="arithmatex">\(i + j = 7\)</span> and <span class="arithmatex">\(i \leq j\)</span>.</p>
-<p>From <span class="arithmatex">\(A\)</span>: <span class="arithmatex">\((1,6),(2,5),(3,4),(4,3),(5,2),(6,1)\)</span>. Filter by <span class="arithmatex">\(i \leq j\)</span>:
-- <span class="arithmatex">\((1,6)\)</span>: <span class="arithmatex">\(1 \leq 6\)</span> ✅
-- <span class="arithmatex">\((2,5)\)</span>: <span class="arithmatex">\(2 \leq 5\)</span> ✅
-- <span class="arithmatex">\((3,4)\)</span>: <span class="arithmatex">\(3 \leq 4\)</span> ✅
-- <span class="arithmatex">\((4,3)\)</span>: <span class="arithmatex">\(4 &gt; 3\)</span> ❌
-- <span class="arithmatex">\((5,2)\)</span>: <span class="arithmatex">\(5 &gt; 2\)</span> ❌
-- <span class="arithmatex">\((6,1)\)</span>: <span class="arithmatex">\(6 &gt; 1\)</span> ❌</p>
-<pre><code>      1 2 3 4 5 6
+<p><strong>Step-by-step thinking:</strong>
+"Not greater than" simply means "less than or equal to".</p>
+<p><strong>The condition:</strong>
+Which <span class="arithmatex">\((i,j)\)</span> pairs satisfy: <span class="arithmatex">\(i+j=7\)</span> AND <span class="arithmatex">\(i \leq j\)</span> ?</p>
+<p>Let's look at the pairs from Event <span class="arithmatex">\(A\)</span> (where the sum is 7) and see which ones pass the test <span class="arithmatex">\(i \leq j\)</span>:
+- <span class="arithmatex">\((1,6): 1 \leq 6\)</span> ✅
+- <span class="arithmatex">\((2,5): 2 \leq 5\)</span> ✅
+- <span class="arithmatex">\((3,4): 3 \leq 4\)</span> ✅
+- <span class="arithmatex">\((4,3): 4 \not\leq 3\)</span> ❌
+- <span class="arithmatex">\((5,2): 5 \not\leq 2\)</span> ❌
+- <span class="arithmatex">\((6,1): 6 \not\leq 1\)</span> ❌</p>
+<p><span class="arithmatex">\(A \cap B^c = \{(1,6),(2,5),(3,4)\}\)</span>, <span class="arithmatex">\(|A \cap B^c| = 3\)</span>.</p>
+<pre><code class="language-text">      1 2 3 4 5 6
 1     . . . . . X
 2     . . . . X .
 3     . . . X . .
@@ -3695,7 +3722,6 @@ Checking the first die (<span class="arithmatex">\(i=6\)</span>):
 5     . . . . . .
 6     . . . . . .
 </code></pre>
-<p><span class="arithmatex">\(A \cap B^c = \{(1,6),(2,5),(3,4)\}\)</span>, <span class="arithmatex">\(|A \cap B^c| = 3\)</span>.</p>
 <p><strong>Java — for loop:</strong></p>
 <pre><code class="language-java">for (int i = 1; i &lt;= 6; i++) {
     for (int j = 1; j &lt;= 6; j++) {
@@ -3713,9 +3739,16 @@ Checking the first die (<span class="arithmatex">\(i=6\)</span>):
 <blockquote>
 <p><strong>Question:</strong> Mark: <em>the sum is 7, </em><em>and</em><em> no die shows 6</em></p>
 </blockquote>
-<p>We need <span class="arithmatex">\(i + j = 7\)</span> and <span class="arithmatex">\(i \neq 6\)</span> and <span class="arithmatex">\(j \neq 6\)</span>.</p>
-<p>From <span class="arithmatex">\(A\)</span>, exclude <span class="arithmatex">\((1,6)\)</span> and <span class="arithmatex">\((6,1)\)</span>:</p>
-<pre><code>      1 2 3 4 5 6
+<p><strong>Step-by-step thinking:</strong>
+"No die shows 6" is the direct opposite (complement) of "at least one die shows 6".</p>
+<p><strong>The condition:</strong>
+Which <span class="arithmatex">\((i,j)\)</span> pairs satisfy: <span class="arithmatex">\(i+j=7\)</span> AND <span class="arithmatex">\(i \neq 6\)</span> AND <span class="arithmatex">\(j \neq 6\)</span> ?</p>
+<p>Take the list from Event <span class="arithmatex">\(A\)</span>: <span class="arithmatex">\((1,6), (2,5), (3,4), (4,3), (5,2), (6,1)\)</span>.
+We just need to throw out any pair that has a 6 in it:
+- Toss out: <span class="arithmatex">\((1,6)\)</span> and <span class="arithmatex">\((6,1)\)</span>.
+- Keep what's left: <span class="arithmatex">\((2,5), (3,4), (4,3), (5,2)\)</span>.</p>
+<p><span class="arithmatex">\(A \cap C^c = \{(2,5),(3,4),(4,3),(5,2)\}\)</span>, <span class="arithmatex">\(|A \cap C^c| = 4\)</span>.</p>
+<pre><code class="language-text">      1 2 3 4 5 6
 1     . . . . . .
 2     . . . . X .
 3     . . . X . .
@@ -3723,7 +3756,6 @@ Checking the first die (<span class="arithmatex">\(i=6\)</span>):
 5     . X . . . .
 6     . . . . . .
 </code></pre>
-<p><span class="arithmatex">\(A \cap C^c = \{(2,5),(3,4),(4,3),(5,2)\}\)</span>, <span class="arithmatex">\(|A \cap C^c| = 4\)</span>.</p>
 <p><strong>Java — for loop:</strong></p>
 <pre><code class="language-java">for (int i = 1; i &lt;= 6; i++) {
     for (int j = 1; j &lt;= 6; j++) {
@@ -3741,9 +3773,19 @@ Checking the first die (<span class="arithmatex">\(i=6\)</span>):
 <blockquote>
 <p><strong>Question:</strong> Mark: <em>at least one die shows 6, </em><em>but</em><em> the sum is not 7</em></p>
 </blockquote>
-<p>We need (<span class="arithmatex">\(i = 6\)</span> or <span class="arithmatex">\(j = 6\)</span>) and <span class="arithmatex">\(i + j \neq 7\)</span>.</p>
-<p>From <span class="arithmatex">\(C\)</span>, exclude <span class="arithmatex">\((1,6)\)</span> and <span class="arithmatex">\((6,1)\)</span>:</p>
-<pre><code>      1 2 3 4 5 6
+<p><strong>Step-by-step thinking:</strong>
+We need pairs where at least one die is 6, BUT we exclude the pairs where the sum is exactly 7.</p>
+<p><strong>The condition:</strong>
+Which <span class="arithmatex">\((i,j)\)</span> pairs satisfy: (<span class="arithmatex">\(i=6\)</span> OR <span class="arithmatex">\(j=6\)</span>) AND <span class="arithmatex">\(i+j \neq 7\)</span> ?</p>
+<p>Let's take the list from Event <span class="arithmatex">\(C\)</span> (the L-shape):
+- Row 6: <span class="arithmatex">\((6,1), (6,2), (6,3), (6,4), (6,5), (6,6)\)</span>
+- Col 6: <span class="arithmatex">\((1,6), (2,6), (3,6), (4,6), (5,6)\)</span></p>
+<p>Now we remove any pair where <span class="arithmatex">\(i+j = 7\)</span>:
+- <span class="arithmatex">\((6,1)\)</span> sum is 7 ❌ remove
+- <span class="arithmatex">\((1,6)\)</span> sum is 7 ❌ remove</p>
+<p>The remaining pairs: <span class="arithmatex">\((6,2), (6,3), (6,4), (6,5), (6,6)\)</span> and <span class="arithmatex">\((2,6), (3,6), (4,6), (5,6)\)</span>.</p>
+<p><span class="arithmatex">\(C \cap A^c = C \setminus A\)</span>, <span class="arithmatex">\(|C \cap A^c| = 11 - 2 = 9\)</span>.</p>
+<pre><code class="language-text">      1 2 3 4 5 6
 1     . . . . . .
 2     . . . . . X
 3     . . . . . X
@@ -3751,7 +3793,6 @@ Checking the first die (<span class="arithmatex">\(i=6\)</span>):
 5     . . . . . X
 6     . X X X X X
 </code></pre>
-<p><span class="arithmatex">\(C \cap A^c = C \setminus A\)</span>, <span class="arithmatex">\(|C \cap A^c| = 11 - 2 = 9\)</span>.</p>
 <p><strong>Java — for loop:</strong></p>
 <pre><code class="language-java">for (int i = 1; i &lt;= 6; i++) {
     for (int j = 1; j &lt;= 6; j++) {
@@ -3769,9 +3810,17 @@ Checking the first die (<span class="arithmatex">\(i=6\)</span>):
 <blockquote>
 <p><strong>Question:</strong> Mark: <em>the sum is not 7 </em><em>and</em><em> the first die is greater than the second</em></p>
 </blockquote>
-<p>We need <span class="arithmatex">\(i &gt; j\)</span> and <span class="arithmatex">\(i + j \neq 7\)</span>. Start from <span class="arithmatex">\(B\)</span> and remove elements of <span class="arithmatex">\(A\)</span>.</p>
-<p>From <span class="arithmatex">\(B\)</span>: the 15 cells below the diagonal. Remove <span class="arithmatex">\(A \cap B = \{(4,3),(5,2),(6,1)\}\)</span>.</p>
-<pre><code>      1 2 3 4 5 6
+<p><strong>Step-by-step thinking:</strong>
+We need pairs where the first die is strictly greater than the second, BUT the sum is NOT 7.</p>
+<p><strong>The condition:</strong>
+Which <span class="arithmatex">\((i,j)\)</span> pairs satisfy: <span class="arithmatex">\(i &gt; j\)</span> AND <span class="arithmatex">\(i+j \neq 7\)</span> ?</p>
+<p>Let's take our existing <span class="arithmatex">\(B\)</span> set (the lower triangle, 15 elements):
+<span class="arithmatex">\((2,1), (3,1), (3,2), (4,1), (4,2), (4,3), \dots\)</span> etc.</p>
+<p>Which of these have a sum of 7?
+We know from Event <span class="arithmatex">\(A\)</span> that the sum is 7 for <span class="arithmatex">\((4,3), (5,2), (6,1)\)</span>.
+We just remove these three from <span class="arithmatex">\(B\)</span>.</p>
+<p><span class="arithmatex">\(A^c \cap B = B \setminus A\)</span>, <span class="arithmatex">\(|A^c \cap B| = 15 - 3 = 12\)</span>.</p>
+<pre><code class="language-text">      1 2 3 4 5 6
 1     . . . . . .
 2     X . . . . .
 3     X X . . . .
@@ -3779,7 +3828,6 @@ Checking the first die (<span class="arithmatex">\(i=6\)</span>):
 5     X . X X . .
 6     . X X X X .
 </code></pre>
-<p><span class="arithmatex">\(A^c \cap B = B \setminus A\)</span>, <span class="arithmatex">\(|A^c \cap B| = 15 - 3 = 12\)</span>.</p>
 <p><strong>Java — for loop:</strong></p>
 <pre><code class="language-java">for (int i = 1; i &lt;= 6; i++) {
     for (int j = 1; j &lt;= 6; j++) {
@@ -3797,12 +3845,18 @@ Checking the first die (<span class="arithmatex">\(i=6\)</span>):
 <blockquote>
 <p><strong>Question:</strong> Mark: <em>the first die is not greater than the second </em><em>and</em><em> at least one die shows 6</em></p>
 </blockquote>
-<p>We need <span class="arithmatex">\(i \leq j\)</span> and (<span class="arithmatex">\(i = 6\)</span> or <span class="arithmatex">\(j = 6\)</span>).</p>
-<ul>
-<li><span class="arithmatex">\(j = 6\)</span>, <span class="arithmatex">\(i \leq 6\)</span>: <span class="arithmatex">\((1,6),(2,6),(3,6),(4,6),(5,6),(6,6)\)</span> — all 6 cells</li>
-<li><span class="arithmatex">\(i = 6\)</span>, <span class="arithmatex">\(j \geq 6\)</span>: only <span class="arithmatex">\((6,6)\)</span> — already counted</li>
-</ul>
-<pre><code>      1 2 3 4 5 6
+<p><strong>Step-by-step thinking:</strong>
+"Not greater than" means <span class="arithmatex">\(i \leq j\)</span>.</p>
+<p><strong>The condition:</strong>
+Which <span class="arithmatex">\((i,j)\)</span> pairs satisfy: <span class="arithmatex">\(i \leq j\)</span> AND (<span class="arithmatex">\(i=6\)</span> OR <span class="arithmatex">\(j=6\)</span>) ?</p>
+<p>Let's test our two cases for having a 6:
+- If first die <span class="arithmatex">\(i=6\)</span>: we need <span class="arithmatex">\(6 \leq j\)</span>. Since <span class="arithmatex">\(j\)</span> is at most 6, the only solution is <span class="arithmatex">\((6,6)\)</span>.
+- If second die <span class="arithmatex">\(j=6\)</span>: we need <span class="arithmatex">\(i \leq 6\)</span>. This is always true! So <span class="arithmatex">\(i\)</span> can be <span class="arithmatex">\(1, 2, 3, 4, 5, 6\)</span>.
+  This gives <span class="arithmatex">\((1,6), (2,6), (3,6), (4,6), (5,6), (6,6)\)</span>.</p>
+<p>Combining these (and avoiding listing <span class="arithmatex">\((6,6)\)</span> twice) gives:
+<span class="arithmatex">\(B^c \cap C = \{(1,6),(2,6),(3,6),(4,6),(5,6),(6,6)\}\)</span>, <span class="arithmatex">\(|B^c \cap C| = 6\)</span>.</p>
+<p>This is exactly the <strong>rightmost column</strong>.</p>
+<pre><code class="language-text">      1 2 3 4 5 6
 1     . . . . . X
 2     . . . . . X
 3     . . . . . X
@@ -3810,8 +3864,6 @@ Checking the first die (<span class="arithmatex">\(i=6\)</span>):
 5     . . . . . X
 6     . . . . . X
 </code></pre>
-<p><span class="arithmatex">\(B^c \cap C = \{(1,6),(2,6),(3,6),(4,6),(5,6),(6,6)\}\)</span>, <span class="arithmatex">\(|B^c \cap C| = 6\)</span>.</p>
-<p>This is exactly the <strong>rightmost column</strong> — all outcomes where the second die is 6 and the first die is <span class="arithmatex">\(\leq\)</span> the second (which is always true when <span class="arithmatex">\(j=6\)</span>).</p>
 <p><strong>Java — for loop:</strong></p>
 <pre><code class="language-java">for (int i = 1; i &lt;= 6; i++) {
     for (int j = 1; j &lt;= 6; j++) {
@@ -3829,10 +3881,18 @@ Checking the first die (<span class="arithmatex">\(i=6\)</span>):
 <blockquote>
 <p><strong>Question:</strong> Mark: <em>it is not true that the sum is 7 </em><em>or</em><em> at least one die shows 6</em></p>
 </blockquote>
-<p>By De Morgan's law: <span class="arithmatex">\((A \cup C)^c = A^c \cap C^c\)</span>.</p>
-<p>We need: the sum is NOT 7, AND neither die is 6. So <span class="arithmatex">\(i + j \neq 7\)</span> and <span class="arithmatex">\(i \leq 5\)</span> and <span class="arithmatex">\(j \leq 5\)</span>. We take the 5×5 sub-grid (rows 1–5, columns 1–5) and remove cells with sum 7.</p>
-<p>In the 5×5 sub-grid, which cells have <span class="arithmatex">\(i+j=7\)</span>? <span class="arithmatex">\((2,5),(3,4),(4,3),(5,2)\)</span> — there are 4 such cells.</p>
-<pre><code>      1 2 3 4 5 6
+<p><strong>Step-by-step thinking:</strong>
+This is the complement of our very first compound event (<span class="arithmatex">\(A \cup C\)</span>).
+By De Morgan's law: <span class="arithmatex">\((A \cup C)^c = A^c \cap C^c\)</span>.
+This means: the sum is NOT 7 AND neither die is 6.</p>
+<p><strong>The condition:</strong>
+Which <span class="arithmatex">\((i,j)\)</span> pairs satisfy: <span class="arithmatex">\(i+j \neq 7\)</span> AND <span class="arithmatex">\(i \leq 5\)</span> AND <span class="arithmatex">\(j \leq 5\)</span> ?</p>
+<p>"Neither die is 6" means we restrict ourselves to the top-left 5x5 grid (25 pairs).
+Inside this 5x5 grid, we must remove the pairs where the sum is 7:
+<span class="arithmatex">\((2,5), (3,4), (4,3), (5,2)\)</span>. (These are 4 pairs).</p>
+<p>So we take the 25 pairs and remove those 4.
+<span class="arithmatex">\(|(A \cup C)^c| = 25 - 4 = 21\)</span>.</p>
+<pre><code class="language-text">      1 2 3 4 5 6
 1     X X X X X .
 2     X X X X . .
 3     X X X . X .
@@ -3840,7 +3900,6 @@ Checking the first die (<span class="arithmatex">\(i=6\)</span>):
 5     X . X X X .
 6     . . . . . .
 </code></pre>
-<p><span class="arithmatex">\(|(A \cup C)^c| = 25 - 4 = 21\)</span>.</p>
 <p><strong>Java — for loop:</strong></p>
 <pre><code class="language-java">for (int i = 1; i &lt;= 6; i++) {
     for (int j = 1; j &lt;= 6; j++) {
@@ -3858,9 +3917,15 @@ Checking the first die (<span class="arithmatex">\(i=6\)</span>):
 <blockquote>
 <p><strong>Question:</strong> Mark: <em>it is not true that the sum is 7 </em><em>and</em><em> at least one die shows 6</em></p>
 </blockquote>
-<p>By De Morgan's law: <span class="arithmatex">\((A \cap C)^c = A^c \cup C^c\)</span>.</p>
-<p>This is the complement of <span class="arithmatex">\(A \cap C = \{(1,6),(6,1)\}\)</span>. So we mark <strong>everything except</strong> <span class="arithmatex">\((1,6)\)</span> and <span class="arithmatex">\((6,1)\)</span>.</p>
-<pre><code>      1 2 3 4 5 6
+<p><strong>Step-by-step thinking:</strong>
+This is the complement of our second compound event (<span class="arithmatex">\(A \cap C\)</span>).
+By De Morgan's law: <span class="arithmatex">\((A \cap C)^c = A^c \cup C^c\)</span>.
+This means we want all outcomes <strong>except</strong> the ones where the sum is 7 AND there is a 6.</p>
+<p><strong>The condition:</strong>
+We already found <span class="arithmatex">\(A \cap C = \{(1,6), (6,1)\}\)</span>.
+Since we are looking for the complement (everything NOT in the set), we just take the entire <span class="arithmatex">\(6 \times 6\)</span> grid (36 pairs) and remove <span class="arithmatex">\((1,6)\)</span> and <span class="arithmatex">\((6,1)\)</span>.</p>
+<p><span class="arithmatex">\(|(A \cap C)^c| = 36 - 2 = 34\)</span>.</p>
+<pre><code class="language-text">      1 2 3 4 5 6
 1     X X X X X .
 2     X X X X X X
 3     X X X X X X
@@ -3868,7 +3933,6 @@ Checking the first die (<span class="arithmatex">\(i=6\)</span>):
 5     X X X X X X
 6     . X X X X X
 </code></pre>
-<p><span class="arithmatex">\(|(A \cap C)^c| = 36 - 2 = 34\)</span>.</p>
 <p><strong>Java — for loop:</strong></p>
 <pre><code class="language-java">for (int i = 1; i &lt;= 6; i++) {
     for (int j = 1; j &lt;= 6; j++) {
