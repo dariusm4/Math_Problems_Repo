@@ -1,0 +1,4164 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://dchorazkiewicz.github.io/Math_Problems_Repo/4_Metody_probabilistyczne/basic/solutions_04_discovery_formalism/solution_05/">
+      
+      
+        <link rel="prev" href="../solution_04/">
+      
+      
+        <link rel="next" href="../../../advanced/01_events_and_probability/">
+      
+      
+        
+          <link rel="alternate" href="../../../../pl/4_Metody_probabilistyczne/basic/solutions_04_discovery_formalism/solution_05/" hreflang="pl">
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Solution 5 - Math Problems</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#solution-problem-5-from-recorded-frequencies-to-probability" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Math Problems" class="md-header__button md-logo" aria-label="Math Problems" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Math Problems
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Solution 5
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../../pl/4_Metody_probabilistyczne/basic/solutions_04_discovery_formalism/solution_05/" hreflang="pl" class="md-select__link">
+              Polski
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Math Problems" class="md-nav__button md-logo" aria-label="Math Problems" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Math Problems
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture: Mathematics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lecture: Mathematics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Algebra
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Algebra
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../1_Algebra/01_matrices_and_operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Matrices & Operations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../1_Algebra/02_determinants/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Determinants
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../1_Algebra/03_matrix_inversion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Matrix Inversion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../1_Algebra/04_systems_of_equations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Systems of Equations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Geometry
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Geometry
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../2_Geometria/01_vectors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Vectors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../2_Geometria/02_lines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Lines
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../2_Geometria/03_planes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Planes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../2_Geometria/04_line_and_plane/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Line and Plane
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Analysis
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Analysis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../3_Analiza/01_sequence_limits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Sequence Limits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../3_Analiza/02_function_limits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Function Limits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../3_Analiza/03_derivatives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Derivatives
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../3_Analiza/04_function_analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Function Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../3_Analiza/05_integrals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Integrals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../3_Analiza/06_applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Calculus Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture: Probabilistic Methods
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lecture: Probabilistic Methods
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Probabilistic Methods
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Probabilistic Methods
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_1" id="__nav_3_1_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Basic
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Basic
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_events_and_probability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Events & Probability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_1_2" id="__nav_3_1_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solutions — Events & Probability
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Solutions — Events & Probability
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 8
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 9
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 10
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_combinatorics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Combinatorics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_1_4" id="__nav_3_1_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solutions — Combinatorics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Solutions — Combinatorics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 8
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 9
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 10
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_probability_distributions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Probability Distributions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_1_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_1_6" id="__nav_3_1_1_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solutions — Probability Distributions
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Solutions — Probability Distributions
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 8
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 9
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 10
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_discovery_formalism/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Discovering Formalism
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_1_8" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_1_8" id="__nav_3_1_1_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solutions — Discovering Formalism
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_1_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1_1_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Solutions — Discovering Formalism
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solution_01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solution_02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solution_03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solution_04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 5
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#problem-recap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem Recap
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-a-from-elementary-outcomes-to-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part A — From Elementary Outcomes to Events
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part A — From Elementary Outcomes to Events">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-a-2-4-6-even-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. \(A = \{2, 4, 6\}\) (even numbers)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-b-1-2-3-numbers-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. \(B = \{1, 2, 3\}\) (numbers ≤ 3)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-c-5-6-numbers-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. \(C = \{5, 6\}\) (numbers ≥ 5)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-d-1-3-5-odd-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. \(D = \{1, 3, 5\}\) (odd numbers)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-e-1-2-3-4-numbers-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. \(E = \{1, 2, 3, 4\}\) (numbers ≤ 4)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-b-how-frequencies-combine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part B — How Frequencies Combine
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part B — How Frequencies Combine">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-f246-f2-f4-f6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. \(f(\{2,4,6\}) = f(\{2\}) + f(\{4\}) + f(\{6\})\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-f1234-f12-f34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. \(f(\{1,2,3,4\}) = f(\{1,2\}) + f(\{3,4\})\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-f135-f246-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. \(f(\{1,3,5\}) + f(\{2,4,6\}) = 1\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-f56-1-f1234" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. \(f(\{5,6\}) = 1 - f(\{1,2,3,4\})\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-c-when-simple-addition-works-and-when-it-fails" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part C — When Simple Addition Works and When It Fails
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part C — When Simple Addition Works and When It Fails">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-disjoint-union-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Disjoint union works
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-overlapping-sets-compute-individual-frequencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Overlapping sets — compute individual frequencies
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-why-fm-cup-n-neq-fm-fn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Why \(f(M \cup N) \neq f(M) + f(N)\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-which-elementary-outcomes-are-counted-twice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Which elementary outcomes are counted twice
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-d-covering-the-whole-sample-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part D — Covering the Whole Sample Space
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part D — Covering the Whole Sample Space">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-sum-of-all-elementary-frequencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Sum of all elementary frequencies
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-why-the-result-must-be-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Why the result must be 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-splitting-omega-into-three-disjoint-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Splitting \(\Omega\) into three disjoint events
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-why-this-sum-is-also-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Why this sum is also 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-general-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. General statement
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-e-from-observed-frequency-to-probability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part E — From Observed Frequency to Probability
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part E — From Observed Frequency to Probability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#property-1-values-between-0-and-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Property 1: Values between 0 and 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#property-2-the-impossible-event-has-probability-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Property 2: The impossible event has probability 0
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#property-3-the-whole-sample-space-has-probability-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Property 3: The whole sample space has probability 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#property-4-additivity-for-disjoint-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Property 4: Additivity for disjoint events
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#property-5-complementary-events-sum-to-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Property 5: Complementary events sum to 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-f-conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part F — Conclusion
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part F — Conclusion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#level-1-elementary-outcomes-and-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 1: Elementary outcomes and events
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-2-observed-frequencies-from-a-real-experiment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 2: Observed frequencies from a real experiment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-3-probability-as-mathematical-abstraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 3: Probability as mathematical abstraction
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_2" id="__nav_3_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Advanced
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/01_events_and_probability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Events & Probability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/02_random_variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Random Variables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/03_distribution_parameters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Distribution Parameters
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/04_selected_distributions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Selected Distributions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/05_limit_theorems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Limit Theorems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/06_basic_statistics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Basic Statistics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/07_estimation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Estimation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/08_hypothesis_testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Hypothesis Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/09_correlation_and_regression/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Correlation & Regression
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/10_advanced_methods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Advanced Methods
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/11_decision_theory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Decision Theory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Animations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Animations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../anim/4_Metody_probalistyczne/laboratory_1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../anim/4_Metody_probalistyczne/laboratory_2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../anim/4_Metody_probalistyczne/laboratory_3.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#problem-recap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem Recap
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-a-from-elementary-outcomes-to-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part A — From Elementary Outcomes to Events
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part A — From Elementary Outcomes to Events">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-a-2-4-6-even-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. \(A = \{2, 4, 6\}\) (even numbers)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-b-1-2-3-numbers-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. \(B = \{1, 2, 3\}\) (numbers ≤ 3)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-c-5-6-numbers-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. \(C = \{5, 6\}\) (numbers ≥ 5)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-d-1-3-5-odd-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. \(D = \{1, 3, 5\}\) (odd numbers)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-e-1-2-3-4-numbers-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. \(E = \{1, 2, 3, 4\}\) (numbers ≤ 4)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-b-how-frequencies-combine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part B — How Frequencies Combine
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part B — How Frequencies Combine">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-f246-f2-f4-f6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. \(f(\{2,4,6\}) = f(\{2\}) + f(\{4\}) + f(\{6\})\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-f1234-f12-f34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. \(f(\{1,2,3,4\}) = f(\{1,2\}) + f(\{3,4\})\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-f135-f246-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. \(f(\{1,3,5\}) + f(\{2,4,6\}) = 1\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-f56-1-f1234" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. \(f(\{5,6\}) = 1 - f(\{1,2,3,4\})\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-c-when-simple-addition-works-and-when-it-fails" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part C — When Simple Addition Works and When It Fails
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part C — When Simple Addition Works and When It Fails">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-disjoint-union-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Disjoint union works
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-overlapping-sets-compute-individual-frequencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Overlapping sets — compute individual frequencies
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-why-fm-cup-n-neq-fm-fn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Why \(f(M \cup N) \neq f(M) + f(N)\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-which-elementary-outcomes-are-counted-twice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Which elementary outcomes are counted twice
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-d-covering-the-whole-sample-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part D — Covering the Whole Sample Space
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part D — Covering the Whole Sample Space">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-sum-of-all-elementary-frequencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Sum of all elementary frequencies
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-why-the-result-must-be-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Why the result must be 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-splitting-omega-into-three-disjoint-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Splitting \(\Omega\) into three disjoint events
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-why-this-sum-is-also-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Why this sum is also 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-general-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. General statement
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-e-from-observed-frequency-to-probability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part E — From Observed Frequency to Probability
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part E — From Observed Frequency to Probability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#property-1-values-between-0-and-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Property 1: Values between 0 and 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#property-2-the-impossible-event-has-probability-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Property 2: The impossible event has probability 0
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#property-3-the-whole-sample-space-has-probability-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Property 3: The whole sample space has probability 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#property-4-additivity-for-disjoint-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Property 4: Additivity for disjoint events
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#property-5-complementary-events-sum-to-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Property 5: Complementary events sum to 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-f-conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part F — Conclusion
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part F — Conclusion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#level-1-elementary-outcomes-and-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 1: Elementary outcomes and events
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-2-observed-frequencies-from-a-real-experiment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 2: Observed frequencies from a real experiment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-3-probability-as-mathematical-abstraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 3: Probability as mathematical abstraction
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="solution-problem-5-from-recorded-frequencies-to-probability">Solution — Problem 5: From Recorded Frequencies to Probability</h1>
+<h2 id="problem-recap">Problem Recap</h2>
+<p>A student rolled a six-sided die <strong>1000 times</strong> and recorded:</p>
+<div class="arithmatex">\[n(\{1\})=168,\quad n(\{2\})=154,\quad n(\{3\})=181,\quad n(\{4\})=167,\quad n(\{5\})=160,\quad n(\{6\})=170.\]</div>
+<p>The sample space is <span class="arithmatex">\(\Omega = \{1,2,3,4,5,6\}\)</span>.</p>
+<p>For any event <span class="arithmatex">\(A \subseteq \Omega\)</span>, the <strong>observed frequency</strong> is:</p>
+<div class="arithmatex">\[f(A) = \frac{n(A)}{1000}\]</div>
+<hr />
+<h2 id="part-a-from-elementary-outcomes-to-events">Part A — From Elementary Outcomes to Events</h2>
+<p>For each event, we compute <span class="arithmatex">\(n(A)\)</span> by summing the counts of the elementary outcomes it contains, then compute <span class="arithmatex">\(f(A)\)</span>.</p>
+<hr />
+<h3 id="1-a-2-4-6-even-numbers">1. <span class="arithmatex">\(A = \{2, 4, 6\}\)</span> (even numbers)</h3>
+<div class="arithmatex">\[n(A) = n(\{2\}) + n(\{4\}) + n(\{6\}) = 154 + 167 + 170 = 491\]</div>
+<div class="arithmatex">\[f(A) = \frac{491}{1000} = 0.491\]</div>
+<hr />
+<h3 id="2-b-1-2-3-numbers-3">2. <span class="arithmatex">\(B = \{1, 2, 3\}\)</span> (numbers ≤ 3)</h3>
+<div class="arithmatex">\[n(B) = n(\{1\}) + n(\{2\}) + n(\{3\}) = 168 + 154 + 181 = 503\]</div>
+<div class="arithmatex">\[f(B) = \frac{503}{1000} = 0.503\]</div>
+<hr />
+<h3 id="3-c-5-6-numbers-5">3. <span class="arithmatex">\(C = \{5, 6\}\)</span> (numbers ≥ 5)</h3>
+<div class="arithmatex">\[n(C) = n(\{5\}) + n(\{6\}) = 160 + 170 = 330\]</div>
+<div class="arithmatex">\[f(C) = \frac{330}{1000} = 0.330\]</div>
+<hr />
+<h3 id="4-d-1-3-5-odd-numbers">4. <span class="arithmatex">\(D = \{1, 3, 5\}\)</span> (odd numbers)</h3>
+<div class="arithmatex">\[n(D) = n(\{1\}) + n(\{3\}) + n(\{5\}) = 168 + 181 + 160 = 509\]</div>
+<div class="arithmatex">\[f(D) = \frac{509}{1000} = 0.509\]</div>
+<hr />
+<h3 id="5-e-1-2-3-4-numbers-4">5. <span class="arithmatex">\(E = \{1, 2, 3, 4\}\)</span> (numbers ≤ 4)</h3>
+<div class="arithmatex">\[n(E) = n(\{1\}) + n(\{2\}) + n(\{3\}) + n(\{4\}) = 168 + 154 + 181 + 167 = 670\]</div>
+<div class="arithmatex">\[f(E) = \frac{670}{1000} = 0.670\]</div>
+<hr />
+<p><strong>Summary table:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Event</th>
+<th style="text-align: center;">Elements</th>
+<th style="text-align: center;"><span class="arithmatex">\(n(\cdot)\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(f(\cdot)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(A\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\{2,4,6\}\)</span></td>
+<td style="text-align: center;">491</td>
+<td style="text-align: center;">0.491</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(B\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\{1,2,3\}\)</span></td>
+<td style="text-align: center;">503</td>
+<td style="text-align: center;">0.503</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(C\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\{5,6\}\)</span></td>
+<td style="text-align: center;">330</td>
+<td style="text-align: center;">0.330</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(D\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\{1,3,5\}\)</span></td>
+<td style="text-align: center;">509</td>
+<td style="text-align: center;">0.509</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(E\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\{1,2,3,4\}\)</span></td>
+<td style="text-align: center;">670</td>
+<td style="text-align: center;">0.670</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="part-b-how-frequencies-combine">Part B — How Frequencies Combine</h2>
+<h3 id="1-f246-f2-f4-f6">1. <span class="arithmatex">\(f(\{2,4,6\}) = f(\{2\}) + f(\{4\}) + f(\{6\})\)</span></h3>
+<p><strong>Left side:</strong> <span class="arithmatex">\(f(\{2,4,6\}) = 0.491\)</span> (computed in Part A).</p>
+<p><strong>Right side:</strong></p>
+<div class="arithmatex">\[f(\{2\}) + f(\{4\}) + f(\{6\}) = \frac{154}{1000} + \frac{167}{1000} + \frac{170}{1000} = \frac{491}{1000} = 0.491\]</div>
+<p>✅ <strong>Verified.</strong> The equality holds because <span class="arithmatex">\(\{2\}, \{4\}, \{6\}\)</span> are <strong>pairwise disjoint</strong> (mutually exclusive), and their union is <span class="arithmatex">\(\{2,4,6\}\)</span>. No throw can produce two different outcomes simultaneously, so the count of throws producing any of <span class="arithmatex">\(\{2,4,6\}\)</span> is exactly the sum of the individual counts: <span class="arithmatex">\(n(\{2,4,6\}) = n(\{2\}) + n(\{4\}) + n(\{6\})\)</span>. Dividing by 1000 preserves the equality.</p>
+<hr />
+<h3 id="2-f1234-f12-f34">2. <span class="arithmatex">\(f(\{1,2,3,4\}) = f(\{1,2\}) + f(\{3,4\})\)</span></h3>
+<p><strong>Left side:</strong> <span class="arithmatex">\(f(\{1,2,3,4\}) = 0.670\)</span>.</p>
+<p><strong>Right side:</strong></p>
+<div class="arithmatex">\[f(\{1,2\}) = \frac{168 + 154}{1000} = \frac{322}{1000} = 0.322\]</div>
+<div class="arithmatex">\[f(\{3,4\}) = \frac{181 + 167}{1000} = \frac{348}{1000} = 0.348\]</div>
+<div class="arithmatex">\[f(\{1,2\}) + f(\{3,4\}) = 0.322 + 0.348 = 0.670\]</div>
+<p>✅ <strong>Verified.</strong> The equality holds because <span class="arithmatex">\(\{1,2\}\)</span> and <span class="arithmatex">\(\{3,4\}\)</span> are <strong>disjoint</strong>, and <span class="arithmatex">\(\{1,2\} \cup \{3,4\} = \{1,2,3,4\}\)</span>. Frequency is <strong>additive on disjoint events</strong>.</p>
+<hr />
+<h3 id="3-f135-f246-1">3. <span class="arithmatex">\(f(\{1,3,5\}) + f(\{2,4,6\}) = 1\)</span></h3>
+<div class="arithmatex">\[f(\{1,3,5\}) + f(\{2,4,6\}) = 0.509 + 0.491 = 1.000\]</div>
+<p>✅ <strong>Verified.</strong> The equality holds because <span class="arithmatex">\(\{1,3,5\}\)</span> and <span class="arithmatex">\(\{2,4,6\}\)</span> are <strong>complementary events</strong>: they are disjoint and their union is <span class="arithmatex">\(\Omega = \{1,...,6\}\)</span>. Every throw must produce one of these outcomes, so:</p>
+<div class="arithmatex">\[n(\{1,3,5\}) + n(\{2,4,6\}) = 1000 = n(\Omega)\]</div>
+<p>Dividing by 1000: <span class="arithmatex">\(f(\{1,3,5\}) + f(\{2,4,6\}) = 1\)</span>.</p>
+<hr />
+<h3 id="4-f56-1-f1234">4. <span class="arithmatex">\(f(\{5,6\}) = 1 - f(\{1,2,3,4\})\)</span></h3>
+<p><strong>Left side:</strong> <span class="arithmatex">\(f(\{5,6\}) = 0.330\)</span>.</p>
+<p><strong>Right side:</strong> <span class="arithmatex">\(1 - f(\{1,2,3,4\}) = 1 - 0.670 = 0.330\)</span>.</p>
+<p>✅ <strong>Verified.</strong> This holds because <span class="arithmatex">\(\{5,6\} = \{1,2,3,4\}^c\)</span> — they are complements. Since <span class="arithmatex">\(f(\Omega) = 1\)</span>:</p>
+<div class="arithmatex">\[f(A) + f(A^c) = 1 \quad \Longrightarrow \quad f(A^c) = 1 - f(A)\]</div>
+<hr />
+<h2 id="part-c-when-simple-addition-works-and-when-it-fails">Part C — When Simple Addition Works and When It Fails</h2>
+<h3 id="1-disjoint-union-works">1. Disjoint union works</h3>
+<div class="arithmatex">\[f(\{1,2\} \cup \{5,6\}) = f(\{1,2\}) + f(\{5,6\})\]</div>
+<p><strong>Left side:</strong></p>
+<div class="arithmatex">\[f(\{1,2,5,6\}) = \frac{168 + 154 + 160 + 170}{1000} = \frac{652}{1000} = 0.652\]</div>
+<p><strong>Right side:</strong></p>
+<div class="arithmatex">\[f(\{1,2\}) + f(\{5,6\}) = \frac{322}{1000} + \frac{330}{1000} = \frac{652}{1000} = 0.652\]</div>
+<p>✅ <strong>Verified.</strong> The sets <span class="arithmatex">\(\{1,2\}\)</span> and <span class="arithmatex">\(\{5,6\}\)</span> are disjoint (no element in common), so additivity applies.</p>
+<hr />
+<h3 id="2-overlapping-sets-compute-individual-frequencies">2. Overlapping sets — compute individual frequencies</h3>
+<div class="arithmatex">\[M = \{1,2,3\},\qquad N = \{3,4,5\}\]</div>
+<div class="arithmatex">\[f(M) = \frac{168 + 154 + 181}{1000} = \frac{503}{1000} = 0.503\]</div>
+<div class="arithmatex">\[f(N) = \frac{181 + 167 + 160}{1000} = \frac{508}{1000} = 0.508\]</div>
+<div class="arithmatex">\[M \cup N = \{1,2,3,4,5\}\]</div>
+<div class="arithmatex">\[f(M \cup N) = \frac{168 + 154 + 181 + 167 + 160}{1000} = \frac{830}{1000} = 0.830\]</div>
+<div class="arithmatex">\[f(M) + f(N) = 0.503 + 0.508 = 1.011\]</div>
+<hr />
+<h3 id="3-why-fm-cup-n-neq-fm-fn">3. Why <span class="arithmatex">\(f(M \cup N) \neq f(M) + f(N)\)</span></h3>
+<div class="arithmatex">\[f(M \cup N) = 0.830 \neq 1.011 = f(M) + f(N)\]</div>
+<p>The simple sum <strong>overcounts</strong> because <span class="arithmatex">\(M\)</span> and <span class="arithmatex">\(N\)</span> are <strong>not disjoint</strong>. They share the element 3:</p>
+<div class="arithmatex">\[M \cap N = \{3\}\]</div>
+<p>The throws producing outcome 3 are counted <strong>once</strong> in <span class="arithmatex">\(n(M)\)</span> and <strong>again</strong> in <span class="arithmatex">\(n(N)\)</span>, so summing <span class="arithmatex">\(n(M) + n(N)\)</span> counts them twice. The correct formula is <strong>inclusion-exclusion</strong>:</p>
+<div class="arithmatex">\[f(M \cup N) = f(M) + f(N) - f(M \cap N)\]</div>
+<div class="arithmatex">\[= 0.503 + 0.508 - \frac{181}{1000} = 1.011 - 0.181 = 0.830 \quad \checkmark\]</div>
+<hr />
+<h3 id="4-which-elementary-outcomes-are-counted-twice">4. Which elementary outcomes are counted twice</h3>
+<p>The elementary outcome counted twice in <span class="arithmatex">\(f(M) + f(N)\)</span> is:</p>
+<div class="arithmatex">\[M \cap N = \{3\}\]</div>
+<p>The outcome <strong>3</strong> belongs to both <span class="arithmatex">\(M\)</span> and <span class="arithmatex">\(N\)</span>, so <span class="arithmatex">\(n(\{3\}) = 181\)</span> is included in both <span class="arithmatex">\(n(M)\)</span> and <span class="arithmatex">\(n(N)\)</span>. This double-counting inflates the naive sum by exactly <span class="arithmatex">\(f(\{3\}) = 0.181\)</span>, which is the discrepancy: <span class="arithmatex">\(1.011 - 0.830 = 0.181\)</span>.</p>
+<blockquote>
+<p><strong>General principle:</strong> Simple additivity <span class="arithmatex">\(f(A \cup B) = f(A) + f(B)\)</span> holds <strong>if and only if</strong> <span class="arithmatex">\(A \cap B = \emptyset\)</span>. When events overlap, we must subtract the frequency of the intersection (inclusion-exclusion principle).</p>
+</blockquote>
+<hr />
+<h2 id="part-d-covering-the-whole-sample-space">Part D — Covering the Whole Sample Space</h2>
+<h3 id="1-sum-of-all-elementary-frequencies">1. Sum of all elementary frequencies</h3>
+<div class="arithmatex">\[\sum_{k=1}^{6} f(\{k\}) = \frac{168 + 154 + 181 + 167 + 160 + 170}{1000} = \frac{1000}{1000} = 1\]</div>
+<hr />
+<h3 id="2-why-the-result-must-be-1">2. Why the result must be 1</h3>
+<p>Every single throw produces <strong>exactly one</strong> outcome in <span class="arithmatex">\(\{1,2,...,6\}\)</span>. Therefore:</p>
+<div class="arithmatex">\[n(\{1\}) + n(\{2\}) + n(\{3\}) + n(\{4\}) + n(\{5\}) + n(\{6\}) = 1000\]</div>
+<p>This is because the six singleton events are:
+- <strong>Pairwise disjoint</strong>: no throw can produce two different numbers.
+- <strong>Exhaustive</strong>: their union is <span class="arithmatex">\(\Omega\)</span>, and every throw produces some result.</p>
+<p>Dividing by 1000:</p>
+<div class="arithmatex">\[f(\{1\}) + f(\{2\}) + \cdots + f(\{6\}) = \frac{1000}{1000} = 1\]</div>
+<hr />
+<h3 id="3-splitting-omega-into-three-disjoint-events">3. Splitting <span class="arithmatex">\(\Omega\)</span> into three disjoint events</h3>
+<div class="arithmatex">\[\Omega = \{1,2\} \cup \{3,4\} \cup \{5,6\}\]</div>
+<div class="arithmatex">\[f(\{1,2\}) = \frac{168+154}{1000} = \frac{322}{1000} = 0.322\]</div>
+<div class="arithmatex">\[f(\{3,4\}) = \frac{181+167}{1000} = \frac{348}{1000} = 0.348\]</div>
+<div class="arithmatex">\[f(\{5,6\}) = \frac{160+170}{1000} = \frac{330}{1000} = 0.330\]</div>
+<div class="arithmatex">\[f(\{1,2\}) + f(\{3,4\}) + f(\{5,6\}) = 0.322 + 0.348 + 0.330 = 1.000\]</div>
+<hr />
+<h3 id="4-why-this-sum-is-also-1">4. Why this sum is also 1</h3>
+<p>The three sets <span class="arithmatex">\(\{1,2\}\)</span>, <span class="arithmatex">\(\{3,4\}\)</span>, <span class="arithmatex">\(\{5,6\}\)</span> satisfy:
+- They are <strong>pairwise disjoint</strong>: no element belongs to two of them.
+- Their union is <span class="arithmatex">\(\Omega\)</span>: <span class="arithmatex">\(\{1,2\} \cup \{3,4\} \cup \{5,6\} = \{1,2,3,4,5,6\}\)</span>.</p>
+<p>Since they form a <strong>partition</strong> of <span class="arithmatex">\(\Omega\)</span>, every throw falls into exactly one of these three groups, so:</p>
+<div class="arithmatex">\[n(\{1,2\}) + n(\{3,4\}) + n(\{5,6\}) = 1000\]</div>
+<p>Dividing by 1000 gives 1.</p>
+<hr />
+<h3 id="5-general-statement">5. General statement</h3>
+<blockquote>
+<p><strong>Theorem (Additivity of frequency over partitions):</strong> If <span class="arithmatex">\(\Omega = A_1 \cup A_2 \cup \cdots \cup A_m\)</span> where the <span class="arithmatex">\(A_i\)</span> are pairwise disjoint (i.e., <span class="arithmatex">\(A_i \cap A_j = \emptyset\)</span> for <span class="arithmatex">\(i \neq j\)</span>), then:</p>
+<div class="arithmatex">\[f(A_1) + f(A_2) + \cdots + f(A_m) = f(\Omega) = 1\]</div>
+<p>This holds for <strong>any</strong> decomposition of <span class="arithmatex">\(\Omega\)</span> into finitely many disjoint events — regardless of how many pieces we use, how we group the elements, or whether the pieces are equal in size.</p>
+</blockquote>
+<p><strong>Why this works:</strong> In any partition, every elementary outcome belongs to exactly one <span class="arithmatex">\(A_i\)</span>. So each of the 1000 throws contributes its count to exactly one <span class="arithmatex">\(n(A_i)\)</span>, ensuring <span class="arithmatex">\(\sum n(A_i) = 1000\)</span>.</p>
+<hr />
+<h2 id="part-e-from-observed-frequency-to-probability">Part E — From Observed Frequency to Probability</h2>
+<p>Based on the observed properties of frequency from Parts A–D, we now describe what properties a general <strong>probability function</strong> <span class="arithmatex">\(P\)</span> should have.</p>
+<h3 id="property-1-values-between-0-and-1">Property 1: Values between 0 and 1</h3>
+<div class="arithmatex">\[0 \leq P(A) \leq 1 \quad \text{for all } A \subseteq \Omega\]</div>
+<p><strong>Justification from frequency:</strong> <span class="arithmatex">\(n(A)\)</span> counts how many of the 1000 throws produced an outcome in <span class="arithmatex">\(A\)</span>. Since <span class="arithmatex">\(0 \leq n(A) \leq 1000\)</span>, we have <span class="arithmatex">\(0 \leq f(A) = \frac{n(A)}{1000} \leq 1\)</span>. A frequency can never be negative (you can't have a negative number of occurrences) and can never exceed 1 (an event can't occur more times than the total number of trials).</p>
+<hr />
+<h3 id="property-2-the-impossible-event-has-probability-0">Property 2: The impossible event has probability 0</h3>
+<div class="arithmatex">\[P(\emptyset) = 0\]</div>
+<p><strong>Justification:</strong> The empty event <span class="arithmatex">\(\emptyset\)</span> contains no elementary outcomes. No throw can ever produce an outcome in <span class="arithmatex">\(\emptyset\)</span>, so <span class="arithmatex">\(n(\emptyset) = 0\)</span> and <span class="arithmatex">\(f(\emptyset) = 0\)</span>. An event that cannot happen should be assigned probability zero.</p>
+<hr />
+<h3 id="property-3-the-whole-sample-space-has-probability-1">Property 3: The whole sample space has probability 1</h3>
+<div class="arithmatex">\[P(\Omega) = 1\]</div>
+<p><strong>Justification:</strong> Every throw produces some outcome in <span class="arithmatex">\(\Omega\)</span>, so <span class="arithmatex">\(n(\Omega) = 1000\)</span> and <span class="arithmatex">\(f(\Omega) = 1\)</span>. Something always happens — the "certain" event should have probability 1.</p>
+<hr />
+<h3 id="property-4-additivity-for-disjoint-events">Property 4: Additivity for disjoint events</h3>
+<div class="arithmatex">\[\text{If } A \cap B = \emptyset, \quad \text{then } P(A \cup B) = P(A) + P(B)\]</div>
+<p><strong>Justification:</strong> We verified repeatedly in Parts B, C, and D that when events don't overlap, their frequencies add perfectly: <span class="arithmatex">\(f(A \cup B) = f(A) + f(B)\)</span>. This is because no throw is counted twice when the events are disjoint. This is the most fundamental computational property of frequency, and it must carry over to probability.</p>
+<p>More generally, for any finite collection of pairwise disjoint events <span class="arithmatex">\(A_1, ..., A_m\)</span>:</p>
+<div class="arithmatex">\[P\left(\bigcup_{i=1}^m A_i\right) = \sum_{i=1}^m P(A_i)\]</div>
+<hr />
+<h3 id="property-5-complementary-events-sum-to-1">Property 5: Complementary events sum to 1</h3>
+<div class="arithmatex">\[P(A) + P(A^c) = 1\]</div>
+<p><strong>Justification:</strong> <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(A^c\)</span> are disjoint and <span class="arithmatex">\(A \cup A^c = \Omega\)</span>. By Properties 3 and 4:</p>
+<div class="arithmatex">\[P(A) + P(A^c) = P(A \cup A^c) = P(\Omega) = 1\]</div>
+<p>We verified this in Part B.3 with <span class="arithmatex">\(\{1,3,5\}\)</span> and <span class="arithmatex">\(\{2,4,6\}\)</span>, and in Part B.4 with <span class="arithmatex">\(\{5,6\}\)</span> and <span class="arithmatex">\(\{1,2,3,4\}\)</span>.</p>
+<blockquote>
+<p><strong>Note:</strong> Property 5 is actually a <strong>consequence</strong> of Properties 3 and 4, not an independent axiom. But it is important enough to highlight.</p>
+</blockquote>
+<hr />
+<h2 id="part-f-conclusion">Part F — Conclusion</h2>
+<p>The three levels of the problem are connected as follows:</p>
+<h3 id="level-1-elementary-outcomes-and-events">Level 1: Elementary outcomes and events</h3>
+<p>This is the <strong>structural</strong> level. We define the sample space <span class="arithmatex">\(\Omega = \{1,2,...,6\}\)</span> as the set of all possible results. Events are subsets of <span class="arithmatex">\(\Omega\)</span> — collections of outcomes that share some property. At this level, we describe <strong>what can happen</strong> and <strong>how situations are classified</strong>, but we say nothing yet about how likely anything is. The language here is purely set-theoretic: unions, intersections, complements, partitions.</p>
+<h3 id="level-2-observed-frequencies-from-a-real-experiment">Level 2: Observed frequencies from a real experiment</h3>
+<p>This is the <strong>empirical</strong> level. By actually performing 1000 throws and counting, we assign a number <span class="arithmatex">\(f(A) = \frac{n(A)}{1000}\)</span> to every event <span class="arithmatex">\(A\)</span>. Frequencies are concrete, data-driven numbers that reflect what <strong>actually happened</strong> in a specific series of trials. Through computation, we discover that frequencies have natural, reliable properties: they lie in <span class="arithmatex">\([0,1]\)</span>, sum to 1 over the whole space, and add for disjoint events.</p>
+<h3 id="level-3-probability-as-mathematical-abstraction">Level 3: Probability as mathematical abstraction</h3>
+<p>This is the <strong>formal/axiomatic</strong> level. Inspired by the properties we observed in frequencies, we define a <strong>probability function</strong> <span class="arithmatex">\(P: \mathcal{P}(\Omega) \to [0,1]\)</span> that satisfies those properties <strong>by definition</strong> — not because they were observed in one specific experiment, but because we <strong>require</strong> them as axioms. The key shift from Level 2 to Level 3 is:</p>
+<ul>
+<li>Frequency depends on a specific experiment and changes if we repeat it.</li>
+<li>Probability is a fixed mathematical object that describes the <strong>idealized model</strong> of the experiment.</li>
+</ul>
+<blockquote>
+<p><strong>The connection:</strong> Level 1 provides the <strong>structure</strong> (what can happen). Level 2 provides the <strong>motivation</strong> (what properties should probability have — discovered empirically). Level 3 provides the <strong>formal framework</strong> (probability axioms that guarantee those properties hold in general, freeing us from dependence on any single experiment).</p>
+</blockquote>
+<p>The genius of Kolmogorov's approach is that Level 3 does not require us to derive probability from frequency — it simply <strong>axiomatizes</strong> the properties that any reasonable notion of "likelihood" should satisfy, allowing probability theory to stand on its own mathematical foundation while remaining consistent with empirical observations.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
