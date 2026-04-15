@@ -2660,67 +2660,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#appendix-java-implementation-nested-for-loop-patterns" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Appendix — Java Implementation (Nested For-Loop Patterns)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Appendix — Java Implementation (Nested For-Loop Patterns)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-core-idea" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The Core Idea
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#full-program-all-events" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Full Program — All Events
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#comparing-star-patterns-vs-event-patterns" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Comparing Star Patterns vs. Event Patterns
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#running-the-program" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Running the Program
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -3533,67 +3472,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#appendix-java-implementation-nested-for-loop-patterns" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Appendix — Java Implementation (Nested For-Loop Patterns)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Appendix — Java Implementation (Nested For-Loop Patterns)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-core-idea" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The Core Idea
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#full-program-all-events" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Full Program — All Events
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#comparing-star-patterns-vs-event-patterns" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Comparing Star Patterns vs. Event Patterns
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#running-the-program" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Running the Program
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -3634,6 +3512,18 @@
 </code></pre>
 <p><span class="arithmatex">\(A = \{(1,6),(2,5),(3,4),(4,3),(5,2),(6,1)\}\)</span>, <span class="arithmatex">\(|A| = 6\)</span>.</p>
 <p>The event forms an <strong>anti-diagonal</strong> from top-right to bottom-left.</p>
+<p><strong>Java — for loop to generate this grid:</strong></p>
+<pre><code class="language-java">for (int i = 1; i &lt;= 6; i++) {
+    for (int j = 1; j &lt;= 6; j++) {
+        if (i + j == 7) {
+            System.out.print(&quot;X &quot;);
+        } else {
+            System.out.print(&quot;. &quot;);
+        }
+    }
+    System.out.println();
+}
+</code></pre>
 <hr />
 <h3 id="event-b-the-first-die-is-greater-than-the-second">Event <span class="arithmatex">\(B\)</span>: The first die is greater than the second</h3>
 <p>We need <span class="arithmatex">\((i,j)\)</span> with <span class="arithmatex">\(i &gt; j\)</span> — all cells strictly below the main diagonal.</p>
@@ -3647,6 +3537,18 @@
 </code></pre>
 <p><span class="arithmatex">\(B = \{(i,j) : i &gt; j\}\)</span>, <span class="arithmatex">\(|B| = 15\)</span>.</p>
 <p>The event is the <strong>lower triangle</strong> below the diagonal.</p>
+<p><strong>Java — for loop to generate this grid:</strong></p>
+<pre><code class="language-java">for (int i = 1; i &lt;= 6; i++) {
+    for (int j = 1; j &lt;= 6; j++) {
+        if (i &gt; j) {
+            System.out.print(&quot;X &quot;);
+        } else {
+            System.out.print(&quot;. &quot;);
+        }
+    }
+    System.out.println();
+}
+</code></pre>
 <hr />
 <h3 id="event-c-at-least-one-die-shows-6">Event <span class="arithmatex">\(C\)</span>: At least one die shows 6</h3>
 <p>We need <span class="arithmatex">\((i,j)\)</span> where <span class="arithmatex">\(i = 6\)</span> or <span class="arithmatex">\(j = 6\)</span>.</p>
@@ -3660,20 +3562,44 @@
 </code></pre>
 <p><span class="arithmatex">\(C = \{(i,j) : i = 6 \text{ or } j = 6\}\)</span>, <span class="arithmatex">\(|C| = 11\)</span>.</p>
 <p>The event is the <strong>union of row 6 and column 6</strong> (an L-shape in the bottom-right).</p>
+<p><strong>Java — for loop to generate this grid:</strong></p>
+<pre><code class="language-java">for (int i = 1; i &lt;= 6; i++) {
+    for (int j = 1; j &lt;= 6; j++) {
+        if (i == 6 || j == 6) {
+            System.out.print(&quot;X &quot;);
+        } else {
+            System.out.print(&quot;. &quot;);
+        }
+    }
+    System.out.println();
+}
+</code></pre>
 <hr />
 <h2 id="part-b-compound-statements">Part B — Compound Statements</h2>
 <h3 id="1-a-cup-c-the-sum-is-7-or-at-least-one-die-shows-6">1. <span class="arithmatex">\(A \cup C\)</span>: The sum is 7 <strong>or</strong> at least one die shows 6</h3>
 <p>This is the union of <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(C\)</span>. A cell is marked if it belongs to <span class="arithmatex">\(A\)</span> <strong>or</strong> <span class="arithmatex">\(C\)</span> (or both).</p>
 <pre><code>      1 2 3 4 5 6
-1     . . . . . X    ← (1,6) ∈ A ∩ C
-2     . . . . X X    ← (2,5) ∈ A; (2,6) ∈ C
-3     . . . X . X    ← (3,4) ∈ A; (3,6) ∈ C
-4     . . X . . X    ← (4,3) ∈ A; (4,6) ∈ C
-5     . X . . . X    ← (5,2) ∈ A; (5,6) ∈ C
-6     X X X X X X    ← row 6 ∈ C; (6,1) ∈ A ∩ C
+1     . . . . . X
+2     . . . . X X
+3     . . . X . X
+4     . . X . . X
+5     . X . . . X
+6     X X X X X X
 </code></pre>
 <p><span class="arithmatex">\(|A \cup C| = |A| + |C| - |A \cap C| = 6 + 11 - 2 = 15\)</span>.</p>
 <p>(The overlapping cells are <span class="arithmatex">\((1,6)\)</span> and <span class="arithmatex">\((6,1)\)</span>, which satisfy both conditions.)</p>
+<p><strong>Java — for loop:</strong></p>
+<pre><code class="language-java">for (int i = 1; i &lt;= 6; i++) {
+    for (int j = 1; j &lt;= 6; j++) {
+        if ((i + j == 7) || (i == 6 || j == 6)) {
+            System.out.print(&quot;X &quot;);
+        } else {
+            System.out.print(&quot;. &quot;);
+        }
+    }
+    System.out.println();
+}
+</code></pre>
 <hr />
 <h3 id="2-a-cap-c-the-sum-is-7-and-at-least-one-die-shows-6">2. <span class="arithmatex">\(A \cap C\)</span>: The sum is 7 <strong>and</strong> at least one die shows 6</h3>
 <p>A cell must be in <strong>both</strong> <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(C\)</span>: the sum is 7 and at least one die is 6.</p>
@@ -3689,6 +3615,18 @@
 6     X . . . . .
 </code></pre>
 <p><span class="arithmatex">\(A \cap C = \{(1,6),(6,1)\}\)</span>, <span class="arithmatex">\(|A \cap C| = 2\)</span>.</p>
+<p><strong>Java — for loop:</strong></p>
+<pre><code class="language-java">for (int i = 1; i &lt;= 6; i++) {
+    for (int j = 1; j &lt;= 6; j++) {
+        if ((i + j == 7) &amp;&amp; (i == 6 || j == 6)) {
+            System.out.print(&quot;X &quot;);
+        } else {
+            System.out.print(&quot;. &quot;);
+        }
+    }
+    System.out.println();
+}
+</code></pre>
 <hr />
 <h3 id="3-b-cap-c-the-first-die-is-greater-than-the-second-and-at-least-one-die-shows-6">3. <span class="arithmatex">\(B \cap C\)</span>: The first die is greater than the second <strong>and</strong> at least one die shows 6</h3>
 <p>We need <span class="arithmatex">\(i &gt; j\)</span> and (<span class="arithmatex">\(i = 6\)</span> or <span class="arithmatex">\(j = 6\)</span>). Since <span class="arithmatex">\(i &gt; j\)</span>, having <span class="arithmatex">\(j = 6\)</span> would require <span class="arithmatex">\(i &gt; 6\)</span>, which is impossible. So we must have <span class="arithmatex">\(i = 6\)</span> and <span class="arithmatex">\(j &lt; 6\)</span>.</p>
@@ -3701,6 +3639,18 @@
 6     X X X X X .
 </code></pre>
 <p><span class="arithmatex">\(B \cap C = \{(6,1),(6,2),(6,3),(6,4),(6,5)\}\)</span>, <span class="arithmatex">\(|B \cap C| = 5\)</span>.</p>
+<p><strong>Java — for loop:</strong></p>
+<pre><code class="language-java">for (int i = 1; i &lt;= 6; i++) {
+    for (int j = 1; j &lt;= 6; j++) {
+        if ((i &gt; j) &amp;&amp; (i == 6 || j == 6)) {
+            System.out.print(&quot;X &quot;);
+        } else {
+            System.out.print(&quot;. &quot;);
+        }
+    }
+    System.out.println();
+}
+</code></pre>
 <hr />
 <h3 id="4-a-cap-bc-the-sum-is-7-but-the-first-die-is-not-greater-than-the-second">4. <span class="arithmatex">\(A \cap B^c\)</span>: The sum is 7, <strong>but</strong> the first die is <strong>not</strong> greater than the second</h3>
 <p>We need <span class="arithmatex">\(i + j = 7\)</span> and <span class="arithmatex">\(i \leq j\)</span>.</p>
@@ -3720,6 +3670,18 @@
 6     . . . . . .
 </code></pre>
 <p><span class="arithmatex">\(A \cap B^c = \{(1,6),(2,5),(3,4)\}\)</span>, <span class="arithmatex">\(|A \cap B^c| = 3\)</span>.</p>
+<p><strong>Java — for loop:</strong></p>
+<pre><code class="language-java">for (int i = 1; i &lt;= 6; i++) {
+    for (int j = 1; j &lt;= 6; j++) {
+        if ((i + j == 7) &amp;&amp; !(i &gt; j)) {
+            System.out.print(&quot;X &quot;);
+        } else {
+            System.out.print(&quot;. &quot;);
+        }
+    }
+    System.out.println();
+}
+</code></pre>
 <hr />
 <h3 id="5-a-cap-cc-the-sum-is-7-and-no-die-shows-6">5. <span class="arithmatex">\(A \cap C^c\)</span>: The sum is 7, <strong>and</strong> no die shows 6</h3>
 <p>We need <span class="arithmatex">\(i + j = 7\)</span> and <span class="arithmatex">\(i \neq 6\)</span> and <span class="arithmatex">\(j \neq 6\)</span>.</p>
@@ -3733,6 +3695,18 @@
 6     . . . . . .
 </code></pre>
 <p><span class="arithmatex">\(A \cap C^c = \{(2,5),(3,4),(4,3),(5,2)\}\)</span>, <span class="arithmatex">\(|A \cap C^c| = 4\)</span>.</p>
+<p><strong>Java — for loop:</strong></p>
+<pre><code class="language-java">for (int i = 1; i &lt;= 6; i++) {
+    for (int j = 1; j &lt;= 6; j++) {
+        if ((i + j == 7) &amp;&amp; !(i == 6 || j == 6)) {
+            System.out.print(&quot;X &quot;);
+        } else {
+            System.out.print(&quot;. &quot;);
+        }
+    }
+    System.out.println();
+}
+</code></pre>
 <hr />
 <h3 id="6-c-cap-ac-at-least-one-die-shows-6-but-the-sum-is-not-7">6. <span class="arithmatex">\(C \cap A^c\)</span>: At least one die shows 6, <strong>but</strong> the sum is <strong>not</strong> 7</h3>
 <p>We need (<span class="arithmatex">\(i = 6\)</span> or <span class="arithmatex">\(j = 6\)</span>) and <span class="arithmatex">\(i + j \neq 7\)</span>.</p>
@@ -3746,6 +3720,18 @@
 6     . X X X X X
 </code></pre>
 <p><span class="arithmatex">\(C \cap A^c = C \setminus A\)</span>, <span class="arithmatex">\(|C \cap A^c| = 11 - 2 = 9\)</span>.</p>
+<p><strong>Java — for loop:</strong></p>
+<pre><code class="language-java">for (int i = 1; i &lt;= 6; i++) {
+    for (int j = 1; j &lt;= 6; j++) {
+        if ((i == 6 || j == 6) &amp;&amp; !(i + j == 7)) {
+            System.out.print(&quot;X &quot;);
+        } else {
+            System.out.print(&quot;. &quot;);
+        }
+    }
+    System.out.println();
+}
+</code></pre>
 <hr />
 <h3 id="7-ac-cap-b-the-sum-is-not-7-and-the-first-die-is-greater-than-the-second">7. <span class="arithmatex">\(A^c \cap B\)</span>: The sum is <strong>not</strong> 7 <strong>and</strong> the first die is greater than the second</h3>
 <p>We need <span class="arithmatex">\(i &gt; j\)</span> and <span class="arithmatex">\(i + j \neq 7\)</span>. Start from <span class="arithmatex">\(B\)</span> and remove elements of <span class="arithmatex">\(A\)</span>.</p>
@@ -3759,6 +3745,18 @@
 6     . X X X X .
 </code></pre>
 <p><span class="arithmatex">\(A^c \cap B = B \setminus A\)</span>, <span class="arithmatex">\(|A^c \cap B| = 15 - 3 = 12\)</span>.</p>
+<p><strong>Java — for loop:</strong></p>
+<pre><code class="language-java">for (int i = 1; i &lt;= 6; i++) {
+    for (int j = 1; j &lt;= 6; j++) {
+        if (!(i + j == 7) &amp;&amp; (i &gt; j)) {
+            System.out.print(&quot;X &quot;);
+        } else {
+            System.out.print(&quot;. &quot;);
+        }
+    }
+    System.out.println();
+}
+</code></pre>
 <hr />
 <h3 id="8-bc-cap-c-the-first-die-is-not-greater-than-the-second-and-at-least-one-die-shows-6">8. <span class="arithmatex">\(B^c \cap C\)</span>: The first die is <strong>not</strong> greater than the second <strong>and</strong> at least one die shows 6</h3>
 <p>We need <span class="arithmatex">\(i \leq j\)</span> and (<span class="arithmatex">\(i = 6\)</span> or <span class="arithmatex">\(j = 6\)</span>).</p>
@@ -3776,6 +3774,18 @@
 </code></pre>
 <p><span class="arithmatex">\(B^c \cap C = \{(1,6),(2,6),(3,6),(4,6),(5,6),(6,6)\}\)</span>, <span class="arithmatex">\(|B^c \cap C| = 6\)</span>.</p>
 <p>This is exactly the <strong>rightmost column</strong> — all outcomes where the second die is 6 and the first die is <span class="arithmatex">\(\leq\)</span> the second (which is always true when <span class="arithmatex">\(j=6\)</span>).</p>
+<p><strong>Java — for loop:</strong></p>
+<pre><code class="language-java">for (int i = 1; i &lt;= 6; i++) {
+    for (int j = 1; j &lt;= 6; j++) {
+        if (!(i &gt; j) &amp;&amp; (i == 6 || j == 6)) {
+            System.out.print(&quot;X &quot;);
+        } else {
+            System.out.print(&quot;. &quot;);
+        }
+    }
+    System.out.println();
+}
+</code></pre>
 <hr />
 <h3 id="9-a-cup-cc-it-is-not-true-that-the-sum-is-7-or-at-least-one-die-shows-6">9. <span class="arithmatex">\((A \cup C)^c\)</span>: It is <strong>not</strong> true that (the sum is 7 <strong>or</strong> at least one die shows 6)</h3>
 <p>By De Morgan's law: <span class="arithmatex">\((A \cup C)^c = A^c \cap C^c\)</span>.</p>
@@ -3790,6 +3800,18 @@
 6     . . . . . .
 </code></pre>
 <p><span class="arithmatex">\(|(A \cup C)^c| = 25 - 4 = 21\)</span>.</p>
+<p><strong>Java — for loop:</strong></p>
+<pre><code class="language-java">for (int i = 1; i &lt;= 6; i++) {
+    for (int j = 1; j &lt;= 6; j++) {
+        if (!((i + j == 7) || (i == 6 || j == 6))) {
+            System.out.print(&quot;X &quot;);
+        } else {
+            System.out.print(&quot;. &quot;);
+        }
+    }
+    System.out.println();
+}
+</code></pre>
 <hr />
 <h3 id="10-a-cap-cc-it-is-not-true-that-the-sum-is-7-and-at-least-one-die-shows-6">10. <span class="arithmatex">\((A \cap C)^c\)</span>: It is <strong>not</strong> true that (the sum is 7 <strong>and</strong> at least one die shows 6)</h3>
 <p>By De Morgan's law: <span class="arithmatex">\((A \cap C)^c = A^c \cup C^c\)</span>.</p>
@@ -3803,25 +3825,10 @@
 6     . X X X X X
 </code></pre>
 <p><span class="arithmatex">\(|(A \cap C)^c| = 36 - 2 = 34\)</span>.</p>
-<blockquote>
-<p><strong>Key observations across all 10 compound events:</strong></p>
-<ul>
-<li><strong>Union (<span class="arithmatex">\(\cup\)</span>)</strong> corresponds to the logical <strong>OR</strong> and produces a <strong>larger</strong> region.</li>
-<li><strong>Intersection (<span class="arithmatex">\(\cap\)</span>)</strong> corresponds to the logical <strong>AND</strong> and produces a <strong>smaller</strong> region.</li>
-<li><strong>Complement (<span class="arithmatex">\(^c\)</span>)</strong> corresponds to <strong>NOT</strong> and produces the "negative" of the grid.</li>
-<li><strong>De Morgan's Laws</strong> are visually verifiable: the complement of a union equals the intersection of the complements, and vice versa.</li>
-<li>The grid representation makes these set-theoretic operations <strong>geometrically visible</strong>, which is a core pedagogical goal of this problem.</li>
-</ul>
-</blockquote>
-<hr />
-<h2 id="appendix-java-implementation-nested-for-loop-patterns">Appendix — Java Implementation (Nested For-Loop Patterns)</h2>
-<blockquote>
-<p><strong>Why Java?</strong> Marking events on a 6×6 grid is structurally identical to the classic <strong>"star pattern"</strong> exercises in Java. In both cases, nested <code>for</code> loops iterate over rows and columns, and an <code>if</code> condition decides whether to print <code>X</code> (or <code>*</code>) or <code>.</code> (or a space). The only difference is that here, the condition encodes a <strong>mathematical statement</strong> about a probability event rather than a geometric shape.</p>
-</blockquote>
-<h3 id="the-core-idea">The Core Idea</h3>
-<pre><code class="language-java">for (int i = 1; i &lt;= 6; i++) {        // row = first die
-    for (int j = 1; j &lt;= 6; j++) {    // col = second die
-        if (condition(i, j)) {
+<p><strong>Java — for loop:</strong></p>
+<pre><code class="language-java">for (int i = 1; i &lt;= 6; i++) {
+    for (int j = 1; j &lt;= 6; j++) {
+        if (!((i + j == 7) &amp;&amp; (i == 6 || j == 6))) {
             System.out.print(&quot;X &quot;);
         } else {
             System.out.print(&quot;. &quot;);
@@ -3830,221 +3837,17 @@
     System.out.println();
 }
 </code></pre>
-<p>This is the same skeleton used for triangle patterns, diamond patterns, etc. — the only thing that changes is the <code>condition</code>.</p>
 <hr />
-<h3 id="full-program-all-events">Full Program — All Events</h3>
-<pre><code class="language-java">public class DiceEvents {
-
-    // ═══════════════════════════════════════════
-    //  BASIC EVENTS (Part A)
-    // ═══════════════════════════════════════════
-
-    /** Event A: the sum of two dice equals 7 */
-    static boolean eventA(int i, int j) {
-        return i + j == 7;
-    }
-
-    /** Event B: the first die is greater than the second */
-    static boolean eventB(int i, int j) {
-        return i &gt; j;
-    }
-
-    /** Event C: at least one die shows 6 */
-    static boolean eventC(int i, int j) {
-        return i == 6 || j == 6;
-    }
-
-    // ═══════════════════════════════════════════
-    //  GRID PRINTER (the &quot;star pattern&quot; engine)
-    // ═══════════════════════════════════════════
-
-    /**
-     * Prints a 6×6 grid, marking cells that satisfy the given condition.
-     * This is the exact same logic as printing star/triangle patterns:
-     *   - outer loop  → rows   (first die)
-     *   - inner loop  → columns (second die)
-     *   - if-condition → decides X or .
-     */
-    static void printGrid(String title, java.util.function.BiPredicate&lt;Integer, Integer&gt; condition) {
-        System.out.println(&quot;\n&quot; + title);
-        System.out.println(&quot;      1 2 3 4 5 6&quot;);
-
-        int count = 0;
-        for (int i = 1; i &lt;= 6; i++) {
-            System.out.print(i + &quot;     &quot;);
-            for (int j = 1; j &lt;= 6; j++) {
-                if (condition.test(i, j)) {
-                    System.out.print(&quot;X &quot;);
-                    count++;
-                } else {
-                    System.out.print(&quot;. &quot;);
-                }
-            }
-            System.out.println();
-        }
-        System.out.println(&quot;Size: &quot; + count + &quot; outcomes&quot;);
-    }
-
-    // ═══════════════════════════════════════════
-    //  MAIN — all 13 events (3 basic + 10 compound)
-    // ═══════════════════════════════════════════
-
-    public static void main(String[] args) {
-
-        // ── Part A: Basic events ──────────────────
-
-        printGrid(&quot;A: Sum equals 7&quot;,
-            (i, j) -&gt; eventA(i, j));
-
-        printGrid(&quot;B: First die &gt; second die&quot;,
-            (i, j) -&gt; eventB(i, j));
-
-        printGrid(&quot;C: At least one die shows 6&quot;,
-            (i, j) -&gt; eventC(i, j));
-
-        // ── Part B: Compound events ───────────────
-
-        // 1. A ∪ C  (OR)
-        printGrid(&quot;1. A ∪ C: Sum is 7 OR at least one 6&quot;,
-            (i, j) -&gt; eventA(i, j) || eventC(i, j));
-
-        // 2. A ∩ C  (AND)
-        printGrid(&quot;2. A ∩ C: Sum is 7 AND at least one 6&quot;,
-            (i, j) -&gt; eventA(i, j) &amp;&amp; eventC(i, j));
-
-        // 3. B ∩ C  (AND)
-        printGrid(&quot;3. B ∩ C: First &gt; second AND at least one 6&quot;,
-            (i, j) -&gt; eventB(i, j) &amp;&amp; eventC(i, j));
-
-        // 4. A ∩ B' (AND NOT)
-        printGrid(&quot;4. A ∩ B': Sum is 7 BUT first NOT &gt; second&quot;,
-            (i, j) -&gt; eventA(i, j) &amp;&amp; !eventB(i, j));
-
-        // 5. A ∩ C' (AND NOT)
-        printGrid(&quot;5. A ∩ C': Sum is 7 AND no die shows 6&quot;,
-            (i, j) -&gt; eventA(i, j) &amp;&amp; !eventC(i, j));
-
-        // 6. C ∩ A' (AND NOT)
-        printGrid(&quot;6. C ∩ A': At least one 6 BUT sum is NOT 7&quot;,
-            (i, j) -&gt; eventC(i, j) &amp;&amp; !eventA(i, j));
-
-        // 7. A' ∩ B (AND NOT)
-        printGrid(&quot;7. A' ∩ B: Sum is NOT 7 AND first &gt; second&quot;,
-            (i, j) -&gt; !eventA(i, j) &amp;&amp; eventB(i, j));
-
-        // 8. B' ∩ C (AND NOT)
-        printGrid(&quot;8. B' ∩ C: First NOT &gt; second AND at least one 6&quot;,
-            (i, j) -&gt; !eventB(i, j) &amp;&amp; eventC(i, j));
-
-        // 9. (A ∪ C)' — De Morgan: A' ∩ C'
-        printGrid(&quot;9. (A ∪ C)': NOT (sum 7 OR at least one 6)&quot;,
-            (i, j) -&gt; !(eventA(i, j) || eventC(i, j)));
-
-        // 10. (A ∩ C)' — De Morgan: A' ∪ C'
-        printGrid(&quot;10. (A ∩ C)': NOT (sum 7 AND at least one 6)&quot;,
-            (i, j) -&gt; !(eventA(i, j) &amp;&amp; eventC(i, j)));
-    }
-}
-</code></pre>
-<hr />
-<h3 id="comparing-star-patterns-vs-event-patterns">Comparing Star Patterns vs. Event Patterns</h3>
-<p>The table below shows how classic Java star-pattern conditions map to probability event conditions:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Classic Star Pattern</th>
-<th style="text-align: left;">Condition</th>
-<th style="text-align: left;">Probability Event</th>
-<th style="text-align: left;">Condition</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">Lower triangle <code>*</code></td>
-<td style="text-align: left;"><code>i &gt;= j</code></td>
-<td style="text-align: left;"><span class="arithmatex">\(B\)</span>: first die ≥ second</td>
-<td style="text-align: left;"><code>i &gt;= j</code></td>
-</tr>
-<tr>
-<td style="text-align: left;">Upper triangle <code>*</code></td>
-<td style="text-align: left;"><code>i &lt;= j</code></td>
-<td style="text-align: left;"><span class="arithmatex">\(B^c\)</span>: first die ≤ second</td>
-<td style="text-align: left;"><code>i &lt;= j</code></td>
-</tr>
-<tr>
-<td style="text-align: left;">Diagonal <code>*</code></td>
-<td style="text-align: left;"><code>i == j</code></td>
-<td style="text-align: left;">Both dice same</td>
-<td style="text-align: left;"><code>i == j</code></td>
-</tr>
-<tr>
-<td style="text-align: left;">Anti-diagonal <code>*</code></td>
-<td style="text-align: left;"><code>i + j == 7</code></td>
-<td style="text-align: left;"><span class="arithmatex">\(A\)</span>: sum equals 7</td>
-<td style="text-align: left;"><code>i + j == 7</code></td>
-</tr>
-<tr>
-<td style="text-align: left;">Border rectangle <code>*</code></td>
-<td style="text-align: left;"><code>i==1 \|\| i==6 \|\| j==1 \|\| j==6</code></td>
-<td style="text-align: left;">Outer ring</td>
-<td style="text-align: left;"><code>i==1 \|\| i==6 \|\| j==1 \|\| j==6</code></td>
-</tr>
-<tr>
-<td style="text-align: left;">Bottom row + right col</td>
-<td style="text-align: left;"><code>i==6 \|\| j==6</code></td>
-<td style="text-align: left;"><span class="arithmatex">\(C\)</span>: at least one 6</td>
-<td style="text-align: left;"><code>i==6 \|\| j==6</code></td>
-</tr>
-<tr>
-<td style="text-align: left;">Filled block (bottom-right)</td>
-<td style="text-align: left;"><code>i&gt;=3 &amp;&amp; j&gt;=3</code></td>
-<td style="text-align: left;">Both dice ≥ 3</td>
-<td style="text-align: left;"><code>i&gt;=3 &amp;&amp; j&gt;=3</code></td>
-</tr>
-</tbody>
-</table>
 <blockquote>
-<p><strong>Key insight:</strong> Every event in probability corresponds to a <strong>boolean condition</strong> on coordinates. Printing event grids is <em>literally</em> the same skill as printing star patterns — just with meaningful conditions instead of geometric ones. The <code>||</code> operator gives <strong>union</strong> (<span class="arithmatex">\(\cup\)</span>), <code>&amp;&amp;</code> gives <strong>intersection</strong> (<span class="arithmatex">\(\cap\)</span>), and <code>!</code> gives <strong>complement</strong> (<span class="arithmatex">\(^c\)</span>).</p>
-</blockquote>
-<hr />
-<h3 id="running-the-program">Running the Program</h3>
-<p>Compile and run:</p>
-<pre><code class="language-bash">javac DiceEvents.java
-java DiceEvents
-</code></pre>
-<p><strong>Expected output (first 3 events):</strong></p>
-<pre><code>A: Sum equals 7
-      1 2 3 4 5 6
-1     . . . . . X
-2     . . . . X .
-3     . . . X . .
-4     . . X . . .
-5     . X . . . .
-6     X . . . . .
-Size: 6 outcomes
-
-B: First die &gt; second die
-      1 2 3 4 5 6
-1     . . . . . .
-2     X . . . . .
-3     X X . . . .
-4     X X X . . .
-5     X X X X . .
-6     X X X X X .
-Size: 15 outcomes
-
-C: At least one die shows 6
-      1 2 3 4 5 6
-1     . . . . . X
-2     . . . . . X
-3     . . . . . X
-4     . . . . . X
-5     . . . . . X
-6     X X X X X X
-Size: 11 outcomes
-</code></pre>
-<blockquote>
-<p><strong>For students familiar with Java star patterns:</strong> If you can write a nested for loop that prints a right triangle of stars, you already have the programming skill needed to visualize probability events. The jump is purely conceptual — replacing "is this cell in the triangle?" with "does this outcome satisfy the event?".</p>
+<p><strong>Key observations across all 10 compound events:</strong></p>
+<ul>
+<li><strong>Union (<span class="arithmatex">\(\cup\)</span>)</strong> corresponds to the logical <strong>OR</strong> (<code>||</code>) and produces a <strong>larger</strong> region.</li>
+<li><strong>Intersection (<span class="arithmatex">\(\cap\)</span>)</strong> corresponds to the logical <strong>AND</strong> (<code>&amp;&amp;</code>) and produces a <strong>smaller</strong> region.</li>
+<li><strong>Complement (<span class="arithmatex">\(^c\)</span>)</strong> corresponds to <strong>NOT</strong> (<code>!</code>) and produces the "negative" of the grid.</li>
+<li><strong>De Morgan's Laws</strong> are visually verifiable: the complement of a union equals the intersection of the complements, and vice versa.</li>
+<li>The grid representation makes these set-theoretic operations <strong>geometrically visible</strong>, which is a core pedagogical goal of this problem.</li>
+<li>Every grid above can be generated with <strong>the same nested for-loop</strong> — only the <code>if</code> condition changes. This is exactly like Java <strong>star-pattern</strong> exercises, where the shape is determined by the condition inside the loop.</li>
+</ul>
 </blockquote>
 
 
