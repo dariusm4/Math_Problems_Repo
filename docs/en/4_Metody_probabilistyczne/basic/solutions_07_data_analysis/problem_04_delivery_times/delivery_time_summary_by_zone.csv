@@ -1,0 +1,4 @@
+zone,count,mean,median,min,max,std,delayed_proportion
+central,154,38.686,33.0,10.0,232.5,25.337,0.117
+remote,56,39.168,36.45,16.0,128.1,18.569,0.089
+suburban,140,36.103,33.05,11.3,151.0,19.855,0.086

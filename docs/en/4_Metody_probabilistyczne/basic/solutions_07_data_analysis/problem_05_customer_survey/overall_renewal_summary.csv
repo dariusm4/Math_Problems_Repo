@@ -1,0 +1,2 @@
+customer_count,renewed_count,renewal_rate,p_renewed_given_satisfaction_5,p_satisfaction_5_given_renewed,satisfaction_5_count
+600,454,0.757,0.955,0.231,110

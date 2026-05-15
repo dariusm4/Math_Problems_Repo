@@ -1,0 +1,2 @@
+n,mean,median_q2,q1,q3,iqr,lower_fence,upper_fence,outlier_count,delayed_count,delayed_proportion
+350,37.73,33.3,24.625,43.775,19.15,-4.1,72.5,20,35,0.1

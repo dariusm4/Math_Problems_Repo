@@ -1,0 +1,5 @@
+data_scope,observation_count,correlation_x_y
+all observations,264,0.0179
+without outlier_group,260,0.0572
+left_branch only,125,-0.9428
+right_branch only,135,0.9405

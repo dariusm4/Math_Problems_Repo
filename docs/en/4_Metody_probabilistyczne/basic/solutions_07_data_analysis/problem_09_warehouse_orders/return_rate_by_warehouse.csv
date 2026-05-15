@@ -1,0 +1,6 @@
+warehouse,returned_count,order_line_count,return_rate
+central,17,336,0.0506
+south,13,240,0.0542
+west,17,233,0.073
+north,13,197,0.066
+east,14,194,0.0722
