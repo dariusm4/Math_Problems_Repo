@@ -1,5 +1,5 @@
 site_name: Math Problems
-site_url: https://dariusm4.github.io/Math_Problems_Repo/
+site_url: https://dchorazkiewicz.github.io/Math_Problems_Repo/
 
 theme:
   name: material
@@ -10,126 +10,58 @@ theme:
         icon: material/brightness-7
         name: Switch to dark mode
 
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - stylesheets/extra.css
+
+plugins:
+  - search
+  - i18n:
+      docs_structure: folder
+      languages:
+        - locale: pl
+          name: Polski
+          build: true
+          nav:
+            - Home: 'index.md'
+            - 'Wykład: Matematyka':
+              - Algebra:
+                - '1. Macierze i operacje': '1_Algebra/01_matrices_and_operations.md'
+                - '2. Wyznaczniki': '1_Algebra/02_determinants.md'
+                - '3. Odwracanie macierzy': '1_Algebra/03_matrix_inversion.md'
+                - '4. Układy równań': '1_Algebra/04_systems_of_equations.md'
+              - Geometria:
+                - '1. Wektory': '2_Geometria/01_vectors.md'
+                - '2. Proste': '2_Geometria/02_lines.md'
+                - '3. Płaszczyzny': '2_Geometria/03_planes.md'
+                - '4. Prosta i płaszczyzna': '2_Geometria/04_line_and_plane.md'
+              - Analiza:
+                - '1. Granice ciągów': '3_Analiza/01_sequence_limits.md'
+                - '2. Granice funkcji': '3_Analiza/02_function_limits.md'
+                - '3. Pochodne funkcji': '3_Analiza/03_derivatives.md'
+                - '4. Badanie funkcji': '3_Analiza/04_function_analysis.md'
+                - '5. Całki': '3_Analiza/05_integrals.md'
+                - '6. Zastosowania rachunku': '3_Analiza/06_applications.md'
             - 'Wykład: Metody probabilistyczne':
               - Metody probabilistyczne:
-<<<<<<< HEAD
-                - '1. Zdarzenia i prawdopodobieństwo': '4_Metody_probabilistyczne/01_events_and_probability.md'
-                - 'Rozwiązania 1':
-                  - 'Zadanie 1': '4_Metody_probabilistyczne/solution_01_events_and_probability/sol_prob_01.md'
-                  - 'Zadanie 2': '4_Metody_probabilistyczne/solution_01_events_and_probability/sol_prob_02.md'
-                  - 'Zadanie 3': '4_Metody_probabilistyczne/solution_01_events_and_probability/sol_prob_03.md'
-                  - 'Zadanie 4': '4_Metody_probabilistyczne/solution_01_events_and_probability/sol_prob_04.md'
-                  - 'Zadanie 5': '4_Metody_probabilistyczne/solution_01_events_and_probability/sol_prob_05.md'
-                  - 'Zadanie 6': '4_Metody_probabilistyczne/solution_01_events_and_probability/sol_prob_06.md'
-                  - 'Zadanie 7': '4_Metody_probabilistyczne/solution_01_events_and_probability/sol_prob_07.md'
-                  - 'Zadanie 8': '4_Metody_probabilistyczne/solution_01_events_and_probability/sol_prob_08.md'
-                  - 'Zadanie 9': '4_Metody_probabilistyczne/solution_01_events_and_probability/sol_prob_09.md'
-                  - 'Zadanie 10': '4_Metody_probabilistyczne/solution_01_events_and_probability/sol_prob_10.md'
-                - '2. Zmienne losowe': '4_Metody_probabilistyczne/02_random_variables.md'
-                - 'Rozwiązania 2':
-                  - 'Zadanie 1': '4_Metody_probabilistyczne/solution_02_random_variables/sol_prob_01.md'
-                  - 'Zadanie 2': '4_Metody_probabilistyczne/solution_02_random_variables/sol_prob_02.md'
-                  - 'Zadanie 3': '4_Metody_probabilistyczne/solution_02_random_variables/sol_prob_03.md'
-                  - 'Zadanie 4': '4_Metody_probabilistyczne/solution_02_random_variables/sol_prob_04.md'
-                  - 'Zadanie 5': '4_Metody_probabilistyczne/solution_02_random_variables/sol_prob_05.md'
-                  - 'Zadanie 6': '4_Metody_probabilistyczne/solution_02_random_variables/sol_prob_06.md'
-                  - 'Zadanie 7': '4_Metody_probabilistyczne/solution_02_random_variables/sol_prob_07.md'
-                  - 'Zadanie 8': '4_Metody_probabilistyczne/solution_02_random_variables/sol_prob_08.md'
-                  - 'Zadanie 9': '4_Metody_probabilistyczne/solution_02_random_variables/sol_prob_09.md'
-                  - 'Zadanie 10': '4_Metody_probabilistyczne/solution_02_random_variables/sol_prob_10.md'
-                - '3. Parametry rozkładu': '4_Metody_probabilistyczne/03_distribution_parameters.md'
-                - 'Rozwiązania 3':
-                  - 'Zadanie 1': '4_Metody_probabilistyczne/solution_03_distribution_parameters/sol_prob_01.md'
-                  - 'Zadanie 2': '4_Metody_probabilistyczne/solution_03_distribution_parameters/sol_prob_02.md'
-                  - 'Zadanie 3': '4_Metody_probabilystyczne/solution_03_distribution_parameters/sol_prob_03.md'
-                - '4. Wybrane rozkłady': '4_Metody_probabilistyczne/04_selected_distributions.md'
-                - 'Rozwiązania 4':
-                  - 'Zadanie 1': '4_Metody_probabilistyczne/solution_04_selected_distributions/sol_prob_01.md'
-                - '5. Twierdzenia graniczne': '4_Metody_probabilistyczne/05_limit_theorems.md'
-                - 'Rozwiązania 5':
-                  - 'Zadanie 1': '4_Metody_probabilistyczne/solution_05_limit_theorems/sol_prob_01.md'
-                - '6. Podstawowe statystyki': '4_Metody_probabilistyczne/06_basic_statistics.md'
-                - 'Rozwiązania 6':
-                  - 'Zadanie 1': '4_Metody_probabilistyczne/solution_06_basic_statistics/sol_prob_01.md'
-                - '7. Estymacja': '4_Metody_probabilistyczne/07_estimation.md'
-                - 'Rozwiązania 7':
-                  - 'Zadanie 1': '4_Metody_probabilistyczne/solution_07_estimation/sol_prob_01.md'
-                - '8. Weryfikacja hipotez': '4_Metody_probabilistyczne/08_hypothesis_testing.md'
-                - 'Rozwiązania 8':
-                  - 'Zadanie 1': '4_Metody_probabilistyczne/solution_08_hypothesis_testing/sol_prob_01.md'
-                - '9. Korelacja i regresja': '4_Metody_probabilistyczne/09_correlation_and_regression.md'
-                - 'Rozwiązania 9':
-                  - 'Zadanie 1': '4_Metody_probabilistyczne/solution_09_correlation_and_regression/sol_prob_01.md'
-                - '10. Zaawansowane metody': '4_Metody_probabilistyczne/10_advanced_methods.md'
-                - 'Rozwiązania 10':
-                  - 'Zadanie 1': '4_Metody_probabilistyczne/solution_10_advanced_methods/sol_prob_01.md'
-                - '11. Teoria decyzji': '4_Metody_probabilistyczne/11_decision_theory.md'
-                - 'Rozwiązania 11':
-                  - 'Zadanie 1': '4_Metody_probabilistyczne/solution_11_decision_theory/sol_prob_01.md'
-                  - 'Zadanie 2': '4_Metody_probabilistyczne/solution_08_hypothesis_testing/sol_prob_02.md'
-                  - 'Zadanie 3': '4_Metody_probabilistyczne/solution_08_hypothesis_testing/sol_prob_03.md'
-                  - 'Zadanie 4': '4_Metody_probabilistyczne/solution_08_hypothesis_testing/sol_prob_04.md'
-                  - 'Zadanie 5': '4_Metody_probabilistyczne/solution_08_hypothesis_testing/sol_prob_05.md'
-                  - 'Zadanie 6': '4_Metody_probabilistyczne/solution_08_hypothesis_testing/sol_prob_06.md'
-                  - 'Zadanie 7': '4_Metody_probabilistyczne/solution_08_hypothesis_testing/sol_prob_07.md'
-                  - 'Zadanie 8': '4_Metody_probabilistyczne/solution_08_hypothesis_testing/sol_prob_08.md'
-                  - 'Zadanie 9': '4_Metody_probabilistyczne/solution_08_hypothesis_testing/sol_prob_09.md'
-                  - 'Zadanie 10': '4_Metody_probabilistyczne/solution_08_hypothesis_testing/sol_prob_10.md'
-                - '9. Korelacja i regresja': '4_Metody_probabilistyczne/09_correlation_and_regression.md'
-                - 'Rozwiązania 9':
-                  - 'Zadanie 1': '4_Metody_probabilistyczne/solution_09_correlation_and_regression/sol_prob_01.md'
-                  - 'Zadanie 2': '4_Metody_probabilistyczne/solution_09_correlation_and_regression/sol_prob_02.md'
-                  - 'Zadanie 3': '4_Metody_probabilistyczne/solution_09_correlation_and_regression/sol_prob_03.md'
-                  - 'Zadanie 4': '4_Metody_probabilistyczne/solution_09_correlation_and_regression/sol_prob_04.md'
-                  - 'Zadanie 5': '4_Metody_probabilistyczne/solution_09_correlation_and_regression/sol_prob_05.md'
-                  - 'Zadanie 6': '4_Metody_probabilistyczne/solution_09_correlation_and_regression/sol_prob_06.md'
-                  - 'Zadanie 7': '4_Metody_probabilistyczne/solution_09_correlation_and_regression/sol_prob_07.md'
-                  - 'Zadanie 8': '4_Metody_probabilistyczne/solution_09_correlation_and_regression/sol_prob_08.md'
-                  - 'Zadanie 9': '4_Metody_probabilistyczne/solution_09_correlation_and_regression/sol_prob_09.md'
-                  - 'Zadanie 10': '4_Metody_probabilistyczne/solution_09_correlation_and_regression/sol_prob_10.md'
-                - '10. Zaawansowane metody': '4_Metody_probabilistyczne/10_advanced_methods.md'
-                - 'Rozwiązania 10':
-                  - 'Zadanie 1': '4_Metody_probabilistyczne/solution_10_advanced_methods/sol_prob_01.md'
-                  - 'Zadanie 2': '4_Metody_probabilistyczne/solution_10_advanced_methods/sol_prob_02.md'
-                  - 'Zadanie 3': '4_Metody_probabilistyczne/solution_10_advanced_methods/sol_prob_03.md'
-                  - 'Zadanie 4': '4_Metody_probabilistyczne/solution_10_advanced_methods/sol_prob_04.md'
-                  - 'Zadanie 5': '4_Metody_probabilistyczne/solution_10_advanced_methods/sol_prob_05.md'
-                  - 'Zadanie 6': '4_Metody_probabilistyczne/solution_10_advanced_methods/sol_prob_06.md'
-                  - 'Zadanie 7': '4_Metody_probabilistyczne/solution_10_advanced_methods/sol_prob_07.md'
-                  - 'Zadanie 8': '4_Metody_probabilistyczne/solution_10_advanced_methods/sol_prob_08.md'
-                  - 'Zadanie 9': '4_Metody_probabilistyczne/solution_10_advanced_methods/sol_prob_09.md'
-                  - 'Zadanie 10': '4_Metody_probabilistyczne/solution_10_advanced_methods/sol_prob_10.md'
-                - '11. Teoria decyzji': '4_Metody_probabilistyczne/11_decision_theory.md'
-                - 'Rozwiązania 11':
-                  - 'Zadanie 1': '4_Metody_probabilistyczne/solution_11_decision_theory/sol_prob_01.md'
-                  - 'Zadanie 2': '4_Metody_probabilistyczne/solution_11_decision_theory/sol_prob_02.md'
-                  - 'Zadanie 3': '4_Metody_probabilistyczne/solution_11_decision_theory/sol_prob_03.md'
-                  - 'Zadanie 4': '4_Metody_probabilistyczne/solution_11_decision_theory/sol_prob_04.md'
-                  - 'Zadanie 5': '4_Metody_probabilistyczne/solution_11_decision_theory/sol_prob_05.md'
-                  - 'Zadanie 6': '4_Metody_probabilistyczne/solution_11_decision_theory/sol_prob_06.md'
-                  - 'Zadanie 7': '4_Metody_probabilistyczne/solution_11_decision_theory/sol_prob_07.md'
-                  - 'Zadanie 8': '4_Metody_probabilistyczne/solution_11_decision_theory/sol_prob_08.md'
-                  - 'Zadanie 9': '4_Metody_probabilistyczne/solution_11_decision_theory/sol_prob_09.md'
-                  - 'Zadanie 10': '4_Metody_probabilistyczne/solution_11_decision_theory/sol_prob_10.md'
->>>>>>> 8afa875 (Solutions for first 2 weeks)
-=======
                 - Podstawowe:
                     - '1. Zdarzenia i prawdopodobieństwo': '4_Metody_probabilistyczne/basic/01_events_and_probability.md'
                     - '2. Kombinatoryka': '4_Metody_probabilistyczne/basic/02_combinatorics.md'
-                    - 'Rozwiązania Kombinatoryka':
-                      - 'Zadanie 1': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_01.md'
-                      - 'Zadanie 2': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_02.md'
-                      - 'Zadanie 3': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_03.md'
-                      - 'Zadanie 4': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_04.md'
-                      - 'Zadanie 5': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_05.md'
-                      - 'Zadanie 6': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_06.md'
-                      - 'Zadanie 7': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_07.md'
-                      - 'Zadanie 8': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_08.md'
-                      - 'Zadanie 9': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_09.md'
-                      - 'Zadanie 10': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_10.md'
-                      - 'Zadanie 11': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_11.md'
-                      - 'Zadanie 12': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_12.md'
-                    - '3. Rozkłady prawdopodobieństwa': '4_Metody_probabilistyczne/basic/04_probability_distributions.md'
+                    - '3. Rozkłady prawdopodobieństwa': '4_Metody_probabilistyczne/basic/03_probability_distributions.md'
                 - Zaawansowane:
                     - '1. Zdarzenia i prawdopodobieństwo': '4_Metody_probabilistyczne/advanced/01_events_and_probability.md'
                     - '2. Zmienne losowe': '4_Metody_probabilistyczne/advanced/02_random_variables.md'
@@ -142,7 +74,6 @@ theme:
                     - '9. Korelacja i regresja': '4_Metody_probabilistyczne/advanced/09_correlation_and_regression.md'
                     - '10. Zaawansowane metody': '4_Metody_probabilistyczne/advanced/10_advanced_methods.md'
                     - '11. Teoria decyzji': '4_Metody_probabilistyczne/advanced/11_decision_theory.md'
->>>>>>> 1c3928e (Add combinatorics solutions and update mkdocs nav)
               - Animacje:
                 - 'Lab 1': 'anim/4_Metody_probalistyczne/laboratory_1.html'
                 - 'Lab 2': 'anim/4_Metody_probalistyczne/laboratory_2.html'
@@ -171,93 +102,82 @@ theme:
                 - '4. Function Analysis': '3_Analiza/04_function_analysis.md'
                 - '5. Integrals': '3_Analiza/05_integrals.md'
                 - '6. Calculus Applications': '3_Analiza/06_applications.md'
-            - 'Wykład: Metody probabilistyczne':
-              - Metody probabilistyczne:
-                - Podstawowe:
-                    - '1. Zdarzenia i prawdopodobieństwo': '4_Metody_probabilistyczne/basic/01_events_and_probability.md'
-                    - '2. Kombinatoryka': '4_Metody_probabilistyczne/basic/02_combinatorics.md'
-                    - '3. Rozkłady prawdopodobieństwa': '4_Metody_probabilistyczne/basic/03_probability_distributions.md'
-                - Zaawansowane:
-                    - '1. Zdarzenia i prawdopodobieństwo': '4_Metody_probabilistyczne/advanced/01_events_and_probability.md'
-                    - '2. Zmienne losowe': '4_Metody_probabilistyczne/advanced/02_random_variables.md'
-                    - '3. Parametry rozkładu': '4_Metody_probabilistyczne/advanced/03_distribution_parameters.md'
-                    - '4. Wybrane rozkłady': '4_Metody_probabilistyczne/advanced/04_selected_distributions.md'
-                    - '5. Twierdzenia graniczne': '4_Metody_probabilistyczne/advanced/05_limit_theorems.md'
-                    - '6. Podstawowe statystyki': '4_Metody_probabilistyczne/advanced/06_basic_statistics.md'
-                    - '7. Estymacja': '4_Metody_probabilistyczne/advanced/07_estimation.md'
-                    - '8. Weryfikacja hipotez': '4_Metody_probabilistyczne/advanced/08_hypothesis_testing.md'
-                    - '9. Korelacja i regresja': '4_Metody_probabilistyczne/advanced/09_correlation_and_regression.md'
-                    - '10. Zaawansowane metody': '4_Metody_probabilistyczne/advanced/10_advanced_methods.md'
-                    - '11. Teoria decyzji': '4_Metody_probabilistyczne/advanced/11_decision_theory.md'
-                  - 'Problem 3': '4_Metody_probabilistyczne/solution_06_basic_statistics/sol_prob_03.md'
-                  - 'Problem 4': '4_Metody_probabilistyczne/solution_06_basic_statistics/sol_prob_04.md'
-                  - 'Problem 5': '4_Metody_probabilistyczne/solution_06_basic_statistics/sol_prob_05.md'
-                  - 'Problem 6': '4_Metody_probabilistyczne/solution_06_basic_statistics/sol_prob_06.md'
-                  - 'Problem 7': '4_Metody_probabilistyczne/solution_06_basic_statistics/sol_prob_07.md'
-                  - 'Problem 8': '4_Metody_probabilistyczne/solution_06_basic_statistics/sol_prob_08.md'
-                  - 'Problem 9': '4_Metody_probabilistyczne/solution_06_basic_statistics/sol_prob_09.md'
-                  - 'Problem 10': '4_Metody_probabilistyczne/solution_06_basic_statistics/sol_prob_10.md'
-                - '7. Estimation': '4_Metody_probabilistyczne/07_estimation.md'
-                - 'Solutions 7':
-                  - 'Problem 1': '4_Metody_probabilistyczne/solution_07_estimation/sol_prob_01.md'
-                  - 'Problem 2': '4_Metody_probabilistyczne/solution_07_estimation/sol_prob_02.md'
-                  - 'Problem 3': '4_Metody_probabilistyczne/solution_07_estimation/sol_prob_03.md'
-                  - 'Problem 4': '4_Metody_probabilistyczne/solution_07_estimation/sol_prob_04.md'
-                  - 'Problem 5': '4_Metody_probabilistyczne/solution_07_estimation/sol_prob_05.md'
-                  - 'Problem 6': '4_Metody_probabilistyczne/solution_07_estimation/sol_prob_06.md'
-                  - 'Problem 7': '4_Metody_probabilistyczne/solution_07_estimation/sol_prob_07.md'
-                  - 'Problem 8': '4_Metody_probabilistyczne/solution_07_estimation/sol_prob_08.md'
-                  - 'Problem 9': '4_Metody_probabilistyczne/solution_07_estimation/sol_prob_09.md'
-                  - 'Problem 10': '4_Metody_probabilistyczne/solution_07_estimation/sol_prob_10.md'
-                - '8. Hypothesis Testing': '4_Metody_probabilistyczne/08_hypothesis_testing.md'
-                - 'Solutions 8':
-                  - 'Problem 1': '4_Metody_probabilistyczne/solution_08_hypothesis_testing/sol_prob_01.md'
-                  - 'Problem 2': '4_Metody_probabilistyczne/solution_08_hypothesis_testing/sol_prob_02.md'
-                  - 'Problem 3': '4_Metody_probabilistyczne/solution_08_hypothesis_testing/sol_prob_03.md'
-                  - 'Problem 4': '4_Metody_probabilistyczne/solution_08_hypothesis_testing/sol_prob_04.md'
-                  - 'Problem 5': '4_Metody_probabilistyczne/solution_08_hypothesis_testing/sol_prob_05.md'
-                  - 'Problem 6': '4_Metody_probabilistyczne/solution_08_hypothesis_testing/sol_prob_06.md'
-                  - 'Problem 7': '4_Metody_probabilistyczne/solution_08_hypothesis_testing/sol_prob_07.md'
-                  - 'Problem 8': '4_Metody_probabilistyczne/solution_08_hypothesis_testing/sol_prob_08.md'
-                  - 'Problem 9': '4_Metody_probabilistyczne/solution_08_hypothesis_testing/sol_prob_09.md'
-                  - 'Problem 10': '4_Metody_probabilistyczne/solution_08_hypothesis_testing/sol_prob_10.md'
-                - '9. Correlation & Regression': '4_Metody_probabilistyczne/09_correlation_and_regression.md'
-                - 'Solutions 9':
-                  - 'Problem 1': '4_Metody_probabilistyczne/solution_09_correlation_and_regression/sol_prob_01.md'
-                  - 'Problem 2': '4_Metody_probabilistyczne/solution_09_correlation_and_regression/sol_prob_02.md'
-                  - 'Problem 3': '4_Metody_probabilistyczne/solution_09_correlation_and_regression/sol_prob_03.md'
-                  - 'Problem 4': '4_Metody_probabilistyczne/solution_09_correlation_and_regression/sol_prob_04.md'
-                  - 'Problem 5': '4_Metody_probabilistyczne/solution_09_correlation_and_regression/sol_prob_05.md'
-                  - 'Problem 6': '4_Metody_probabilistyczne/solution_09_correlation_and_regression/sol_prob_06.md'
-                  - 'Problem 7': '4_Metody_probabilistyczne/solution_09_correlation_and_regression/sol_prob_07.md'
-                  - 'Problem 8': '4_Metody_probabilistyczne/solution_09_correlation_and_regression/sol_prob_08.md'
-                  - 'Problem 9': '4_Metody_probabilistyczne/solution_09_correlation_and_regression/sol_prob_09.md'
-                  - 'Problem 10': '4_Metody_probabilistyczne/solution_09_correlation_and_regression/sol_prob_10.md'
-                - '10. Advanced Methods': '4_Metody_probabilistyczne/10_advanced_methods.md'
-                - 'Solutions 10':
-                  - 'Problem 1': '4_Metody_probabilistyczne/solution_10_advanced_methods/sol_prob_01.md'
-                  - 'Problem 2': '4_Metody_probabilistyczne/solution_10_advanced_methods/sol_prob_02.md'
-                  - 'Problem 3': '4_Metody_probabilistyczne/solution_10_advanced_methods/sol_prob_03.md'
-                  - 'Problem 4': '4_Metody_probabilistyczne/solution_10_advanced_methods/sol_prob_04.md'
-                  - 'Problem 5': '4_Metody_probabilistyczne/solution_10_advanced_methods/sol_prob_05.md'
-                  - 'Problem 6': '4_Metody_probabilistyczne/solution_10_advanced_methods/sol_prob_06.md'
-                  - 'Problem 7': '4_Metody_probabilistyczne/solution_10_advanced_methods/sol_prob_07.md'
-                  - 'Problem 8': '4_Metody_probabilistyczne/solution_10_advanced_methods/sol_prob_08.md'
-                  - 'Problem 9': '4_Metody_probabilistyczne/solution_10_advanced_methods/sol_prob_09.md'
-                  - 'Problem 10': '4_Metody_probabilistyczne/solution_10_advanced_methods/sol_prob_10.md'
-                - '11. Decision Theory': '4_Metody_probabilistyczne/11_decision_theory.md'
-                - 'Solutions 11':
-                  - 'Problem 1': '4_Metody_probabilistyczne/solution_11_decision_theory/sol_prob_01.md'
-                  - 'Problem 2': '4_Metody_probabilistyczne/solution_11_decision_theory/sol_prob_02.md'
-                  - 'Problem 3': '4_Metody_probabilistyczne/solution_11_decision_theory/sol_prob_03.md'
-                  - 'Problem 4': '4_Metody_probabilistyczne/solution_11_decision_theory/sol_prob_04.md'
-                  - 'Problem 5': '4_Metody_probabilistyczne/solution_11_decision_theory/sol_prob_05.md'
-                  - 'Problem 6': '4_Metody_probabilistyczne/solution_11_decision_theory/sol_prob_06.md'
-                  - 'Problem 7': '4_Metody_probabilistyczne/solution_11_decision_theory/sol_prob_07.md'
-                  - 'Problem 8': '4_Metody_probabilistyczne/solution_11_decision_theory/sol_prob_08.md'
-                  - 'Problem 9': '4_Metody_probabilistyczne/solution_11_decision_theory/sol_prob_09.md'
-                  - 'Problem 10': '4_Metody_probabilistyczne/solution_11_decision_theory/sol_prob_10.md'
->>>>>>> 8afa875 (Solutions for first 2 weeks)
+            - 'Lecture: Probabilistic Methods':
+              - Probabilistic Methods:
+                - Basic:
+                    - '1. Events & Probability': '4_Metody_probabilistyczne/basic/01_events_and_probability.md'
+                    - 'Solutions — Events & Probability':
+                        - 'Solution 1': '4_Metody_probabilistyczne/basic/solutions_01_events_and_probability/solution_01.md'
+                        - 'Solution 2': '4_Metody_probabilistyczne/basic/solutions_01_events_and_probability/solution_02.md'
+                        - 'Solution 3': '4_Metody_probabilistyczne/basic/solutions_01_events_and_probability/solution_03.md'
+                        - 'Solution 4': '4_Metody_probabilistyczne/basic/solutions_01_events_and_probability/solution_04.md'
+                        - 'Solution 5': '4_Metody_probabilistyczne/basic/solutions_01_events_and_probability/solution_05.md'
+                        - 'Solution 6': '4_Metody_probabilistyczne/basic/solutions_01_events_and_probability/solution_06.md'
+                        - 'Solution 7': '4_Metody_probabilistyczne/basic/solutions_01_events_and_probability/solution_07.md'
+                        - 'Solution 8': '4_Metody_probabilistyczne/basic/solutions_01_events_and_probability/solution_08.md'
+                        - 'Solution 9': '4_Metody_probabilistyczne/basic/solutions_01_events_and_probability/solution_09.md'
+                        - 'Solution 10': '4_Metody_probabilistyczne/basic/solutions_01_events_and_probability/solution_10.md'
+                    - '2. Combinatorics': '4_Metody_probabilistyczne/basic/02_combinatorics.md'
+                    - 'Solutions — Combinatorics':
+                        - 'Solution 1': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_01.md'
+                        - 'Solution 2': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_02.md'
+                        - 'Solution 3': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_03.md'
+                        - 'Solution 4': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_04.md'
+                        - 'Solution 5': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_05.md'
+                        - 'Solution 6': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_06.md'
+                        - 'Solution 7': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_07.md'
+                        - 'Solution 8': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_08.md'
+                        - 'Solution 9': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_09.md'
+                        - 'Solution 10': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_10.md'
+                        - 'Solution 11': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_11.md'
+                        - 'Solution 12': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_12.md'
+                    - '3. Probability Distributions': '4_Metody_probabilistyczne/basic/03_probability_distributions.md'
+                    - 'Solutions — Probability Distributions':
+                        - 'Solution 1': '4_Metody_probabilistyczne/basic/solutions_03_probability_distributions/solution_01.md'
+                        - 'Solution 2': '4_Metody_probabilistyczne/basic/solutions_03_probability_distributions/solution_02.md'
+                        - 'Solution 3': '4_Metody_probabilistyczne/basic/solutions_03_probability_distributions/solution_03.md'
+                        - 'Solution 4': '4_Metody_probabilistyczne/basic/solutions_03_probability_distributions/solution_04.md'
+                        - 'Solution 5': '4_Metody_probabilistyczne/basic/solutions_03_probability_distributions/solution_05.md'
+                        - 'Solution 6': '4_Metody_probabilistyczne/basic/solutions_03_probability_distributions/solution_06.md'
+                        - 'Solution 7': '4_Metody_probabilistyczne/basic/solutions_03_probability_distributions/solution_07.md'
+                        - 'Solution 8': '4_Metody_probabilistyczne/basic/solutions_03_probability_distributions/solution_08.md'
+                        - 'Solution 9': '4_Metody_probabilistyczne/basic/solutions_03_probability_distributions/solution_09.md'
+                        - 'Solution 10': '4_Metody_probabilistyczne/basic/solutions_03_probability_distributions/solution_10.md'
+                        - 'Solution 11': '4_Metody_probabilistyczne/basic/solutions_03_probability_distributions/solution_11.md'
+                        - 'Solution 12': '4_Metody_probabilistyczne/basic/solutions_03_probability_distributions/solution_12.md'
+                    - '4. Discovering Formalism': '4_Metody_probabilistyczne/basic/04_discovery_formalism.md'
+                    - 'Solutions — Discovering Formalism':
+                        - 'Solution 1': '4_Metody_probabilistyczne/basic/solutions_04_discovery_formalism/solution_01.md'
+                        - 'Solution 2': '4_Metody_probabilistyczne/basic/solutions_04_discovery_formalism/solution_02.md'
+                        - 'Solution 3': '4_Metody_probabilistyczne/basic/solutions_04_discovery_formalism/solution_03.md'
+                        - 'Solution 4': '4_Metody_probabilistyczne/basic/solutions_04_discovery_formalism/solution_04.md'
+                        - 'Solution 5': '4_Metody_probabilistyczne/basic/solutions_04_discovery_formalism/solution_05.md'
+                        - 'Solution 6': '4_Metody_probabilistyczne/basic/solutions_04_discovery_formalism/solution_06.md'
+                    - '5. PMF, PDF, and CDF': '4_Metody_probabilistyczne/basic/05_pmf_pdf_cdf.md'
+                    - '6. Conditional Probability': '4_Metody_probabilistyczne/basic/06_conditional_probability.md'
+                    - 'Solutions — Conditional Probability':
+                        - 'Solution 1': '4_Metody_probabilistyczne/basic/solutions_06_conditional_probability/solution_01.md'
+                        - 'Solution 2': '4_Metody_probabilistyczne/basic/solutions_06_conditional_probability/solution_02.md'
+                        - 'Solution 3': '4_Metody_probabilistyczne/basic/solutions_06_conditional_probability/solution_03.md'
+                        - 'Solution 4': '4_Metody_probabilistyczne/basic/solutions_06_conditional_probability/solution_04.md'
+                        - 'Solution 5': '4_Metody_probabilistyczne/basic/solutions_06_conditional_probability/solution_05.md'
+                        - 'Solution 6': '4_Metody_probabilistyczne/basic/solutions_06_conditional_probability/solution_06.md'
+                        - 'Solution 7': '4_Metody_probabilistyczne/basic/solutions_06_conditional_probability/solution_07.md'
+                        - 'Solution 8': '4_Metody_probabilistyczne/basic/solutions_06_conditional_probability/solution_08.md'
+                        - 'Solution 9': '4_Metody_probabilistyczne/basic/solutions_06_conditional_probability/solution_09.md'
+                        - 'Solution 10': '4_Metody_probabilistyczne/basic/solutions_06_conditional_probability/solution_10.md'
+                - Advanced:
+                    - '1. Events & Probability': '4_Metody_probabilistyczne/advanced/01_events_and_probability.md'
+                    - '2. Random Variables': '4_Metody_probabilistyczne/advanced/02_random_variables.md'
+                    - '3. Distribution Parameters': '4_Metody_probabilistyczne/advanced/03_distribution_parameters.md'
+                    - '4. Selected Distributions': '4_Metody_probabilistyczne/advanced/04_selected_distributions.md'
+                    - '5. Limit Theorems': '4_Metody_probabilistyczne/advanced/05_limit_theorems.md'
+                    - '6. Basic Statistics': '4_Metody_probabilistyczne/advanced/06_basic_statistics.md'
+                    - '7. Estimation': '4_Metody_probabilistyczne/advanced/07_estimation.md'
+                    - '8. Hypothesis Testing': '4_Metody_probabilistyczne/advanced/08_hypothesis_testing.md'
+                    - '9. Correlation & Regression': '4_Metody_probabilistyczne/advanced/09_correlation_and_regression.md'
+                    - '10. Advanced Methods': '4_Metody_probabilistyczne/advanced/10_advanced_methods.md'
+                    - '11. Decision Theory': '4_Metody_probabilistyczne/advanced/11_decision_theory.md'
               - Animations:
                 - 'Lab 1': 'anim/4_Metody_probalistyczne/laboratory_1.html'
                 - 'Lab 2': 'anim/4_Metody_probalistyczne/laboratory_2.html'

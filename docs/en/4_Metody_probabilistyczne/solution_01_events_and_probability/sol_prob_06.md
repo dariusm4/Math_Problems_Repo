@@ -19,3 +19,4 @@ $$\boxed{P(G) = 0.73}$$
 $$P(M_1|G) = \frac{P(G|M_1) \cdot P(M_1)}{P(G)} = \frac{0.65 \cdot 0.6}{0.73} = \frac{0.39}{0.73}$$
 
 $$\boxed{P(M_1|G) \approx 0.534}$$
+a
