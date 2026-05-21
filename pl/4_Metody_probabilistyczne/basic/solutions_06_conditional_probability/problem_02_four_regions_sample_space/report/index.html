@@ -25,7 +25,7 @@
     
     
       
-        <title>Problem 2 — Four Regions of a Sample Space - Math Problems</title>
+        <title>Problem 2 — Full Walkthrough - Math Problems</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#problem-2-four-regions-of-a-sample-space" class="md-skip">
+        <a href="#problem-2-full-walkthrough" class="md-skip">
           Przejdź do treści
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Problem 2 — Four Regions of a Sample Space
+              Problem 2 — Full Walkthrough
             
           </span>
         </div>
@@ -1819,7 +1819,7 @@
 
 
 
-<h1 id="problem-2-four-regions-of-a-sample-space">Problem 2 — Four Regions of a Sample Space</h1>
+<h1 id="problem-2-full-walkthrough">Problem 2 — Full Walkthrough</h1>
 <h2 id="generated-files">Generated files</h2>
 <ul>
 <li>Four regions: <a href="../../../../../../4_Metody_probabilistyczne/basic/solutions_06_conditional_probability/problem_02_four_regions_sample_space/four_regions.csv"><code>four_regions.csv</code></a></li>
@@ -1886,7 +1886,9 @@ P(T^c \cap S^c) = \frac{40}{350} \approx 0.1143
 <div class="arithmatex">\[
 P(T \cup S) = P(T) + P(S) - P(T \cap S) = \frac{150}{350} + \frac{250}{350} - \frac{90}{350} = \frac{310}{350} \approx 0.8857
 \]</div>
-<p>We subtract <span class="arithmatex">\(P(T \cap S)\)</span> because the 90 tickets in that region were counted twice — once in <span class="arithmatex">\(P(T)\)</span> and once in <span class="arithmatex">\(P(S)\)</span>.</p>
+<p>!!! info "Why do we subtract <span class="arithmatex">\(P(T \cap S)\)</span>?"</p>
+<pre><code>When we add $P(T)$ and $P(S)$, the 90 tickets in $T \cap S$ get counted twice — once inside $P(T)$ and once inside $P(S)$. Subtracting $P(T \cap S)$ corrects for that double-counting.
+</code></pre>
 <p><strong>Alternative</strong> using the four regions directly — everything except <span class="arithmatex">\(T^c \cap S^c\)</span>:</p>
 <div class="arithmatex">\[
 P(T \cup S) = 1 - P(T^c \cap S^c) = 1 - \frac{40}{350} \approx 0.8857
@@ -1897,18 +1899,26 @@ P(T^c \cup S) = P(T^c) + P(S) - P(T^c \cap S) = \frac{200}{350} + \frac{250}{350
 \]</div>
 <h2 id="step-4-conditional-probabilities">Step 4 — Conditional probabilities</h2>
 <h3 id="ps-mid-t-given-that-the-ticket-is-technical-what-is-the-probability-it-was-solved"><span class="arithmatex">\(P(S \mid T)\)</span> — "given that the ticket is technical, what is the probability it was solved?"</h3>
-<p>We no longer look at all 350 tickets — we restrict to the 150 technical ones:</p>
 <div class="arithmatex">\[
 P(S \mid T) = \frac{90}{150} = 0.60
 \]</div>
+<p>!!! info "Why do we divide by 150 and not 350?"</p>
+<pre><code>The condition "$T$" means we already know the ticket is technical. So we restrict our universe to only those 150 tickets — the other 200 are irrelevant. Out of those 150, exactly 90 were solved. Formally: $P(S \mid T) = \frac{P(T \cap S)}{P(T)} = \frac{90/350}{150/350} = \frac{90}{150}$. The 350s cancel out, which is why we end up dividing by 150.
+</code></pre>
 <h3 id="ps-mid-tc-given-that-the-ticket-is-non-technical-what-is-the-probability-it-was-solved"><span class="arithmatex">\(P(S \mid T^c)\)</span> — "given that the ticket is non-technical, what is the probability it was solved?"</h3>
-<p>We restrict to the 200 non-technical tickets:</p>
 <div class="arithmatex">\[
 P(S \mid T^c) = \frac{160}{200} = 0.80
 \]</div>
+<p>By the same logic, we restrict to the 200 non-technical tickets and ask how many of those were solved.</p>
 <h2 id="step-5-interpretation">Step 5 — Interpretation</h2>
 <p>60% of technical tickets are solved during first contact, compared to 80% of non-technical ones. The gap shows that <span class="arithmatex">\(T\)</span> and <span class="arithmatex">\(S\)</span> are not independent — being a technical ticket lowers the probability of first-contact resolution.</p>
-<p>If they were independent, we would have <span class="arithmatex">\(P(S \mid T) = P(S \mid T^c) = P(S)\)</span>. Since <span class="arithmatex">\(0.60 \neq 0.80\)</span>, the ticket type clearly affects the outcome.</p>
+<p>!!! info "What would independence look like numerically?"</p>
+<pre><code>If $T$ and $S$ were independent, knowing the ticket type would tell you nothing about whether it gets solved. Formally, independence means:
+
+$$P(S \mid T) = P(S \mid T^c) = P(S)$$
+
+Here $P(S) = \frac{250}{350} \approx 0.714$, but $P(S \mid T) = 0.60$ and $P(S \mid T^c) = 0.80$. Since $0.60 \neq 0.80 \neq 0.714$, the events are dependent — ticket type clearly affects the outcome.
+</code></pre>
 
 
 
