@@ -1903,14 +1903,12 @@ P(T^c \cup S) = P(T^c) + P(S) - P(T^c \cap S) = \frac{200}{350} + \frac{250}{350
 P(S \mid T) = \frac{90}{150} = 0.60
 \]</div>
 <p>!!! info "Why do we divide by 150 and not 350?"</p>
-<pre><code>The condition "T" means we already know the ticket is technical. So we restrict our universe to only those 150 tickets — the other 200 are irrelevant. Out of those 150, exactly 90 were solved. Formally:
-
-$$
-P(S \mid T) = \frac{P(T \cap S)}{P(T)} = \frac{90/350}{150/350} = \frac{90}{150}
-$$
-
-The 350s cancel out, which is why we end up dividing by 150.
+<pre><code>The condition "T" means we already know the ticket is technical. So we restrict our universe to only those 150 tickets — the other 200 are irrelevant. Out of those 150, exactly 90 were solved. The 350s cancel out, which is why we end up dividing by 150.
 </code></pre>
+<p>Formally:</p>
+<div class="arithmatex">\[
+P(S \mid T) = \frac{P(T \cap S)}{P(T)} = \frac{90/350}{150/350} = \frac{90}{150}
+\]</div>
 <h3 id="ps-mid-tc-given-that-the-ticket-is-non-technical-what-is-the-probability-it-was-solved"><span class="arithmatex">\(P(S \mid T^c)\)</span> — "given that the ticket is non-technical, what is the probability it was solved?"</h3>
 <div class="arithmatex">\[
 P(S \mid T^c) = \frac{160}{200} = 0.80
@@ -1919,14 +1917,13 @@ P(S \mid T^c) = \frac{160}{200} = 0.80
 <h2 id="step-5-interpretation">Step 5 — Interpretation</h2>
 <p>60% of technical tickets are solved during first contact, compared to 80% of non-technical ones. The gap shows that <span class="arithmatex">\(T\)</span> and <span class="arithmatex">\(S\)</span> are not independent — being a technical ticket lowers the probability of first-contact resolution.</p>
 <p>!!! info "What would independence look like numerically?"</p>
-<pre><code>If T and S were independent, knowing the ticket type would tell you nothing about whether it gets solved. Formally, independence means:
-
-$$
-P(S \mid T) = P(S \mid T^c) = P(S)
-$$
-
-Here P(S) = 250/350 ≈ 0.714, but P(S | T) = 0.60 and P(S | Tᶜ) = 0.80. Since 0.60 ≠ 0.80 ≠ 0.714, the events are dependent — ticket type clearly affects the outcome.
+<pre><code>If T and S were independent, knowing the ticket type would tell you nothing about whether it gets solved. Here P(S | T) = 0.60 and P(S | Tᶜ) = 0.80. Since 0.60 ≠ 0.80 ≠ 0.714, the events are dependent — ticket type clearly affects the outcome.
 </code></pre>
+<p>Formally, independence requires:</p>
+<div class="arithmatex">\[
+P(S \mid T) = P(S \mid T^c) = P(S) = \frac{250}{350} \approx 0.714
+\]</div>
+<p>But we found 0.60 and 0.80, so the condition fails.</p>
 
 
 
