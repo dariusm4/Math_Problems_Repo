@@ -166,6 +166,18 @@ plugins:
                         - 'Solution 8': '4_Metody_probabilistyczne/basic/solutions_06_conditional_probability/solution_08.md'
                         - 'Solution 9': '4_Metody_probabilistyczne/basic/solutions_06_conditional_probability/solution_09.md'
                         - 'Solution 10': '4_Metody_probabilistyczne/basic/solutions_06_conditional_probability/solution_10.md'
+                    - '7. Data Analysis': '4_Metody_probabilistyczne/basic/07_data_analysis.md'
+                    - 'Solutions — Data Analysis':
+                        - 'Solution 1 — Die Rolls': '4_Metody_probabilistyczne/basic/solutions_07_data_analysis/solution_01.md'
+                        - 'Solution 2 — Coin Tosses': '4_Metody_probabilistyczne/basic/solutions_07_data_analysis/solution_02.md'
+                        - 'Solution 3 — Exam Scores': '4_Metody_probabilistyczne/basic/solutions_07_data_analysis/solution_03.md'
+                        - 'Solution 4 — Delivery Times': '4_Metody_probabilistyczne/basic/solutions_07_data_analysis/solution_04.md'
+                        - 'Solution 5 — Customer Survey': '4_Metody_probabilistyczne/basic/solutions_07_data_analysis/solution_05.md'
+                        - 'Solution 6 — Factory Measurements': '4_Metody_probabilistyczne/basic/solutions_07_data_analysis/solution_06.md'
+                        - 'Solution 7 — Call Center': '4_Metody_probabilistyczne/basic/solutions_07_data_analysis/solution_07.md'
+                        - 'Solution 8 — Waiting Times': '4_Metody_probabilistyczne/basic/solutions_07_data_analysis/solution_08.md'
+                        - 'Solution 9 — Warehouse Orders': '4_Metody_probabilistyczne/basic/solutions_07_data_analysis/solution_09.md'
+                        - 'Solution 10 — Correlation Traps': '4_Metody_probabilistyczne/basic/solutions_07_data_analysis/solution_10.md'
                 - Advanced:
                     - '1. Events & Probability': '4_Metody_probabilistyczne/advanced/01_events_and_probability.md'
                     - '2. Random Variables': '4_Metody_probabilistyczne/advanced/02_random_variables.md'
