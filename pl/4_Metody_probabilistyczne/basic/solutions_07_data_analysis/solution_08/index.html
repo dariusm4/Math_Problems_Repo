@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://dchorazkiewicz.github.io/Math_Problems_Repo/pl/4_Metody_probabilistyczne/basic/solutions_07_data_analysis/solution_08/">
+        <link rel="canonical" href="https://dariusm4.github.io/Math_Problems_Repo/pl/4_Metody_probabilistyczne/basic/solutions_07_data_analysis/solution_08/">
       
       
       
@@ -1551,7 +1551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../anim/4_Metody_probalistyczne/laboratory_1.html" class="md-nav__link">
+      <a href="../../../../../anim/4_Metody_probalistyczne/laboratory_1.html" class="md-nav__link">
         
   
   
@@ -1579,7 +1579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../anim/4_Metody_probalistyczne/laboratory_2.html" class="md-nav__link">
+      <a href="../../../../../anim/4_Metody_probalistyczne/laboratory_2.html" class="md-nav__link">
         
   
   
@@ -1607,7 +1607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../anim/4_Metody_probalistyczne/laboratory_3.html" class="md-nav__link">
+      <a href="../../../../../anim/4_Metody_probalistyczne/laboratory_3.html" class="md-nav__link">
         
   
   
@@ -1991,14 +1991,14 @@
 <h2 id="generated-files">Generated Files</h2>
 <ul>
 <li>Dataset: <a href="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_08_waiting_times/problem_08_waiting_times.csv">problem_08_waiting_times.csv</a></li>
-<li>Overall summary: <a href="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_08_waiting_times/waiting_time_summary_overall.csv">waiting_time_summary_overall.csv</a></li>
-<li>Service-type summary: <a href="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_08_waiting_times/waiting_time_summary_by_service_type.csv">waiting_time_summary_by_service_type.csv</a></li>
-<li>ECDF probability estimates: <a href="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_08_waiting_times/ecdf_probability_estimates.csv">ecdf_probability_estimates.csv</a></li>
-<li>Quantiles by service type: <a href="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_08_waiting_times/waiting_time_quantiles_by_service_type.csv">waiting_time_quantiles_by_service_type.csv</a></li>
+<li>Overall summary: <a href="problem_08_waiting_times/waiting_time_summary_overall.csv">waiting_time_summary_overall.csv</a></li>
+<li>Service-type summary: <a href="problem_08_waiting_times/waiting_time_summary_by_service_type.csv">waiting_time_summary_by_service_type.csv</a></li>
+<li>ECDF probability estimates: <a href="problem_08_waiting_times/ecdf_probability_estimates.csv">ecdf_probability_estimates.csv</a></li>
+<li>Quantiles by service type: <a href="problem_08_waiting_times/waiting_time_quantiles_by_service_type.csv">waiting_time_quantiles_by_service_type.csv</a></li>
 <li>Plots:</li>
-<li><a href="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_08_waiting_times/waiting_time_histograms_by_service_type.png">waiting_time_histograms_by_service_type.png</a></li>
-<li><a href="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_08_waiting_times/waiting_time_ecdf_by_service_type.png">waiting_time_ecdf_by_service_type.png</a></li>
-<li><a href="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_08_waiting_times/waiting_time_boxplot_by_service_type.png">waiting_time_boxplot_by_service_type.png</a></li>
+<li><a href="problem_08_waiting_times/waiting_time_histograms_by_service_type.png">waiting_time_histograms_by_service_type.png</a></li>
+<li><a href="problem_08_waiting_times/waiting_time_ecdf_by_service_type.png">waiting_time_ecdf_by_service_type.png</a></li>
+<li><a href="problem_08_waiting_times/waiting_time_boxplot_by_service_type.png">waiting_time_boxplot_by_service_type.png</a></li>
 </ul>
 <hr />
 <h2 id="solution">Solution</h2>
@@ -2193,7 +2193,7 @@ summary_by_type = grouped.agg([&quot;count&quot;, &quot;mean&quot;, &quot;median
 <hr />
 <h3 id="task-4-draw-histograms-for-standard-and-priority-service">Task 4: Draw histograms for standard and priority service</h3>
 <p><strong>Answer:</strong></p>
-<p><img alt="Waiting time histograms by service type" src="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_08_waiting_times/waiting_time_histograms_by_service_type.png" /></p>
+<p><img alt="Waiting time histograms by service type" src="problem_08_waiting_times/waiting_time_histograms_by_service_type.png" /></p>
 <p>The side-by-side histograms reveal the distributional shapes clearly:</p>
 <p><strong>Priority service (left panel):</strong>
 - The distribution is concentrated in the range 0–10 minutes.
@@ -2225,7 +2225,7 @@ def ecdf(data):
 x, y = ecdf(df[&quot;waiting_time_min&quot;].values)
 </code></pre>
 <p>The ECDF is a <strong>step function</strong> that jumps by <span class="arithmatex">\( 1/n = 1/500 = 0.002 \)</span> at each observed data point. It starts at 0 for values below the minimum observation and reaches 1 at the maximum observation.</p>
-<p><img alt="Empirical CDF of waiting times by service type" src="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_08_waiting_times/waiting_time_ecdf_by_service_type.png" /></p>
+<p><img alt="Empirical CDF of waiting times by service type" src="problem_08_waiting_times/waiting_time_ecdf_by_service_type.png" /></p>
 <p><strong>Reading the ECDF plot:</strong></p>
 <ul>
 <li>The <strong>priority ECDF</strong> (one curve) rises steeply and reaches values near 0.85 by <span class="arithmatex">\( t = 10 \)</span> minutes. This means about 85% of priority tickets have waiting times ≤ 10 minutes.</li>
@@ -2359,7 +2359,7 @@ for st in [&quot;priority&quot;, &quot;standard&quot;]:
 <li>The <strong>slowest 10%</strong> of priority tickets wait over 10.84 min; the slowest 10% of standard tickets wait over 26.21 min.</li>
 <li>If a customer needs their issue resolved within 10 minutes, they should strongly prefer priority service: <span class="arithmatex">\( Q_{90} \)</span> for priority (10.84 min) is just above 10, meaning about 90% of priority tickets meet this target. For standard service, only the bottom half (<span class="arithmatex">\( Q_{50} = 12.24 \)</span> min) is close.</li>
 </ol>
-<p><img alt="Waiting time boxplot by service type" src="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_08_waiting_times/waiting_time_boxplot_by_service_type.png" /></p>
+<p><img alt="Waiting time boxplot by service type" src="problem_08_waiting_times/waiting_time_boxplot_by_service_type.png" /></p>
 <p>The box plot visualisation above confirms the quantile comparison: the priority box is much more compact and shifted toward lower values, while the standard box is wider with many upper outliers.</p>
 <hr />
 <h3 id="task-8-explain-why-waiting-time-data-are-often-right-skewed">Task 8: Explain why waiting-time data are often right-skewed</h3>

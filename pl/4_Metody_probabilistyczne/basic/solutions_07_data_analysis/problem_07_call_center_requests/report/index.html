@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://dchorazkiewicz.github.io/Math_Problems_Repo/pl/4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_07_call_center_requests/report/">
+        <link rel="canonical" href="https://dariusm4.github.io/Math_Problems_Repo/pl/4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_07_call_center_requests/report/">
       
       
       
@@ -1551,7 +1551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../anim/4_Metody_probalistyczne/laboratory_1.html" class="md-nav__link">
+      <a href="../../../../../../anim/4_Metody_probalistyczne/laboratory_1.html" class="md-nav__link">
         
   
   
@@ -1579,7 +1579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../anim/4_Metody_probalistyczne/laboratory_2.html" class="md-nav__link">
+      <a href="../../../../../../anim/4_Metody_probalistyczne/laboratory_2.html" class="md-nav__link">
         
   
   
@@ -1607,7 +1607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../anim/4_Metody_probalistyczne/laboratory_3.html" class="md-nav__link">
+      <a href="../../../../../../anim/4_Metody_probalistyczne/laboratory_3.html" class="md-nav__link">
         
   
   
@@ -1681,10 +1681,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#description-of-the-data" class="md-nav__link">
+  <a href="#visualizations" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Description of the data
+        Visualizations
       
     </span>
   </a>
@@ -1692,10 +1692,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#overall-hourly-summary" class="md-nav__link">
+  <a href="#description" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Overall hourly summary
+        Description
       
     </span>
   </a>
@@ -1703,10 +1703,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#comparison-by-day-type" class="md-nav__link">
+  <a href="#hourly-count-summary-for-sample_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Comparison by day type
+        Hourly Count Summary for sample_1
       
     </span>
   </a>
@@ -1714,10 +1714,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#daily-totals" class="md-nav__link">
+  <a href="#weekday-and-weekend-comparison-for-sample_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Daily totals
+        Weekday and Weekend Comparison for sample_1
       
     </span>
   </a>
@@ -1725,10 +1725,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#plots" class="md-nav__link">
+  <a href="#first-daily-totals-for-sample_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Plots
+        First Daily Totals for sample_1
       
     </span>
   </a>
@@ -1736,10 +1736,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#interpretation" class="md-nav__link">
+  <a href="#answers-and-interpretation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Interpretation
+        Answers and Interpretation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mean-variance-and-sample-variation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mean, Variance, and Sample Variation
       
     </span>
   </a>
@@ -1767,121 +1778,198 @@
 <h2 id="generated-files">Generated files</h2>
 <ul>
 <li>Dataset: <a href="../../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_07_call_center_requests/problem_07_call_center_requests.csv"><code>problem_07_call_center_requests.csv</code></a></li>
-<li>Overall hourly summary: <a href="../../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_07_call_center_requests/hourly_requests_summary.csv"><code>hourly_requests_summary.csv</code></a></li>
-<li>Day-type summary: <a href="../../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_07_call_center_requests/requests_summary_by_day_type.csv"><code>requests_summary_by_day_type.csv</code></a></li>
-<li>Average requests by hour: <a href="../../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_07_call_center_requests/average_requests_by_hour.csv"><code>average_requests_by_hour.csv</code></a></li>
-<li>Daily totals: <a href="../../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_07_call_center_requests/daily_total_requests.csv"><code>daily_total_requests.csv</code></a></li>
-<li>Daily total summary: <a href="../../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_07_call_center_requests/daily_total_summary_by_day_type.csv"><code>daily_total_summary_by_day_type.csv</code></a></li>
-<li>Plots:</li>
-<li><a href="../../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_07_call_center_requests/average_requests_by_hour.png"><code>average_requests_by_hour.png</code></a></li>
-<li><a href="../../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_07_call_center_requests/hourly_requests_histogram.png"><code>hourly_requests_histogram.png</code></a></li>
-<li><a href="../../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_07_call_center_requests/mean_hourly_requests_by_day_type.png"><code>mean_hourly_requests_by_day_type.png</code></a></li>
+<li>Hourly summary for <code>sample_1</code>: <a href="../../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_07_call_center_requests/hourly_requests_summary_sample_1.csv"><code>hourly_requests_summary_sample_1.csv</code></a></li>
+<li>Day-type summary for <code>sample_1</code>: <a href="../../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_07_call_center_requests/requests_summary_by_day_type_sample_1.csv"><code>requests_summary_by_day_type_sample_1.csv</code></a></li>
+<li>Average by hour for <code>sample_1</code>: <a href="../../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_07_call_center_requests/average_requests_by_hour_sample_1.csv"><code>average_requests_by_hour_sample_1.csv</code></a></li>
+<li>Average by hour and day type: <a href="../../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_07_call_center_requests/average_requests_by_hour_and_day_type_sample_1.csv"><code>average_requests_by_hour_and_day_type_sample_1.csv</code></a></li>
+<li>Daily totals: <a href="../../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_07_call_center_requests/daily_total_requests_sample_1.csv"><code>daily_total_requests_sample_1.csv</code></a></li>
+<li>Mean and variance by sample: <a href="../../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_07_call_center_requests/mean_variance_by_sample.csv"><code>mean_variance_by_sample.csv</code></a></li>
+<li>Plots: PNG files in this folder.</li>
 </ul>
-<h2 id="description-of-the-data">Description of the data</h2>
-<p>One row represents one hour in the call center. The dataset records the date, whether the day was a weekday or weekend, the hour of day, and the number of customer requests received during that hour.</p>
-<p>The dataset contains 720 hourly observations, because it covers 30 days and 24 hours per day.</p>
-<h2 id="overall-hourly-summary">Overall hourly summary</h2>
+<h2 id="visualizations">Visualizations</h2>
+<p><img alt="Mean hourly requests by day type for sample_1" src="../../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_07_call_center_requests/mean_hourly_requests_by_day_type_sample_1.png" /></p>
+<p><strong>What this shows:</strong> This plot shows that weekday and weekend request volumes differ. It is evidence that the data should not be treated as one homogeneous count distribution.</p>
+<p><img alt="Average requests by hour for sample_1" src="../../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_07_call_center_requests/average_requests_by_hour_sample_1.png" /></p>
+<p><strong>What this shows:</strong> This line plot shows the daily traffic pattern. Request intensity changes strongly by hour, especially between night hours and business hours.</p>
+<p><img alt="Average requests by hour and day type for sample_1" src="../../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_07_call_center_requests/average_requests_by_hour_and_day_type_sample_1.png" /></p>
+<p><strong>What this shows:</strong> This plot separates weekday and weekend patterns. It explains why one identical Poisson model for the whole dataset would be inappropriate.</p>
+<p><img alt="Hourly request-count histogram for sample_1" src="../../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_07_call_center_requests/hourly_requests_histogram_sample_1.png" /></p>
+<p><strong>What this shows:</strong> The histogram summarizes the distribution of hourly counts. Its shape is a mixture of low-rate and high-rate hours, not the shape of one constant-rate process.</p>
+<p><img alt="Mean and variance by sample" src="../../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_07_call_center_requests/mean_variance_by_sample.png" /></p>
+<p><strong>What this shows:</strong> This plot compares the empirical mean and variance across samples. The difference between them supports the explanation that the data combine several traffic regimes.</p>
+<h2 id="description">Description</h2>
+<p>One row represents one hour in one generated 30-day call-center sample. It records the date, day type, hour, and number of requests in that hour.</p>
+<p>The main reproducible solution uses <code>sample_1</code>. The other samples show how count summaries fluctuate when the same time-dependent mechanism is sampled again.</p>
+<h2 id="hourly-count-summary-for-sample_1">Hourly Count Summary for <code>sample_1</code></h2>
 <table>
 <thead>
 <tr>
-<th style="text-align: right;">Number of hours</th>
-<th style="text-align: right;">Mean hourly requests</th>
-<th style="text-align: right;">Variance</th>
-<th style="text-align: right;">Standard deviation</th>
-<th style="text-align: right;">Minimum</th>
-<th style="text-align: right;">Maximum</th>
+<th>count</th>
+<th>mean</th>
+<th>variance</th>
+<th>standard_deviation</th>
+<th>minimum</th>
+<th>median</th>
+<th>maximum</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: right;">720</td>
-<td style="text-align: right;">3.8542</td>
-<td style="text-align: right;">11.1484</td>
-<td style="text-align: right;">3.3389</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">19</td>
+<td>720.0000</td>
+<td>3.8542</td>
+<td>11.1484</td>
+<td>3.3389</td>
+<td>0.0000</td>
+<td>3.0000</td>
+<td>19.0000</td>
 </tr>
 </tbody>
 </table>
-<p>The empirical variance is much larger than the empirical mean. This is important because a single Poisson distribution has equal theoretical mean and variance.</p>
-<h2 id="comparison-by-day-type">Comparison by day type</h2>
+<h2 id="weekday-and-weekend-comparison-for-sample_1">Weekday and Weekend Comparison for <code>sample_1</code></h2>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Day type</th>
-<th style="text-align: right;">Number of hours</th>
-<th style="text-align: right;">Mean</th>
-<th style="text-align: right;">Variance</th>
-<th style="text-align: right;">Standard deviation</th>
-<th style="text-align: right;">Minimum</th>
-<th style="text-align: right;">Maximum</th>
+<th>day_type</th>
+<th>hours</th>
+<th>mean</th>
+<th>variance</th>
+<th>standard_deviation</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">weekday</td>
-<td style="text-align: right;">504</td>
-<td style="text-align: right;">4.3452</td>
-<td style="text-align: right;">12.9700</td>
-<td style="text-align: right;">3.6014</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">19</td>
+<td>weekday</td>
+<td>504</td>
+<td>4.3452</td>
+<td>12.9700</td>
+<td>3.6014</td>
 </tr>
 <tr>
-<td style="text-align: left;">weekend</td>
-<td style="text-align: right;">216</td>
-<td style="text-align: right;">2.7083</td>
-<td style="text-align: right;">5.0541</td>
-<td style="text-align: right;">2.2481</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">9</td>
+<td>weekend</td>
+<td>216</td>
+<td>2.7083</td>
+<td>5.0541</td>
+<td>2.2481</td>
 </tr>
 </tbody>
 </table>
-<p>Weekdays have more requests on average than weekends. Weekdays also have higher variability.</p>
-<h2 id="daily-totals">Daily totals</h2>
+<h2 id="first-daily-totals-for-sample_1">First Daily Totals for <code>sample_1</code></h2>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Day type</th>
-<th style="text-align: right;">Number of days</th>
-<th style="text-align: right;">Mean daily total</th>
-<th style="text-align: right;">Variance</th>
-<th style="text-align: right;">Standard deviation</th>
-<th style="text-align: right;">Minimum</th>
-<th style="text-align: right;">Maximum</th>
+<th>date</th>
+<th>day_type</th>
+<th>daily_total_requests</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">weekday</td>
-<td style="text-align: right;">21</td>
-<td style="text-align: right;">104.2857</td>
-<td style="text-align: right;">100.8143</td>
-<td style="text-align: right;">10.0406</td>
-<td style="text-align: right;">86</td>
-<td style="text-align: right;">124</td>
+<td>2026-03-01</td>
+<td>weekend</td>
+<td>57</td>
 </tr>
 <tr>
-<td style="text-align: left;">weekend</td>
-<td style="text-align: right;">9</td>
-<td style="text-align: right;">65.0000</td>
-<td style="text-align: right;">91.7500</td>
-<td style="text-align: right;">9.5786</td>
-<td style="text-align: right;">56</td>
-<td style="text-align: right;">85</td>
+<td>2026-03-02</td>
+<td>weekday</td>
+<td>109</td>
+</tr>
+<tr>
+<td>2026-03-03</td>
+<td>weekday</td>
+<td>90</td>
+</tr>
+<tr>
+<td>2026-03-04</td>
+<td>weekday</td>
+<td>102</td>
+</tr>
+<tr>
+<td>2026-03-05</td>
+<td>weekday</td>
+<td>124</td>
+</tr>
+<tr>
+<td>2026-03-06</td>
+<td>weekday</td>
+<td>109</td>
+</tr>
+<tr>
+<td>2026-03-07</td>
+<td>weekend</td>
+<td>61</td>
+</tr>
+<tr>
+<td>2026-03-08</td>
+<td>weekend</td>
+<td>57</td>
+</tr>
+<tr>
+<td>2026-03-09</td>
+<td>weekday</td>
+<td>106</td>
+</tr>
+<tr>
+<td>2026-03-10</td>
+<td>weekday</td>
+<td>109</td>
 </tr>
 </tbody>
 </table>
-<h2 id="plots">Plots</h2>
-<p><img alt="Average requests by hour" src="../../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_07_call_center_requests/average_requests_by_hour.png" /></p>
-<p><img alt="Histogram of hourly request counts" src="../../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_07_call_center_requests/hourly_requests_histogram.png" /></p>
-<p><img alt="Mean hourly requests by day type" src="../../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_07_call_center_requests/mean_hourly_requests_by_day_type.png" /></p>
-<h2 id="interpretation">Interpretation</h2>
-<p>The average number of requests is clearly different across hours of the day. The line plot shows low activity during the night and higher activity during working hours. This pattern agrees with the way the data were generated.</p>
-<p>Weekdays are busier than weekends. The mean hourly number of requests is 4.3452 on weekdays and 2.7083 on weekends. Daily totals show the same pattern: weekday daily totals average 104.2857 requests, while weekend daily totals average 65.0000 requests.</p>
-<p>This dataset is related to the Poisson distribution because each hourly count is generated as a count of events occurring in a fixed time interval. That is a typical setting for Poisson models.</p>
-<p>However, the whole dataset should not be treated as one identical Poisson distribution. The request rate changes with the hour of day and with the day type. The complete dataset is a mixture of different situations, not repeated observations from one fixed-rate process. This explains why the overall empirical variance is much larger than the overall empirical mean.</p>
+<p>The full daily-total table is saved as CSV.</p>
+<h2 id="answers-and-interpretation">Answers and Interpretation</h2>
+<p>The dataset is related to the Poisson distribution because each row records a count of events in a fixed time interval, one hour. For a simple Poisson model with a constant rate, the mean and variance would be approximately equal.</p>
+<p>However, the whole dataset should not be treated as one identical Poisson distribution. The expected request rate changes by hour and by day type. Business hours have more requests than night hours, and weekdays differ from weekends. Mixing several different rates creates a heterogeneous count distribution.</p>
+<p>The line plots show the most important structure: request intensity is strongly time-dependent.</p>
+<h2 id="mean-variance-and-sample-variation">Mean, Variance, and Sample Variation</h2>
+<p>Across samples, the exact mean and variance change, but the main pattern remains stable. The variance is larger than the mean because the data combine different traffic regimes.</p>
+<table>
+<thead>
+<tr>
+<th>sample_id</th>
+<th>mean</th>
+<th>variance</th>
+<th>standard_deviation</th>
+<th>variance_minus_mean</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sample_1</td>
+<td>3.8542</td>
+<td>11.1484</td>
+<td>3.3389</td>
+<td>7.2942</td>
+</tr>
+<tr>
+<td>sample_2</td>
+<td>3.8431</td>
+<td>10.6276</td>
+<td>3.2600</td>
+<td>6.7846</td>
+</tr>
+<tr>
+<td>sample_3</td>
+<td>3.9444</td>
+<td>11.1541</td>
+<td>3.3398</td>
+<td>7.2096</td>
+</tr>
+<tr>
+<td>sample_4</td>
+<td>3.9153</td>
+<td>11.2849</td>
+<td>3.3593</td>
+<td>7.3696</td>
+</tr>
+<tr>
+<td>sample_5</td>
+<td>3.9167</td>
+<td>11.5146</td>
+<td>3.3933</td>
+<td>7.5979</td>
+</tr>
+</tbody>
+</table>
 
 
 

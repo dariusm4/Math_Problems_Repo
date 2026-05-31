@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://dchorazkiewicz.github.io/Math_Problems_Repo/pl/4_Metody_probabilistyczne/basic/solutions_07_data_analysis/solution_04/">
+        <link rel="canonical" href="https://dariusm4.github.io/Math_Problems_Repo/pl/4_Metody_probabilistyczne/basic/solutions_07_data_analysis/solution_04/">
       
       
       
@@ -1551,7 +1551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../anim/4_Metody_probalistyczne/laboratory_1.html" class="md-nav__link">
+      <a href="../../../../../anim/4_Metody_probalistyczne/laboratory_1.html" class="md-nav__link">
         
   
   
@@ -1579,7 +1579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../anim/4_Metody_probalistyczne/laboratory_2.html" class="md-nav__link">
+      <a href="../../../../../anim/4_Metody_probalistyczne/laboratory_2.html" class="md-nav__link">
         
   
   
@@ -1607,7 +1607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../anim/4_Metody_probalistyczne/laboratory_3.html" class="md-nav__link">
+      <a href="../../../../../anim/4_Metody_probalistyczne/laboratory_3.html" class="md-nav__link">
         
   
   
@@ -1863,23 +1863,23 @@
 <td>Raw dataset (350 rows)</td>
 </tr>
 <tr>
-<td><a href="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_04_delivery_times/delivery_time_summary.csv">delivery_time_summary.csv</a></td>
+<td><a href="problem_04_delivery_times/delivery_time_summary.csv">delivery_time_summary.csv</a></td>
 <td>Overall summary statistics</td>
 </tr>
 <tr>
-<td><a href="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_04_delivery_times/delivery_time_summary_by_zone.csv">delivery_time_summary_by_zone.csv</a></td>
+<td><a href="problem_04_delivery_times/delivery_time_summary_by_zone.csv">delivery_time_summary_by_zone.csv</a></td>
 <td>Summary statistics by delivery zone</td>
 </tr>
 <tr>
-<td><a href="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_04_delivery_times/outliers_1_5_iqr.csv">outliers_1_5_iqr.csv</a></td>
+<td><a href="problem_04_delivery_times/outliers_1_5_iqr.csv">outliers_1_5_iqr.csv</a></td>
 <td>List of 20 identified outliers</td>
 </tr>
 <tr>
-<td><a href="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_04_delivery_times/delivery_time_histogram.png">delivery_time_histogram.png</a></td>
+<td><a href="problem_04_delivery_times/delivery_time_histogram.png">delivery_time_histogram.png</a></td>
 <td>Histogram of all delivery times</td>
 </tr>
 <tr>
-<td><a href="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_04_delivery_times/delivery_time_boxplot_by_zone.png">delivery_time_boxplot_by_zone.png</a></td>
+<td><a href="problem_04_delivery_times/delivery_time_boxplot_by_zone.png">delivery_time_boxplot_by_zone.png</a></td>
 <td>Boxplot of delivery times by zone</td>
 </tr>
 </tbody>
@@ -2329,7 +2329,7 @@ delayed_by_zone = df.groupby(&quot;zone&quot;)[&quot;delayed&quot;].mean()
 <h3 id="task-8-draw-a-histogram-of-delivery_time_min">Task 8: Draw a histogram of <code>delivery_time_min</code></h3>
 <p><strong>Answer:</strong></p>
 <p>The histogram below shows the frequency distribution of all 350 delivery times.</p>
-<p><img alt="Histogram of delivery times" src="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_04_delivery_times/delivery_time_histogram.png" /></p>
+<p><img alt="Histogram of delivery times" src="problem_04_delivery_times/delivery_time_histogram.png" /></p>
 <pre><code class="language-python">import matplotlib.pyplot as plt
 
 fig, ax = plt.subplots(figsize=(10, 6))
@@ -2365,7 +2365,7 @@ plt.savefig(&quot;delivery_time_histogram.png&quot;, dpi=150)
 <h3 id="task-9-draw-a-boxplot-of-delivery-times-by-zone">Task 9: Draw a boxplot of delivery times by zone</h3>
 <p><strong>Answer:</strong></p>
 <p>The boxplots below compare the distribution of delivery times across the three zones.</p>
-<p><img alt="Boxplot of delivery times by zone" src="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_04_delivery_times/delivery_time_boxplot_by_zone.png" /></p>
+<p><img alt="Boxplot of delivery times by zone" src="problem_04_delivery_times/delivery_time_boxplot_by_zone.png" /></p>
 <pre><code class="language-python">fig, ax = plt.subplots(figsize=(10, 6))
 df.boxplot(column=&quot;delivery_time_min&quot;, by=&quot;zone&quot;, ax=ax)
 ax.set_xlabel(&quot;Zone&quot;)

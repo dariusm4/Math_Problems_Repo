@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://dchorazkiewicz.github.io/Math_Problems_Repo/pl/4_Metody_probabilistyczne/basic/solutions_07_data_analysis/solution_10/">
+        <link rel="canonical" href="https://dariusm4.github.io/Math_Problems_Repo/pl/4_Metody_probabilistyczne/basic/solutions_07_data_analysis/solution_10/">
       
       
       
@@ -1551,7 +1551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../anim/4_Metody_probalistyczne/laboratory_1.html" class="md-nav__link">
+      <a href="../../../../../anim/4_Metody_probalistyczne/laboratory_1.html" class="md-nav__link">
         
   
   
@@ -1579,7 +1579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../anim/4_Metody_probalistyczne/laboratory_2.html" class="md-nav__link">
+      <a href="../../../../../anim/4_Metody_probalistyczne/laboratory_2.html" class="md-nav__link">
         
   
   
@@ -1607,7 +1607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../anim/4_Metody_probalistyczne/laboratory_3.html" class="md-nav__link">
+      <a href="../../../../../anim/4_Metody_probalistyczne/laboratory_3.html" class="md-nav__link">
         
   
   
@@ -1924,14 +1924,14 @@
 <h2 id="generated-files">Generated Files</h2>
 <ul>
 <li>Dataset: <a href="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_10_correlation_traps/problem_10_correlation_traps.csv"><code>problem_10_correlation_traps.csv</code></a></li>
-<li>Dataset without outlier group: <a href="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_10_correlation_traps/problem_10_without_outlier_group.csv"><code>problem_10_without_outlier_group.csv</code></a></li>
-<li>Outlier observations: <a href="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_10_correlation_traps/outlier_group_observations.csv"><code>outlier_group_observations.csv</code></a></li>
-<li>Correlation summary: <a href="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_10_correlation_traps/correlation_summary.csv"><code>correlation_summary.csv</code></a></li>
-<li>Group summary: <a href="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_10_correlation_traps/summary_by_group.csv"><code>summary_by_group.csv</code></a></li>
+<li>Dataset without outlier group: <a href="problem_10_correlation_traps/problem_10_without_outlier_group.csv"><code>problem_10_without_outlier_group.csv</code></a></li>
+<li>Outlier observations: <a href="problem_10_correlation_traps/outlier_group_observations.csv"><code>outlier_group_observations.csv</code></a></li>
+<li>Correlation summary: <a href="problem_10_correlation_traps/correlation_summary.csv"><code>correlation_summary.csv</code></a></li>
+<li>Group summary: <a href="problem_10_correlation_traps/summary_by_group.csv"><code>summary_by_group.csv</code></a></li>
 <li>Plots:</li>
-<li><a href="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_10_correlation_traps/scatter_with_outliers.png"><code>scatter_with_outliers.png</code></a></li>
-<li><a href="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_10_correlation_traps/scatter_without_outliers.png"><code>scatter_without_outliers.png</code></a></li>
-<li><a href="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_10_correlation_traps/correlation_by_scope.png"><code>correlation_by_scope.png</code></a></li>
+<li><a href="problem_10_correlation_traps/scatter_with_outliers.png"><code>scatter_with_outliers.png</code></a></li>
+<li><a href="problem_10_correlation_traps/scatter_without_outliers.png"><code>scatter_without_outliers.png</code></a></li>
+<li><a href="problem_10_correlation_traps/correlation_by_scope.png"><code>correlation_by_scope.png</code></a></li>
 </ul>
 <hr />
 <h2 id="solution">Solution</h2>
@@ -1992,7 +1992,7 @@ plt.ylabel('y')
 plt.title('Scatter Plot: x vs y (All Observations)')
 plt.savefig('scatter_with_outliers.png', dpi=150)
 </code></pre>
-<p><img alt="Scatter plot of x vs y with all observations including outliers" src="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_10_correlation_traps/scatter_with_outliers.png" /></p>
+<p><img alt="Scatter plot of x vs y with all observations including outliers" src="problem_10_correlation_traps/scatter_with_outliers.png" /></p>
 <p><strong>What we see in the scatter plot:</strong></p>
 <ol>
 <li>
@@ -2006,7 +2006,7 @@ plt.savefig('scatter_with_outliers.png', dpi=150)
 </li>
 </ol>
 <p>After removing the outlier group, the structure is even clearer:</p>
-<p><img alt="Scatter plot without outlier group" src="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_10_correlation_traps/scatter_without_outliers.png" /></p>
+<p><img alt="Scatter plot without outlier group" src="problem_10_correlation_traps/scatter_without_outliers.png" /></p>
 <hr />
 <h3 id="task-3-compute-the-correlation-coefficient-between-x-and-y">Task 3: Compute the correlation coefficient between x and y</h3>
 <p><strong>Answer:</strong></p>
@@ -2123,7 +2123,7 @@ r_{xy}^{(\text{no outliers})} = 0.0572
 </tr>
 </tbody>
 </table>
-<p><img alt="Correlation by data scope" src="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_10_correlation_traps/correlation_by_scope.png" /></p>
+<p><img alt="Correlation by data scope" src="problem_10_correlation_traps/correlation_by_scope.png" /></p>
 <p>The within-branch correlations are stunning: <strong>−0.9428</strong> for the left branch and <strong>+0.9405</strong> for the right branch. These are among the strongest correlations one can observe in real-world-like data. Yet when combined, they produce a correlation of essentially zero.</p>
 <hr />
 <h3 id="task-6-compare-the-two-correlation-values">Task 6: Compare the two correlation values</h3>

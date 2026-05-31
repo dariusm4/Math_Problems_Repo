@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://dchorazkiewicz.github.io/Math_Problems_Repo/4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_01_die_rolls/report/">
+        <link rel="canonical" href="https://dariusm4.github.io/Math_Problems_Repo/4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_01_die_rolls/report/">
       
       
       
@@ -3803,10 +3803,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#description-of-the-data" class="md-nav__link">
+  <a href="#visualizations" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Description of the data
+        Visualizations
       
     </span>
   </a>
@@ -3814,10 +3814,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#frequency-table" class="md-nav__link">
+  <a href="#description" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Frequency table
+        Description
       
     </span>
   </a>
@@ -3825,10 +3825,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#empirical-probabilities" class="md-nav__link">
+  <a href="#frequency-table-for-sample_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Empirical probabilities
+        Frequency Table for sample_1
       
     </span>
   </a>
@@ -3836,10 +3836,32 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#interpretation" class="md-nav__link">
+  <a href="#empirical-event-probabilities-for-sample_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Interpretation
+        Empirical Event Probabilities for sample_1
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#answers-and-interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Answers and Interpretation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variation-across-samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variation Across Samples
       
     </span>
   </a>
@@ -3867,94 +3889,159 @@
 <h2 id="generated-files">Generated files</h2>
 <ul>
 <li>Dataset: <a href="../problem_01_die_rolls.csv"><code>problem_01_die_rolls.csv</code></a></li>
-<li>Frequency table: <a href="../frequency_table.csv"><code>frequency_table.csv</code></a></li>
-<li>Event probabilities: <a href="../event_probabilities.csv"><code>event_probabilities.csv</code></a></li>
-<li>Plot: <a href="../empirical_distribution.png"><code>empirical_distribution.png</code></a></li>
+<li>Frequency table for <code>sample_1</code>: <a href="../frequency_table_sample_1.csv"><code>frequency_table_sample_1.csv</code></a></li>
+<li>Event probabilities for <code>sample_1</code>: <a href="../event_probabilities_sample_1.csv"><code>event_probabilities_sample_1.csv</code></a></li>
+<li>Relative frequencies by sample: <a href="../relative_frequency_by_sample.csv"><code>relative_frequency_by_sample.csv</code></a></li>
+<li>Event probabilities by sample: <a href="../event_probabilities_by_sample.csv"><code>event_probabilities_by_sample.csv</code></a></li>
+<li>Distribution plot for <code>sample_1</code>: <a href="../empirical_distribution_sample_1.png"><code>empirical_distribution_sample_1.png</code></a></li>
+<li>Sample comparison plot: <a href="../relative_frequency_by_sample.png"><code>relative_frequency_by_sample.png</code></a></li>
 </ul>
-<h2 id="description-of-the-data">Description of the data</h2>
-<p>One row of the dataset represents one die roll. The column <code>trial</code> gives the number of the trial, <code>roll</code> gives the observed result, <code>is_even</code> tells whether the result is even, and <code>is_at_least_5</code> tells whether the result is at least 5.</p>
-<p>The dataset contains 1000 die rolls generated with a fixed random seed.</p>
-<h2 id="frequency-table">Frequency table</h2>
+<h2 id="visualizations">Visualizations</h2>
+<p><img alt="Empirical distribution for sample_1" src="../empirical_distribution_sample_1.png" /></p>
+<p><strong>What this shows:</strong> This plot compares the observed relative frequencies in <code>sample_1</code> with two references: a fair die and the probabilities used to generate the data. It shows why the die should not be judged only by one theoretical line: the sample is close to the generating probabilities, but still fluctuates.</p>
+<p><img alt="Relative frequency by sample" src="../relative_frequency_by_sample.png" /></p>
+<p><strong>What this shows:</strong> This plot is the key sampling-variation check. The five lines come from the same generating process, but they are not identical. The differences between lines show that empirical frequencies change when the seed changes.</p>
+<h2 id="description">Description</h2>
+<p>One row represents one die roll inside one generated sample. The columns <code>sample_id</code> and <code>seed</code> identify which random sample produced the row. The variable <code>roll</code> is the observed die face. The variables <code>is_even</code> and <code>is_at_least_5</code> mark two events whose empirical probabilities can be estimated from the data.</p>
+<p>The main reproducible solution uses <code>sample_1</code>. The other samples are used to check how much the empirical description changes when the seed changes.</p>
+<h2 id="frequency-table-for-sample_1">Frequency Table for <code>sample_1</code></h2>
 <table>
 <thead>
 <tr>
-<th style="text-align: right;">Roll</th>
-<th style="text-align: right;">Absolute frequency</th>
-<th style="text-align: right;">Relative frequency</th>
-<th style="text-align: right;">Fair die probability</th>
+<th>roll</th>
+<th>frequency</th>
+<th>relative_frequency</th>
+<th>fair_die_probability</th>
+<th>generating_probability</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">157</td>
-<td style="text-align: right;">0.157</td>
-<td style="text-align: right;">0.167</td>
+<td>1.0000</td>
+<td>157.0000</td>
+<td>0.1570</td>
+<td>0.1667</td>
+<td>0.1400</td>
 </tr>
 <tr>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">174</td>
-<td style="text-align: right;">0.174</td>
-<td style="text-align: right;">0.167</td>
+<td>2.0000</td>
+<td>174.0000</td>
+<td>0.1740</td>
+<td>0.1667</td>
+<td>0.1600</td>
 </tr>
 <tr>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">151</td>
-<td style="text-align: right;">0.151</td>
-<td style="text-align: right;">0.167</td>
+<td>3.0000</td>
+<td>151.0000</td>
+<td>0.1510</td>
+<td>0.1667</td>
+<td>0.1700</td>
 </tr>
 <tr>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">184</td>
-<td style="text-align: right;">0.184</td>
-<td style="text-align: right;">0.167</td>
+<td>4.0000</td>
+<td>184.0000</td>
+<td>0.1840</td>
+<td>0.1667</td>
+<td>0.1800</td>
 </tr>
 <tr>
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">158</td>
-<td style="text-align: right;">0.158</td>
-<td style="text-align: right;">0.167</td>
+<td>5.0000</td>
+<td>158.0000</td>
+<td>0.1580</td>
+<td>0.1667</td>
+<td>0.1600</td>
 </tr>
 <tr>
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">176</td>
-<td style="text-align: right;">0.176</td>
-<td style="text-align: right;">0.167</td>
+<td>6.0000</td>
+<td>176.0000</td>
+<td>0.1760</td>
+<td>0.1667</td>
+<td>0.1900</td>
 </tr>
 </tbody>
 </table>
-<p><img alt="Empirical distribution of die rolls" src="../empirical_distribution.png" /></p>
-<h2 id="empirical-probabilities">Empirical probabilities</h2>
+<h2 id="empirical-event-probabilities-for-sample_1">Empirical Event Probabilities for <code>sample_1</code></h2>
 <table>
 <thead>
 <tr>
-<th>Event</th>
-<th style="text-align: right;">Empirical probability</th>
-<th style="text-align: right;">Fair die probability</th>
+<th>event</th>
+<th>empirical_probability</th>
+<th>fair_die_probability</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>The result is even</td>
-<td style="text-align: right;">0.534</td>
-<td style="text-align: right;">0.500</td>
+<td>result is even</td>
+<td>0.5340</td>
+<td>0.5000</td>
 </tr>
 <tr>
-<td>The result is at least 5</td>
-<td style="text-align: right;">0.334</td>
-<td style="text-align: right;">0.333</td>
+<td>result is at least 5</td>
+<td>0.3340</td>
+<td>0.3333</td>
 </tr>
 <tr>
-<td>The result is equal to 6</td>
-<td style="text-align: right;">0.176</td>
-<td style="text-align: right;">0.167</td>
+<td>result is equal to 6</td>
+<td>0.1760</td>
+<td>0.1667</td>
 </tr>
 </tbody>
 </table>
-<h2 id="interpretation">Interpretation</h2>
-<p>The empirical distribution is not exactly uniform. The most frequent result is 4, with relative frequency 0.184, and the least frequent result is 3, with relative frequency 0.151. For a fair die, each result would have probability approximately 0.167.</p>
-<p>These differences are expected in random data. Even if a die is fair, empirical frequencies from a finite sample do not have to be exactly equal to theoretical probabilities.</p>
-<p>Based only on this generated dataset, the die does not look perfectly fair, but the deviations from the fair-die probabilities are moderate. The result 4 and the event "even" appear slightly more often than under a fair die, while result 3 appears less often. This suggests a possible imbalance, but this descriptive analysis alone is not a formal statistical test.</p>
+<h2 id="answers-and-interpretation">Answers and Interpretation</h2>
+<p>The empirical distribution in <code>sample_1</code> is close to the generating probabilities, but it is not identical to them. It is also not identical to the fair-die distribution. This is expected: empirical frequencies are computed from a finite random sample, so they fluctuate around the probabilities that generated the data.</p>
+<p>The empirical probability of an even result is 0.5340. The empirical probability of a result at least 5 is 0.3340. The empirical probability of rolling a 6 is 0.1760.</p>
+<p>Based only on <code>sample_1</code>, the die does not look perfectly fair. Faces 4 and 6 occur relatively often, while face 1 occurs relatively rarely. This conclusion should be cautious because one finite sample is evidence, not proof.</p>
+<h2 id="variation-across-samples">Variation Across Samples</h2>
+<p>The additional samples show the central lesson of the problem: the same data-generating process gives different empirical frequency tables from seed to seed. The broad pattern is similar, but the exact relative frequency of each face changes.</p>
+<table>
+<thead>
+<tr>
+<th>sample_id</th>
+<th>rows</th>
+<th>even_probability</th>
+<th>at_least_5_probability</th>
+<th>six_probability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sample_1</td>
+<td>1000</td>
+<td>0.5340</td>
+<td>0.3340</td>
+<td>0.1760</td>
+</tr>
+<tr>
+<td>sample_2</td>
+<td>1000</td>
+<td>0.5440</td>
+<td>0.3510</td>
+<td>0.1950</td>
+</tr>
+<tr>
+<td>sample_3</td>
+<td>1000</td>
+<td>0.5260</td>
+<td>0.3310</td>
+<td>0.1940</td>
+</tr>
+<tr>
+<td>sample_4</td>
+<td>1000</td>
+<td>0.5430</td>
+<td>0.3560</td>
+<td>0.1940</td>
+</tr>
+<tr>
+<td>sample_5</td>
+<td>1000</td>
+<td>0.5170</td>
+<td>0.3420</td>
+<td>0.1740</td>
+</tr>
+</tbody>
+</table>
+<p>This is why descriptive statistics should be interpreted as summaries of observed data, not as exact theoretical probabilities.</p>
 
 
 

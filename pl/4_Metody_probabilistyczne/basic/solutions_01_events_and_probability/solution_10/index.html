@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://dchorazkiewicz.github.io/Math_Problems_Repo/pl/4_Metody_probabilistyczne/basic/solutions_01_events_and_probability/solution_10/">
+        <link rel="canonical" href="https://dariusm4.github.io/Math_Problems_Repo/pl/4_Metody_probabilistyczne/basic/solutions_01_events_and_probability/solution_10/">
       
       
       
@@ -1551,7 +1551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../anim/4_Metody_probalistyczne/laboratory_1.html" class="md-nav__link">
+      <a href="../../../../../anim/4_Metody_probalistyczne/laboratory_1.html" class="md-nav__link">
         
   
   
@@ -1579,7 +1579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../anim/4_Metody_probalistyczne/laboratory_2.html" class="md-nav__link">
+      <a href="../../../../../anim/4_Metody_probalistyczne/laboratory_2.html" class="md-nav__link">
         
   
   
@@ -1607,7 +1607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../anim/4_Metody_probalistyczne/laboratory_3.html" class="md-nav__link">
+      <a href="../../../../../anim/4_Metody_probalistyczne/laboratory_3.html" class="md-nav__link">
         
   
   
@@ -1663,6 +1663,53 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Spis treści
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#task-10-events-and-probabilities-in-buffons-needle-experiment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 10 — Events and Probabilities in Buffon's Needle Experiment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Task 10 — Events and Probabilities in Buffon&#39;s Needle Experiment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Events
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-event" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional event
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1679,6 +1726,50 @@
 
 
 <h1 id="solution">Solution</h1>
+<h2 id="task-10-events-and-probabilities-in-buffons-needle-experiment">Task 10 — Events and Probabilities in Buffon's Needle Experiment</h2>
+<p>Assume <span class="arithmatex">\(L \le d\)</span> and that <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(\theta\)</span> are independent and uniformly distributed on
+<span class="arithmatex">\(X \in [0, \tfrac{d}{2}]\)</span> and <span class="arithmatex">\(\theta \in [0, \tfrac{\pi}{2}]\)</span>.</p>
+<p>The total area of the sample space is
+<span class="arithmatex">\(\tfrac{d}{2} \cdot \tfrac{\pi}{2} = \tfrac{d\pi}{4}\)</span>.</p>
+<h3 id="events">Events</h3>
+<ul>
+<li><span class="arithmatex">\(A\)</span>: the needle intersects one of the lines.</li>
+<li>The crossing condition is <span class="arithmatex">\(x \le \tfrac{L}{2} \sin\theta\)</span>.</li>
+<li>Intersection area: <span class="arithmatex">\(\int_0^{\pi/2} \tfrac{L}{2} \sin\theta \,d\theta = \tfrac{L}{2}\)</span>.</li>
+<li>
+<p>Probability: <span class="arithmatex">\(P(A) = \dfrac{\tfrac{L}{2}}{\tfrac{d\pi}{4}} = \dfrac{2L}{d\pi}\)</span>.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(B\)</span>: the needle does not intersect any line.</p>
+</li>
+<li>
+<p>Probability: <span class="arithmatex">\(P(B) = 1 - P(A) = 1 - \dfrac{2L}{d\pi}\)</span>.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(C\)</span>: the angle is smaller than <span class="arithmatex">\(\tfrac{\pi}{6}\)</span>.</p>
+</li>
+<li>
+<p>Probability: <span class="arithmatex">\(\dfrac{\tfrac{\pi}{6}}{\tfrac{\pi}{2}} = \dfrac13\)</span>.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(D\)</span>: the center is at distance less than <span class="arithmatex">\(\tfrac{d}{4}\)</span> from the nearest line.</p>
+</li>
+<li>
+<p>Probability: <span class="arithmatex">\(\dfrac{\tfrac{d}{4}}{\tfrac{d}{2}} = \tfrac12\)</span>.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(E\)</span>: the needle intersects a line and <span class="arithmatex">\(\theta &gt; \tfrac{\pi}{4}\)</span>.</p>
+</li>
+<li>Area for <span class="arithmatex">\(\theta &gt; \tfrac{\pi}{4}\)</span>:
+    <span class="arithmatex">\(\int_{\pi/4}^{\pi/2} \tfrac{L}{2} \sin\theta \,d\theta = \tfrac{L}{2} \cdot \dfrac{\sqrt{2}}{2} = \dfrac{L\sqrt{2}}{4}\)</span>.</li>
+<li>Probability: <span class="arithmatex">\(P(E) = \dfrac{\tfrac{L\sqrt{2}}{4}}{\tfrac{d\pi}{4}} = \dfrac{L\sqrt{2}}{d\pi}\)</span>.</li>
+</ul>
+<h3 id="additional-event">Additional event</h3>
+<ul>
+<li>Example: <span class="arithmatex">\(F = \{\theta \in [0, \tfrac{\pi}{6}],\ x &lt; \tfrac{d}{4}\}\)</span>.</li>
+<li>Because <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(\theta\)</span> are independent,
+  <span class="arithmatex">\(P(F) = \dfrac13 \cdot \tfrac12 = \dfrac16\)</span>.</li>
+</ul>
 
 
 

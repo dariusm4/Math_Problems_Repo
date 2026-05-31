@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://dchorazkiewicz.github.io/Math_Problems_Repo/pl/4_Metody_probabilistyczne/basic/solutions_07_data_analysis/solution_03/">
+        <link rel="canonical" href="https://dariusm4.github.io/Math_Problems_Repo/pl/4_Metody_probabilistyczne/basic/solutions_07_data_analysis/solution_03/">
       
       
       
@@ -1551,7 +1551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../anim/4_Metody_probalistyczne/laboratory_1.html" class="md-nav__link">
+      <a href="../../../../../anim/4_Metody_probalistyczne/laboratory_1.html" class="md-nav__link">
         
   
   
@@ -1579,7 +1579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../anim/4_Metody_probalistyczne/laboratory_2.html" class="md-nav__link">
+      <a href="../../../../../anim/4_Metody_probalistyczne/laboratory_2.html" class="md-nav__link">
         
   
   
@@ -1607,7 +1607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../anim/4_Metody_probalistyczne/laboratory_3.html" class="md-nav__link">
+      <a href="../../../../../anim/4_Metody_probalistyczne/laboratory_3.html" class="md-nav__link">
         
   
   
@@ -1863,23 +1863,23 @@
 <td>Raw dataset (240 rows)</td>
 </tr>
 <tr>
-<td><a href="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_03_exam_scores/overall_score_summary.csv">overall_score_summary.csv</a></td>
+<td><a href="problem_03_exam_scores/overall_score_summary.csv">overall_score_summary.csv</a></td>
 <td>Mean, median, min, max, variance, std dev for all students</td>
 </tr>
 <tr>
-<td><a href="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_03_exam_scores/score_summary_by_group.csv">score_summary_by_group.csv</a></td>
+<td><a href="problem_03_exam_scores/score_summary_by_group.csv">score_summary_by_group.csv</a></td>
 <td>Same statistics split by group</td>
 </tr>
 <tr>
-<td><a href="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_03_exam_scores/pass_rate_by_group.csv">pass_rate_by_group.csv</a></td>
+<td><a href="problem_03_exam_scores/pass_rate_by_group.csv">pass_rate_by_group.csv</a></td>
 <td>Pass counts and rates by group</td>
 </tr>
 <tr>
-<td><a href="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_03_exam_scores/score_histograms_by_group.png">score_histograms_by_group.png</a></td>
+<td><a href="problem_03_exam_scores/score_histograms_by_group.png">score_histograms_by_group.png</a></td>
 <td>Histograms of scores for A and B</td>
 </tr>
 <tr>
-<td><a href="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_03_exam_scores/score_boxplots_by_group.png">score_boxplots_by_group.png</a></td>
+<td><a href="problem_03_exam_scores/score_boxplots_by_group.png">score_boxplots_by_group.png</a></td>
 <td>Side-by-side boxplots</td>
 </tr>
 </tbody>
@@ -2110,7 +2110,7 @@ pass_rates[&quot;rate&quot;] = pass_rates[&quot;sum&quot;] / pass_rates[&quot;co
 <h3 id="task-5-draw-histograms-of-exam-scores-for-both-groups">Task 5: Draw histograms of exam scores for both groups</h3>
 <p><strong>Answer:</strong></p>
 <p>The histograms below show the frequency distributions of exam scores for Group A and Group B side by side.</p>
-<p><img alt="Histograms of exam scores by group" src="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_03_exam_scores/score_histograms_by_group.png" /></p>
+<p><img alt="Histograms of exam scores by group" src="problem_03_exam_scores/score_histograms_by_group.png" /></p>
 <pre><code class="language-python">import matplotlib.pyplot as plt
 
 fig, axes = plt.subplots(1, 2, figsize=(12, 5), sharey=True)
@@ -2133,7 +2133,7 @@ plt.savefig(&quot;score_histograms_by_group.png&quot;, dpi=150)
 <h3 id="task-6-draw-boxplots-comparing-the-two-groups">Task 6: Draw boxplots comparing the two groups</h3>
 <p><strong>Answer:</strong></p>
 <p>Boxplots provide a compact summary of each group's distribution, showing the median, interquartile range (IQR), whiskers, and potential outliers.</p>
-<p><img alt="Boxplots of exam scores by group" src="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_03_exam_scores/score_boxplots_by_group.png" /></p>
+<p><img alt="Boxplots of exam scores by group" src="problem_03_exam_scores/score_boxplots_by_group.png" /></p>
 <pre><code class="language-python">df.boxplot(column=&quot;score&quot;, by=&quot;group&quot;, figsize=(8, 6))
 plt.title(&quot;Exam Scores by Group&quot;)
 plt.suptitle(&quot;&quot;)

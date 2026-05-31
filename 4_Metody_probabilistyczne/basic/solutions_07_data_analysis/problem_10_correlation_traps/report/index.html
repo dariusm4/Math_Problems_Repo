@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://dchorazkiewicz.github.io/Math_Problems_Repo/4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_10_correlation_traps/report/">
+        <link rel="canonical" href="https://dariusm4.github.io/Math_Problems_Repo/4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_10_correlation_traps/report/">
       
       
       
@@ -3803,10 +3803,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#description-of-the-data" class="md-nav__link">
+  <a href="#visualizations" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Description of the data
+        Visualizations
       
     </span>
   </a>
@@ -3814,10 +3814,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#correlation-results" class="md-nav__link">
+  <a href="#description" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Correlation results
+        Description
       
     </span>
   </a>
@@ -3825,10 +3825,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#group-summary" class="md-nav__link">
+  <a href="#correlation-summary-for-sample_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Group summary
+        Correlation Summary for sample_1
       
     </span>
   </a>
@@ -3836,10 +3836,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#plots" class="md-nav__link">
+  <a href="#group-summary-for-sample_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Plots
+        Group Summary for sample_1
       
     </span>
   </a>
@@ -3847,10 +3847,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#interpretation" class="md-nav__link">
+  <a href="#answers-and-interpretation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Interpretation
+        Answers and Interpretation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variation-across-samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variation Across Samples
       
     </span>
   </a>
@@ -3878,108 +3889,154 @@
 <h2 id="generated-files">Generated files</h2>
 <ul>
 <li>Dataset: <a href="../problem_10_correlation_traps.csv"><code>problem_10_correlation_traps.csv</code></a></li>
-<li>Dataset without outlier group: <a href="../problem_10_without_outlier_group.csv"><code>problem_10_without_outlier_group.csv</code></a></li>
-<li>Outlier observations: <a href="../outlier_group_observations.csv"><code>outlier_group_observations.csv</code></a></li>
-<li>Correlation summary: <a href="../correlation_summary.csv"><code>correlation_summary.csv</code></a></li>
-<li>Group summary: <a href="../summary_by_group.csv"><code>summary_by_group.csv</code></a></li>
-<li>Plots:</li>
-<li><a href="../scatter_with_outliers.png"><code>scatter_with_outliers.png</code></a></li>
-<li><a href="../scatter_without_outliers.png"><code>scatter_without_outliers.png</code></a></li>
-<li><a href="../correlation_by_scope.png"><code>correlation_by_scope.png</code></a></li>
+<li>Dataset without outlier group for <code>sample_1</code>: <a href="../problem_10_without_outlier_group_sample_1.csv"><code>problem_10_without_outlier_group_sample_1.csv</code></a></li>
+<li>Outlier observations for <code>sample_1</code>: <a href="../outlier_group_observations_sample_1.csv"><code>outlier_group_observations_sample_1.csv</code></a></li>
+<li>Correlation summary for <code>sample_1</code>: <a href="../correlation_summary_sample_1.csv"><code>correlation_summary_sample_1.csv</code></a></li>
+<li>Group summary for <code>sample_1</code>: <a href="../summary_by_group_sample_1.csv"><code>summary_by_group_sample_1.csv</code></a></li>
+<li>Correlation by sample: <a href="../correlation_by_sample.csv"><code>correlation_by_sample.csv</code></a></li>
+<li>Scatter with outliers: <a href="../scatter_with_outliers_sample_1.png"><code>scatter_with_outliers_sample_1.png</code></a></li>
+<li>Scatter without outliers: <a href="../scatter_without_outliers_sample_1.png"><code>scatter_without_outliers_sample_1.png</code></a></li>
+<li>Correlation by scope plot: <a href="../correlation_by_scope_sample_1.png"><code>correlation_by_scope_sample_1.png</code></a></li>
+<li>Correlation by sample plot: <a href="../correlation_by_sample.png"><code>correlation_by_sample.png</code></a></li>
 </ul>
-<h2 id="description-of-the-data">Description of the data</h2>
-<p>One row represents one observation with two numerical variables, <code>x</code> and <code>y</code>. The variable <code>group</code> indicates whether the observation belongs to the left branch, the right branch, or the outlier group.</p>
-<p>The dataset contains 264 observations: 260 regular observations and 4 observations in the outlier group.</p>
-<h2 id="correlation-results">Correlation results</h2>
+<h2 id="visualizations">Visualizations</h2>
+<p><img alt="Scatter plot with outliers for sample_1" src="../scatter_with_outliers_sample_1.png" /></p>
+<p><strong>What this shows:</strong> This scatter plot is the main evidence. It shows a strong U-shaped relationship even though the overall linear correlation is close to zero.</p>
+<p><img alt="Scatter plot without outliers for sample_1" src="../scatter_without_outliers_sample_1.png" /></p>
+<p><strong>What this shows:</strong> After removing the outlier group, the nonlinear U-shape remains. This shows that the low overall correlation is not simply caused by the outliers.</p>
+<p><img alt="Correlation by scope for sample_1" src="../correlation_by_scope_sample_1.png" /></p>
+<p><strong>What this shows:</strong> This plot shows that correlation depends heavily on which observations are included. The branches have strong correlations in opposite directions, while the combined data have weak correlation.</p>
+<p><img alt="Correlation by sample" src="../correlation_by_sample.png" /></p>
+<p><strong>What this shows:</strong> This plot shows that exact correlation values change across samples. The visual nonlinear structure is more stable than the single numerical correlation.</p>
+<h2 id="description">Description</h2>
+<p>One row represents one observation in one generated sample. It records two numerical variables, <code>x</code> and <code>y</code>, and a group label identifying the left branch, right branch, or outlier group.</p>
+<p>The main reproducible solution uses <code>sample_1</code>. The other samples show how numerical correlation changes even when the nonlinear visual pattern stays the same.</p>
+<h2 id="correlation-summary-for-sample_1">Correlation Summary for <code>sample_1</code></h2>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Data scope</th>
-<th style="text-align: right;">Observation count</th>
-<th style="text-align: right;">Correlation between x and y</th>
+<th>data_scope</th>
+<th>observation_count</th>
+<th>correlation</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">all observations</td>
-<td style="text-align: right;">264</td>
-<td style="text-align: right;">0.0179</td>
+<td>all observations</td>
+<td>264</td>
+<td>0.0179</td>
 </tr>
 <tr>
-<td style="text-align: left;">without outlier_group</td>
-<td style="text-align: right;">260</td>
-<td style="text-align: right;">0.0572</td>
+<td>without outlier_group</td>
+<td>260</td>
+<td>0.0572</td>
 </tr>
 <tr>
-<td style="text-align: left;">left_branch only</td>
-<td style="text-align: right;">125</td>
-<td style="text-align: right;">-0.9428</td>
+<td>left_branch only</td>
+<td>125</td>
+<td>-0.9428</td>
 </tr>
 <tr>
-<td style="text-align: left;">right_branch only</td>
-<td style="text-align: right;">135</td>
-<td style="text-align: right;">0.9405</td>
+<td>outlier_group only</td>
+<td>4</td>
+<td>0.5292</td>
+</tr>
+<tr>
+<td>right_branch only</td>
+<td>135</td>
+<td>0.9405</td>
 </tr>
 </tbody>
 </table>
-<p>The correlation for all observations is very close to zero. After removing the outlier group, the correlation is still close to zero. However, this does not mean that there is no relationship between <code>x</code> and <code>y</code>.</p>
-<h2 id="group-summary">Group summary</h2>
+<h2 id="group-summary-for-sample_1">Group Summary for <code>sample_1</code></h2>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Group</th>
-<th style="text-align: right;">Observation count</th>
-<th style="text-align: right;">Mean x</th>
-<th style="text-align: right;">Mean y</th>
-<th style="text-align: right;">Min x</th>
-<th style="text-align: right;">Max x</th>
-<th style="text-align: right;">Min y</th>
-<th style="text-align: right;">Max y</th>
+<th>group</th>
+<th>observation_count</th>
+<th>mean_x</th>
+<th>mean_y</th>
+<th>min_x</th>
+<th>max_x</th>
+<th>min_y</th>
+<th>max_y</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">left_branch</td>
-<td style="text-align: right;">125</td>
-<td style="text-align: right;">-2.1482</td>
-<td style="text-align: right;">5.9510</td>
-<td style="text-align: right;">-3.995</td>
-<td style="text-align: right;">-0.063</td>
-<td style="text-align: right;">-2.163</td>
-<td style="text-align: right;">16.804</td>
+<td>left_branch</td>
+<td>125</td>
+<td>-2.1482</td>
+<td>5.9510</td>
+<td>-3.9950</td>
+<td>-0.0630</td>
+<td>-2.1630</td>
+<td>16.8040</td>
 </tr>
 <tr>
-<td style="text-align: left;">outlier_group</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">8.2500</td>
-<td style="text-align: right;">2.1250</td>
-<td style="text-align: right;">7.500</td>
-<td style="text-align: right;">9.000</td>
-<td style="text-align: right;">1.000</td>
-<td style="text-align: right;">3.000</td>
+<td>outlier_group</td>
+<td>4</td>
+<td>8.2500</td>
+<td>2.1250</td>
+<td>7.5000</td>
+<td>9.0000</td>
+<td>1.0000</td>
+<td>3.0000</td>
 </tr>
 <tr>
-<td style="text-align: left;">right_branch</td>
-<td style="text-align: right;">135</td>
-<td style="text-align: right;">2.1446</td>
-<td style="text-align: right;">6.0978</td>
-<td style="text-align: right;">0.069</td>
-<td style="text-align: right;">3.998</td>
-<td style="text-align: right;">-2.595</td>
-<td style="text-align: right;">17.557</td>
+<td>right_branch</td>
+<td>135</td>
+<td>2.1446</td>
+<td>6.0978</td>
+<td>0.0690</td>
+<td>3.9980</td>
+<td>-2.5950</td>
+<td>17.5570</td>
 </tr>
 </tbody>
 </table>
-<h2 id="plots">Plots</h2>
-<p><img alt="Scatter plot with outliers" src="../scatter_with_outliers.png" /></p>
-<p><img alt="Scatter plot without outlier group" src="../scatter_without_outliers.png" /></p>
-<p><img alt="Correlation by data scope" src="../correlation_by_scope.png" /></p>
-<h2 id="interpretation">Interpretation</h2>
-<p>The scatter plot shows a clear nonlinear relationship. The regular observations form a U-shaped pattern similar to <span class="arithmatex">\(y=x^2\)</span>. This relationship is strong visually, but it is not a simple linear relationship.</p>
-<p>The correlation coefficient measures linear association. Because the U-shape is roughly symmetric, the negative trend on the left branch and the positive trend on the right branch cancel each other when all regular observations are combined. That is why the correlation without the outlier group is only 0.0572.</p>
-<p>Within each branch, the relationship is almost linear. On the left branch, the correlation is -0.9428. On the right branch, it is 0.9405. These large values are hidden when both branches are summarized by one correlation coefficient.</p>
-<p>The outlier group also matters. The correlation using all observations is 0.0179, while the correlation after removing the outlier group is 0.0572. In this dataset the outliers change the value, but the deeper issue is that a single correlation coefficient is not appropriate for describing the nonlinear pattern.</p>
-<p>A low correlation does not necessarily mean that there is no relationship. It may mean that the relationship is nonlinear, that different subgroups behave differently, or that outliers are distorting the numerical summary. The scatter plot reveals structure that the correlation coefficient alone does not show.</p>
+<h2 id="answers-and-interpretation">Answers and Interpretation</h2>
+<p>The overall correlation in <code>sample_1</code> is close to zero, but the scatter plot clearly shows a strong U-shaped relationship. This is the main trap: correlation measures linear association, so it can fail to describe a nonlinear relationship.</p>
+<p>Removing the outlier group changes the correlation, but it still does not make the U-shaped relationship well described by one linear coefficient. Within the left branch the relationship is strongly negative, and within the right branch it is strongly positive. The combined dataset hides both branch-level relationships.</p>
+<p>A low correlation therefore does not necessarily mean that there is no relationship. It may mean that the relationship is nonlinear, that subgroups behave differently, or that outliers distort the linear summary.</p>
+<h2 id="variation-across-samples">Variation Across Samples</h2>
+<p>The exact correlation changes from sample to sample. The visual U-shape remains stable, so the model solution should rely on the scatter plot together with the numerical correlation, not on the correlation coefficient alone.</p>
+<table>
+<thead>
+<tr>
+<th>sample_id</th>
+<th>correlation_all</th>
+<th>correlation_without_outliers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sample_1</td>
+<td>0.0179</td>
+<td>0.0572</td>
+</tr>
+<tr>
+<td>sample_2</td>
+<td>-0.1679</td>
+<td>-0.1537</td>
+</tr>
+<tr>
+<td>sample_3</td>
+<td>-0.0698</td>
+<td>-0.0386</td>
+</tr>
+<tr>
+<td>sample_4</td>
+<td>-0.1017</td>
+<td>-0.0784</td>
+</tr>
+<tr>
+<td>sample_5</td>
+<td>-0.0168</td>
+<td>0.0159</td>
+</tr>
+</tbody>
+</table>
 
 
 

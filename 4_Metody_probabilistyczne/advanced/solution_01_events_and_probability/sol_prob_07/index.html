@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://dchorazkiewicz.github.io/Math_Problems_Repo/4_Metody_probabilistyczne/advanced/solution_01_events_and_probability/sol_prob_07/">
+        <link rel="canonical" href="https://dariusm4.github.io/Math_Problems_Repo/4_Metody_probabilistyczne/advanced/solution_01_events_and_probability/sol_prob_07/">
       
       
       
@@ -25,7 +25,7 @@
     
     
       
-        <title>Task 7 — Signal Transmission with Interference - Math Problems</title>
+        <title>Sol prob 07 - Math Problems</title>
       
     
     
@@ -77,11 +77,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#task-7-signal-transmission-with-interference" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -114,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Task 7 — Signal Transmission with Interference
+              Sol prob 07
             
           </span>
         </div>
@@ -3782,60 +3777,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#given" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Given
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-probability-of-receiving-111" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Probability of receiving 111
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-probability-of-receiving-000" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Probability of receiving 000
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-probability-of-receiving-010" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Probability of receiving 010
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -3852,35 +3793,9 @@
 
 
 
-<h1 id="task-7-signal-transmission-with-interference">Task 7 — Signal Transmission with Interference</h1>
-<h2 id="given">Given</h2>
-<ul>
-<li><span class="arithmatex">\(P(\text{send } 111) = 0.65\)</span>, <span class="arithmatex">\(P(\text{send } 000) = 0.35\)</span></li>
-<li><span class="arithmatex">\(P(\text{bit flip}) = 0.2\)</span>, <span class="arithmatex">\(P(\text{correct bit}) = 0.8\)</span></li>
-<li>Bits are independent</li>
-</ul>
-<h2 id="1-probability-of-receiving-111">1. Probability of receiving 111</h2>
-<div class="arithmatex">\[P(\text{recv } 111) = P(111|\text{send } 111) \cdot P(\text{send } 111) + P(111|\text{send } 000) \cdot P(\text{send } 000)\]</div>
-<ul>
-<li><span class="arithmatex">\(P(111|\text{send } 111) = 0.8^3 = 0.512\)</span></li>
-<li><span class="arithmatex">\(P(111|\text{send } 000) = 0.2^3 = 0.008\)</span></li>
-</ul>
-<div class="arithmatex">\[P(\text{recv } 111) = 0.512 \cdot 0.65 + 0.008 \cdot 0.35 = 0.3328 + 0.0028\]</div>
-<div class="arithmatex">\[\boxed{P(\text{recv } 111) = 0.3356}\]</div>
-<h2 id="2-probability-of-receiving-000">2. Probability of receiving 000</h2>
-<ul>
-<li><span class="arithmatex">\(P(000|\text{send } 111) = 0.2^3 = 0.008\)</span></li>
-<li><span class="arithmatex">\(P(000|\text{send } 000) = 0.8^3 = 0.512\)</span></li>
-</ul>
-<div class="arithmatex">\[P(\text{recv } 000) = 0.008 \cdot 0.65 + 0.512 \cdot 0.35 = 0.0052 + 0.1792\]</div>
-<div class="arithmatex">\[\boxed{P(\text{recv } 000) = 0.1844}\]</div>
-<h2 id="3-probability-of-receiving-010">3. Probability of receiving 010</h2>
-<ul>
-<li><span class="arithmatex">\(P(010|\text{send } 111)\)</span>: positions 1,3 flip (<span class="arithmatex">\(0.2\)</span>), position 2 stays (<span class="arithmatex">\(0.8\)</span>) → <span class="arithmatex">\(0.2 \cdot 0.8 \cdot 0.2 = 0.032\)</span></li>
-<li><span class="arithmatex">\(P(010|\text{send } 000)\)</span>: position 2 flips (<span class="arithmatex">\(0.2\)</span>), positions 1,3 stay (<span class="arithmatex">\(0.8\)</span>) → <span class="arithmatex">\(0.8 \cdot 0.2 \cdot 0.8 = 0.128\)</span></li>
-</ul>
-<div class="arithmatex">\[P(\text{recv } 010) = 0.032 \cdot 0.65 + 0.128 \cdot 0.35 = 0.0208 + 0.0448\]</div>
-<div class="arithmatex">\[\boxed{P(\text{recv } 010) = 0.0656}\]</div>
+  <h1>Sol prob 07</h1>
+
+
 
 
 

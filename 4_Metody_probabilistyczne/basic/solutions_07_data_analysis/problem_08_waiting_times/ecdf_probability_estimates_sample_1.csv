@@ -1,0 +1,4 @@
+quantity,estimate
+P(waiting time <= 5),0.244
+P(waiting time <= 10),0.538
+P(waiting time > 20),0.17

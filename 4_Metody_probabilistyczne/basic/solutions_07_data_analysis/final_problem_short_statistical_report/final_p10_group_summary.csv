@@ -1,0 +1,4 @@
+group,count,mean_x,mean_y,min_y,max_y
+left_branch,125,-2.14824,5.951008,-2.163,16.804
+outlier_group,4,8.25,2.125,1.0,3.0
+right_branch,135,2.144614814814815,6.097822222222223,-2.595,17.557

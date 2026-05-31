@@ -1,0 +1,5 @@
+sample_id,seed,observation_id,x,y,group
+sample_1,710,N0261,7.5,2.0,outlier_group
+sample_1,710,N0262,8.0,1.0,outlier_group
+sample_1,710,N0263,8.5,3.0,outlier_group
+sample_1,710,N0264,9.0,2.5,outlier_group

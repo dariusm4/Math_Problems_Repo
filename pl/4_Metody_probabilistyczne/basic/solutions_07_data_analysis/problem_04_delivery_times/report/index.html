@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://dchorazkiewicz.github.io/Math_Problems_Repo/pl/4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_04_delivery_times/report/">
+        <link rel="canonical" href="https://dariusm4.github.io/Math_Problems_Repo/pl/4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_04_delivery_times/report/">
       
       
       
@@ -1551,7 +1551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../anim/4_Metody_probalistyczne/laboratory_1.html" class="md-nav__link">
+      <a href="../../../../../../anim/4_Metody_probalistyczne/laboratory_1.html" class="md-nav__link">
         
   
   
@@ -1579,7 +1579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../anim/4_Metody_probalistyczne/laboratory_2.html" class="md-nav__link">
+      <a href="../../../../../../anim/4_Metody_probalistyczne/laboratory_2.html" class="md-nav__link">
         
   
   
@@ -1607,7 +1607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../anim/4_Metody_probalistyczne/laboratory_3.html" class="md-nav__link">
+      <a href="../../../../../../anim/4_Metody_probalistyczne/laboratory_3.html" class="md-nav__link">
         
   
   
@@ -1681,10 +1681,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#description-of-the-data" class="md-nav__link">
+  <a href="#visualizations" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Description of the data
+        Visualizations
       
     </span>
   </a>
@@ -1692,10 +1692,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#overall-summary" class="md-nav__link">
+  <a href="#description" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Overall summary
+        Description
       
     </span>
   </a>
@@ -1703,10 +1703,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#summary-by-zone" class="md-nav__link">
+  <a href="#summary-for-sample_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Summary by zone
+        Summary for sample_1
       
     </span>
   </a>
@@ -1714,10 +1714,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#plots" class="md-nav__link">
+  <a href="#quartiles-and-iqr-rule-for-sample_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Plots
+        Quartiles and IQR Rule for sample_1
       
     </span>
   </a>
@@ -1725,10 +1725,43 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#interpretation" class="md-nav__link">
+  <a href="#zone-summary-for-sample_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Interpretation
+        Zone Summary for sample_1
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#answers-and-interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Answers and Interpretation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delayed-deliveries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Delayed Deliveries
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variation-across-samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variation Across Samples
       
     </span>
   </a>
@@ -1756,109 +1789,211 @@
 <h2 id="generated-files">Generated files</h2>
 <ul>
 <li>Dataset: <a href="../../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_04_delivery_times/problem_04_delivery_times.csv"><code>problem_04_delivery_times.csv</code></a></li>
-<li>Overall summary: <a href="../../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_04_delivery_times/delivery_time_summary.csv"><code>delivery_time_summary.csv</code></a></li>
-<li>Zone summary: <a href="../../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_04_delivery_times/delivery_time_summary_by_zone.csv"><code>delivery_time_summary_by_zone.csv</code></a></li>
-<li>Possible outliers: <a href="../../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_04_delivery_times/outliers_1_5_iqr.csv"><code>outliers_1_5_iqr.csv</code></a></li>
-<li>Histogram: <a href="../../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_04_delivery_times/delivery_time_histogram.png"><code>delivery_time_histogram.png</code></a></li>
-<li>Boxplot: <a href="../../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_04_delivery_times/delivery_time_boxplot_by_zone.png"><code>delivery_time_boxplot_by_zone.png</code></a></li>
+<li>Summary for <code>sample_1</code>: <a href="../../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_04_delivery_times/delivery_time_summary_sample_1.csv"><code>delivery_time_summary_sample_1.csv</code></a></li>
+<li>Zone summary for <code>sample_1</code>: <a href="../../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_04_delivery_times/delivery_time_summary_by_zone_sample_1.csv"><code>delivery_time_summary_by_zone_sample_1.csv</code></a></li>
+<li>IQR outliers for <code>sample_1</code>: <a href="../../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_04_delivery_times/outliers_1_5_iqr_sample_1.csv"><code>outliers_1_5_iqr_sample_1.csv</code></a></li>
+<li>Delayed proportion for <code>sample_1</code>: <a href="../../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_04_delivery_times/delayed_proportion_sample_1.csv"><code>delayed_proportion_sample_1.csv</code></a></li>
+<li>Summary by sample: <a href="../../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_04_delivery_times/delivery_time_summary_by_sample.csv"><code>delivery_time_summary_by_sample.csv</code></a></li>
+<li>Histogram: <a href="../../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_04_delivery_times/delivery_time_histogram_sample_1.png"><code>delivery_time_histogram_sample_1.png</code></a></li>
+<li>Boxplot by zone: <a href="../../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_04_delivery_times/delivery_time_boxplot_by_zone_sample_1.png"><code>delivery_time_boxplot_by_zone_sample_1.png</code></a></li>
+<li>Mean/median sample plot: <a href="../../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_04_delivery_times/mean_median_by_sample.png"><code>mean_median_by_sample.png</code></a></li>
 </ul>
-<h2 id="description-of-the-data">Description of the data</h2>
-<p>One row represents one delivery. The column <code>delivery_id</code> identifies the delivery, <code>zone</code> gives the delivery zone, <code>delivery_time_min</code> gives the delivery time in minutes, and <code>delayed</code> indicates whether the delivery took more than 60 minutes.</p>
-<p>The dataset contains 350 deliveries.</p>
-<h2 id="overall-summary">Overall summary</h2>
+<h2 id="visualizations">Visualizations</h2>
+<p><img alt="Delivery-time histogram for sample_1" src="../../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_04_delivery_times/delivery_time_histogram_sample_1.png" /></p>
+<p><strong>What this shows:</strong> The histogram shows the right-skewed shape of delivery times. Most deliveries are moderate, while a smaller number of long deliveries stretch the right tail and pull the mean above the median.</p>
+<p><img alt="Delivery-time boxplot by zone for sample_1" src="../../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_04_delivery_times/delivery_time_boxplot_by_zone_sample_1.png" /></p>
+<p><strong>What this shows:</strong> The boxplot compares delivery-time distributions between zones. It shows differences in center, spread, and possible outliers more clearly than a table of means alone.</p>
+<p><img alt="Mean and median by sample" src="../../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_04_delivery_times/mean_median_by_sample.png" /></p>
+<p><strong>What this shows:</strong> This plot shows that the mean and median fluctuate from sample to sample. The mean is consistently above the median, which confirms that skewness is a stable feature, not an accident of one sample.</p>
+<h2 id="description">Description</h2>
+<p>One row represents one delivery in one generated sample. It records the delivery zone, the delivery time in minutes, and whether the delivery was delayed.</p>
+<p>The main reproducible solution uses <code>sample_1</code>. The other samples help check whether skewness, outliers, and delay rates are stable features of the data-generating process.</p>
+<h2 id="summary-for-sample_1">Summary for <code>sample_1</code></h2>
 <table>
 <thead>
 <tr>
-<th style="text-align: right;">Number of deliveries</th>
-<th style="text-align: right;">Mean</th>
-<th style="text-align: right;">Median</th>
-<th style="text-align: right;">Q1</th>
-<th style="text-align: right;">Q3</th>
-<th style="text-align: right;">IQR</th>
-<th style="text-align: right;">Lower fence</th>
-<th style="text-align: right;">Upper fence</th>
-<th style="text-align: right;">Possible outliers</th>
-<th style="text-align: right;">Delayed proportion</th>
+<th>count</th>
+<th>mean</th>
+<th>median</th>
+<th>minimum</th>
+<th>q1</th>
+<th>q2_median</th>
+<th>q3</th>
+<th>maximum</th>
+<th>variance</th>
+<th>standard_deviation</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: right;">350</td>
-<td style="text-align: right;">37.730</td>
-<td style="text-align: right;">33.300</td>
-<td style="text-align: right;">24.625</td>
-<td style="text-align: right;">43.775</td>
-<td style="text-align: right;">19.150</td>
-<td style="text-align: right;">-4.100</td>
-<td style="text-align: right;">72.500</td>
-<td style="text-align: right;">20</td>
-<td style="text-align: right;">0.100</td>
+<td>350.0000</td>
+<td>37.7300</td>
+<td>33.3000</td>
+<td>10.0000</td>
+<td>24.6250</td>
+<td>33.3000</td>
+<td>43.7750</td>
+<td>232.5000</td>
+<td>494.5839</td>
+<td>22.2392</td>
 </tr>
 </tbody>
 </table>
-<p>The 1.5 IQR rule gives:</p>
-<div class="arithmatex">\[
-Q_1 - 1.5 \cdot IQR = -4.1,
-\]</div>
-<div class="arithmatex">\[
-Q_3 + 1.5 \cdot IQR = 72.5.
-\]</div>
-<p>Since delivery times cannot be negative, only unusually large delivery times are identified as possible outliers. There are 20 observations above 72.5 minutes.</p>
-<h2 id="summary-by-zone">Summary by zone</h2>
+<h2 id="quartiles-and-iqr-rule-for-sample_1">Quartiles and IQR Rule for <code>sample_1</code></h2>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Zone</th>
-<th style="text-align: right;">Count</th>
-<th style="text-align: right;">Mean</th>
-<th style="text-align: right;">Median</th>
-<th style="text-align: right;">Minimum</th>
-<th style="text-align: right;">Maximum</th>
-<th style="text-align: right;">Standard deviation</th>
-<th style="text-align: right;">Delayed proportion</th>
+<th>q1</th>
+<th>q2_median</th>
+<th>q3</th>
+<th>iqr</th>
+<th>lower_fence</th>
+<th>upper_fence</th>
+<th>outlier_count</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">central</td>
-<td style="text-align: right;">154</td>
-<td style="text-align: right;">38.686</td>
-<td style="text-align: right;">33.000</td>
-<td style="text-align: right;">10.000</td>
-<td style="text-align: right;">232.500</td>
-<td style="text-align: right;">25.337</td>
-<td style="text-align: right;">0.117</td>
-</tr>
-<tr>
-<td style="text-align: left;">remote</td>
-<td style="text-align: right;">56</td>
-<td style="text-align: right;">39.168</td>
-<td style="text-align: right;">36.450</td>
-<td style="text-align: right;">16.000</td>
-<td style="text-align: right;">128.100</td>
-<td style="text-align: right;">18.569</td>
-<td style="text-align: right;">0.089</td>
-</tr>
-<tr>
-<td style="text-align: left;">suburban</td>
-<td style="text-align: right;">140</td>
-<td style="text-align: right;">36.103</td>
-<td style="text-align: right;">33.050</td>
-<td style="text-align: right;">11.300</td>
-<td style="text-align: right;">151.000</td>
-<td style="text-align: right;">19.855</td>
-<td style="text-align: right;">0.086</td>
+<td>24.6250</td>
+<td>33.3000</td>
+<td>43.7750</td>
+<td>19.1500</td>
+<td>-4.1000</td>
+<td>72.5000</td>
+<td>20.0000</td>
 </tr>
 </tbody>
 </table>
-<h2 id="plots">Plots</h2>
-<p><img alt="Histogram of delivery times" src="../../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_04_delivery_times/delivery_time_histogram.png" /></p>
-<p><img alt="Boxplot of delivery times by zone" src="../../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_04_delivery_times/delivery_time_boxplot_by_zone.png" /></p>
-<h2 id="interpretation">Interpretation</h2>
-<p>The mean delivery time is 37.730 minutes, while the median is 33.300 minutes. The mean is higher than the median because the distribution is right-skewed: most deliveries are concentrated around moderate times, but a small number of very long deliveries pull the mean upward.</p>
-<p>The delayed proportion is 0.100, so about 10% of deliveries took more than 60 minutes.</p>
-<p>The remote zone has the highest median delivery time, 36.450 minutes, while the central zone has the highest mean, 38.686 minutes, and the largest standard deviation, 25.337 minutes. The central zone also has the highest delayed proportion, 0.117. This suggests that central deliveries contain some unusually long cases, even though the typical central delivery is not much slower than the suburban one.</p>
-<p>The median is more informative than the mean in this dataset because the mean is sensitive to unusually large delivery times. For a skewed distribution with outliers, the median gives a better description of a typical delivery.</p>
+<h2 id="zone-summary-for-sample_1">Zone Summary for <code>sample_1</code></h2>
+<table>
+<thead>
+<tr>
+<th>zone</th>
+<th>deliveries</th>
+<th>mean</th>
+<th>median</th>
+<th>q1</th>
+<th>q3</th>
+<th>standard_deviation</th>
+<th>delayed_rate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>central</td>
+<td>154</td>
+<td>38.6864</td>
+<td>33.0000</td>
+<td>24.0500</td>
+<td>43.8000</td>
+<td>25.3375</td>
+<td>0.1169</td>
+</tr>
+<tr>
+<td>remote</td>
+<td>56</td>
+<td>39.1679</td>
+<td>36.4500</td>
+<td>27.1000</td>
+<td>46.8500</td>
+<td>18.5686</td>
+<td>0.0893</td>
+</tr>
+<tr>
+<td>suburban</td>
+<td>140</td>
+<td>36.1029</td>
+<td>33.0500</td>
+<td>24.3500</td>
+<td>41.4000</td>
+<td>19.8546</td>
+<td>0.0857</td>
+</tr>
+</tbody>
+</table>
+<h2 id="answers-and-interpretation">Answers and Interpretation</h2>
+<p>The mean delivery time is larger than the median. This happens because the distribution is right-skewed: most deliveries are moderate, but a few unusually long deliveries pull the mean upward.</p>
+<p>The 1.5 IQR rule identifies observations above 72.5000 minutes as possible high outliers. These are not necessarily data errors; they are deliveries that are unusually long relative to the middle 50% of the data.</p>
+<p>The delayed-delivery proportion in <code>sample_1</code> is 0.1000. The median is often more informative than the mean in this dataset because it is less affected by very long delivery times.</p>
+<h2 id="delayed-deliveries">Delayed Deliveries</h2>
+<table>
+<thead>
+<tr>
+<th>delayed_deliveries</th>
+<th>total_deliveries</th>
+<th>proportion_delayed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>35.0000</td>
+<td>350.0000</td>
+<td>0.1000</td>
+</tr>
+</tbody>
+</table>
+<h2 id="variation-across-samples">Variation Across Samples</h2>
+<p>The right-skewed shape is stable across samples, but the exact mean, median, outlier cutoff, and delayed rate change. This is especially visible for outliers, because extreme observations are strongly sample-dependent.</p>
+<table>
+<thead>
+<tr>
+<th>sample_id</th>
+<th>mean</th>
+<th>median</th>
+<th>q1</th>
+<th>q3</th>
+<th>standard_deviation</th>
+<th>delayed_rate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sample_1</td>
+<td>37.7300</td>
+<td>33.3000</td>
+<td>24.6250</td>
+<td>43.7750</td>
+<td>22.2392</td>
+<td>0.1000</td>
+</tr>
+<tr>
+<td>sample_2</td>
+<td>35.7423</td>
+<td>32.4500</td>
+<td>24.9250</td>
+<td>41.5500</td>
+<td>16.6651</td>
+<td>0.0800</td>
+</tr>
+<tr>
+<td>sample_3</td>
+<td>36.4397</td>
+<td>32.7500</td>
+<td>24.5000</td>
+<td>42.2750</td>
+<td>19.7337</td>
+<td>0.0886</td>
+</tr>
+<tr>
+<td>sample_4</td>
+<td>37.3206</td>
+<td>32.6000</td>
+<td>25.0250</td>
+<td>43.6250</td>
+<td>21.3082</td>
+<td>0.0771</td>
+</tr>
+<tr>
+<td>sample_5</td>
+<td>35.1740</td>
+<td>30.5000</td>
+<td>23.7250</td>
+<td>40.7750</td>
+<td>18.6007</td>
+<td>0.0714</td>
+</tr>
+</tbody>
+</table>
 
 
 

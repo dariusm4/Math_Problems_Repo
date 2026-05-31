@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://dchorazkiewicz.github.io/Math_Problems_Repo/4_Metody_probabilistyczne/basic/solutions_07_data_analysis/solution_05/">
+        <link rel="canonical" href="https://dariusm4.github.io/Math_Problems_Repo/4_Metody_probabilistyczne/basic/solutions_07_data_analysis/solution_05/">
       
       
         <link rel="prev" href="../solution_04/">
@@ -4294,17 +4294,17 @@
 <ul>
 <li>Dataset: <a href="../problem_05_customer_survey/problem_05_customer_survey.csv">problem_05_customer_survey.csv</a></li>
 <li>Frequency tables:</li>
-<li><a href="../problem_05_customer_survey/frequency_age_group.csv">frequency_age_group.csv</a></li>
-<li><a href="../problem_05_customer_survey/frequency_channel.csv">frequency_channel.csv</a></li>
-<li><a href="../problem_05_customer_survey/frequency_satisfaction.csv">frequency_satisfaction.csv</a></li>
-<li><a href="../problem_05_customer_survey/frequency_renewed.csv">frequency_renewed.csv</a></li>
-<li>Overall renewal summary: <a href="../problem_05_customer_survey/overall_renewal_summary.csv">overall_renewal_summary.csv</a></li>
-<li>Renewal by channel: <a href="../problem_05_customer_survey/renewal_rate_by_channel.csv">renewal_rate_by_channel.csv</a></li>
-<li>Renewal by satisfaction: <a href="../problem_05_customer_survey/renewal_rate_by_satisfaction.csv">renewal_rate_by_satisfaction.csv</a></li>
+<li><a href="problem_05_customer_survey/frequency_age_group.csv">frequency_age_group.csv</a></li>
+<li><a href="problem_05_customer_survey/frequency_channel.csv">frequency_channel.csv</a></li>
+<li><a href="problem_05_customer_survey/frequency_satisfaction.csv">frequency_satisfaction.csv</a></li>
+<li><a href="problem_05_customer_survey/frequency_renewed.csv">frequency_renewed.csv</a></li>
+<li>Overall renewal summary: <a href="problem_05_customer_survey/overall_renewal_summary.csv">overall_renewal_summary.csv</a></li>
+<li>Renewal by channel: <a href="problem_05_customer_survey/renewal_rate_by_channel.csv">renewal_rate_by_channel.csv</a></li>
+<li>Renewal by satisfaction: <a href="problem_05_customer_survey/renewal_rate_by_satisfaction.csv">renewal_rate_by_satisfaction.csv</a></li>
 <li>Plots:</li>
-<li><a href="../problem_05_customer_survey/satisfaction_frequency_bar.png">satisfaction_frequency_bar.png</a></li>
-<li><a href="../problem_05_customer_survey/renewal_rate_by_satisfaction.png">renewal_rate_by_satisfaction.png</a></li>
-<li><a href="../problem_05_customer_survey/renewal_rate_by_channel.png">renewal_rate_by_channel.png</a></li>
+<li><a href="problem_05_customer_survey/satisfaction_frequency_bar.png">satisfaction_frequency_bar.png</a></li>
+<li><a href="problem_05_customer_survey/renewal_rate_by_satisfaction.png">renewal_rate_by_satisfaction.png</a></li>
+<li><a href="problem_05_customer_survey/renewal_rate_by_channel.png">renewal_rate_by_channel.png</a></li>
 </ul>
 <hr />
 <h2 id="solution">Solution</h2>
@@ -4457,7 +4457,7 @@ f_{\text{rel}}(c) = \frac{n_c}{n}
 </tr>
 </tbody>
 </table>
-<p><img alt="Satisfaction frequency distribution" src="../problem_05_customer_survey/satisfaction_frequency_bar.png" /></p>
+<p><img alt="Satisfaction frequency distribution" src="problem_05_customer_survey/satisfaction_frequency_bar.png" /></p>
 <p>The distribution is <strong>left-skewed</strong> (concentrated at higher values). Scores 3 and 4 together account for about 72.3% of all responses. Very few customers (only 5) gave the lowest score of 1, while 110 customers (18.3%) gave the highest score of 5. This is a generally positive sentiment.</p>
 <h4 id="renewed">Renewed</h4>
 <table>
@@ -4535,7 +4535,7 @@ P(\text{renewed} \mid \text{channel} = c) = \frac{\text{Number renewed in channe
 </tr>
 </tbody>
 </table>
-<p><img alt="Renewal rate by channel" src="../problem_05_customer_survey/renewal_rate_by_channel.png" /></p>
+<p><img alt="Renewal rate by channel" src="problem_05_customer_survey/renewal_rate_by_channel.png" /></p>
 <pre><code class="language-python">renewal_by_channel = df.groupby('channel')['renewed'].agg(['sum', 'count'])
 renewal_by_channel['rate'] = renewal_by_channel['sum'] / renewal_by_channel['count']
 </code></pre>
@@ -4595,7 +4595,7 @@ P(\text{renewed} \mid \text{satisfaction} = s) = \frac{n_{\text{renewed},\, s}}{
 </tr>
 </tbody>
 </table>
-<p><img alt="Renewal rate by satisfaction" src="../problem_05_customer_survey/renewal_rate_by_satisfaction.png" /></p>
+<p><img alt="Renewal rate by satisfaction" src="problem_05_customer_survey/renewal_rate_by_satisfaction.png" /></p>
 <pre><code class="language-python">renewal_by_sat = df.groupby('satisfaction')['renewed'].agg(['sum', 'count'])
 renewal_by_sat['rate'] = renewal_by_sat['sum'] / renewal_by_sat['count']
 </code></pre>

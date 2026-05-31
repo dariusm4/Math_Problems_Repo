@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://dchorazkiewicz.github.io/Math_Problems_Repo/pl/4_Metody_probabilistyczne/basic/solutions_01_events_and_probability/solution_08/">
+        <link rel="canonical" href="https://dariusm4.github.io/Math_Problems_Repo/pl/4_Metody_probabilistyczne/basic/solutions_01_events_and_probability/solution_08/">
       
       
       
@@ -1551,7 +1551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../anim/4_Metody_probalistyczne/laboratory_1.html" class="md-nav__link">
+      <a href="../../../../../anim/4_Metody_probalistyczne/laboratory_1.html" class="md-nav__link">
         
   
   
@@ -1579,7 +1579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../anim/4_Metody_probalistyczne/laboratory_2.html" class="md-nav__link">
+      <a href="../../../../../anim/4_Metody_probalistyczne/laboratory_2.html" class="md-nav__link">
         
   
   
@@ -1607,7 +1607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../anim/4_Metody_probalistyczne/laboratory_3.html" class="md-nav__link">
+      <a href="../../../../../anim/4_Metody_probalistyczne/laboratory_3.html" class="md-nav__link">
         
   
   
@@ -1663,6 +1663,86 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Spis treści
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#task-8-events-and-probabilities-in-card-drawing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 8 — Events and Probabilities in Card Drawing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Task 8 — Events and Probabilities in Card Drawing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#elementary-outcome-probabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Elementary outcome probabilities
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#one-card-drawn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        One card drawn
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#two-cards-drawn-with-replacement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Two cards drawn with replacement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#two-cards-drawn-without-replacement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Two cards drawn without replacement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-event-on-omega_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional event on \(\Omega_2'\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1679,6 +1759,36 @@
 
 
 <h1 id="solution">Solution</h1>
+<h2 id="task-8-events-and-probabilities-in-card-drawing">Task 8 — Events and Probabilities in Card Drawing</h2>
+<h3 id="elementary-outcome-probabilities">Elementary outcome probabilities</h3>
+<ul>
+<li>In <span class="arithmatex">\(\Omega_1\)</span>: each card has probability <span class="arithmatex">\(\tfrac1{52}\)</span>.</li>
+<li>In <span class="arithmatex">\(\Omega_2\)</span> with replacement: each ordered pair has probability <span class="arithmatex">\(\tfrac1{2704}\)</span>.</li>
+<li>In <span class="arithmatex">\(\Omega_2'\)</span> without replacement: each ordered pair has probability <span class="arithmatex">\(\tfrac1{2652}\)</span>.</li>
+</ul>
+<h3 id="one-card-drawn">One card drawn</h3>
+<ul>
+<li><span class="arithmatex">\(A_1 = \{\text{heart}\}\)</span>, so <span class="arithmatex">\(P(A_1) = \tfrac{13}{52} = \tfrac14\)</span>.</li>
+<li><span class="arithmatex">\(B_1 = \{\text{king}\}\)</span>, so <span class="arithmatex">\(P(B_1) = \tfrac{4}{52} = \tfrac1{13}\)</span>.</li>
+<li><span class="arithmatex">\(C_1 = \{\text{not a face card}\}\)</span>, so <span class="arithmatex">\(P(C_1) = \tfrac{40}{52} = \tfrac{10}{13}\)</span>.</li>
+</ul>
+<h3 id="two-cards-drawn-with-replacement">Two cards drawn with replacement</h3>
+<ul>
+<li><span class="arithmatex">\(A_2 = \{\text{both hearts}\}\)</span>, so <span class="arithmatex">\(P(A_2) = \Bigl(\tfrac{13}{52}\Bigr)^2 = \tfrac1{16}\)</span>.</li>
+<li><span class="arithmatex">\(B_2 = \{\text{same rank}\}\)</span>, so <span class="arithmatex">\(P(B_2) = 13 \cdot \Bigl(\tfrac{4}{52}\Bigr)^2 = \tfrac1{13}\)</span>.</li>
+<li><span class="arithmatex">\(C_2 = \{\text{at least one ace}\}\)</span>, so <span class="arithmatex">\(P(C_2) = 1 - \Bigl(\tfrac{48}{52}\Bigr)^2 = 1 - \Bigl(\tfrac{12}{13}\Bigr)^2 = \tfrac{25}{169}\)</span>.</li>
+</ul>
+<h3 id="two-cards-drawn-without-replacement">Two cards drawn without replacement</h3>
+<ul>
+<li><span class="arithmatex">\(A_3 = \{\text{both hearts}\}\)</span>, so <span class="arithmatex">\(P(A_3) = \tfrac{13}{52} \cdot \tfrac{12}{51} = \tfrac1{17}\)</span>.</li>
+<li><span class="arithmatex">\(B_3 = \{\text{same rank}\}\)</span>, so <span class="arithmatex">\(P(B_3) = \dfrac{13 \cdot \binom{4}{2}}{2652} = \dfrac{78}{2652} = \dfrac1{34}\)</span>.</li>
+<li><span class="arithmatex">\(C_3 = \{\text{one king and one queen in any order}\}\)</span>, so <span class="arithmatex">\(P(C_3) = \dfrac{4 \cdot 4 \cdot 2}{2652} = \dfrac{32}{2652} = \dfrac{8}{663}\)</span>.</li>
+</ul>
+<h3 id="additional-event-on-omega_2">Additional event on <span class="arithmatex">\(\Omega_2'\)</span></h3>
+<ul>
+<li>Example: <span class="arithmatex">\(D_3 = \{\text{both cards are red}\}\)</span>.</li>
+<li>There are 26 red cards and <span class="arithmatex">\(26 \cdot 25 = 650\)</span> ordered red-red outcomes. Thus <span class="arithmatex">\(P(D_3) = \dfrac{650}{2652} = \dfrac{25}{102}\)</span>.</li>
+</ul>
 
 
 

@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://dchorazkiewicz.github.io/Math_Problems_Repo/4_Metody_probabilistyczne/basic/solutions_07_data_analysis/solution_06/">
+        <link rel="canonical" href="https://dariusm4.github.io/Math_Problems_Repo/4_Metody_probabilistyczne/basic/solutions_07_data_analysis/solution_06/">
       
       
         <link rel="prev" href="../solution_05/">
@@ -4193,11 +4193,11 @@
 <h2 id="generated-files">Generated Files</h2>
 <ul>
 <li>Dataset: <a href="../problem_06_factory_measurements/problem_06_factory_measurements.csv">problem_06_factory_measurements.csv</a></li>
-<li>Overall summary: <a href="../problem_06_factory_measurements/length_summary_overall.csv">length_summary_overall.csv</a></li>
-<li>Machine summaries: <a href="../problem_06_factory_measurements/length_summary_by_machine.csv">length_summary_by_machine.csv</a></li>
-<li>Within-spec counts: <a href="../problem_06_factory_measurements/within_spec_counts_by_machine.csv">within_spec_counts_by_machine.csv</a></li>
-<li>Boxplot: <a href="../problem_06_factory_measurements/length_boxplots_by_machine.png">length_boxplots_by_machine.png</a></li>
-<li>Within-spec plot: <a href="../problem_06_factory_measurements/within_spec_proportion_by_machine.png">within_spec_proportion_by_machine.png</a></li>
+<li>Overall summary: <a href="problem_06_factory_measurements/length_summary_overall.csv">length_summary_overall.csv</a></li>
+<li>Machine summaries: <a href="problem_06_factory_measurements/length_summary_by_machine.csv">length_summary_by_machine.csv</a></li>
+<li>Within-spec counts: <a href="problem_06_factory_measurements/within_spec_counts_by_machine.csv">within_spec_counts_by_machine.csv</a></li>
+<li>Boxplot: <a href="problem_06_factory_measurements/length_boxplots_by_machine.png">length_boxplots_by_machine.png</a></li>
+<li>Within-spec plot: <a href="problem_06_factory_measurements/within_spec_proportion_by_machine.png">within_spec_proportion_by_machine.png</a></li>
 </ul>
 <hr />
 <h2 id="solution">Solution</h2>
@@ -4499,7 +4499,7 @@ print(f&quot;Within spec: {within_spec_count}/{total} = {proportion:.4f}&quot;)
 </tr>
 </tbody>
 </table>
-<p><img alt="Within-spec proportion by machine" src="../problem_06_factory_measurements/within_spec_proportion_by_machine.png" /></p>
+<p><img alt="Within-spec proportion by machine" src="problem_06_factory_measurements/within_spec_proportion_by_machine.png" /></p>
 <p><strong>Interpretation:</strong></p>
 <ul>
 <li>
@@ -4622,7 +4622,7 @@ print(f&quot;Within spec: {within_spec_count}/{total} = {proportion:.4f}&quot;)
 <h3 id="task-7-draw-boxplots-of-length_mm-by-machine">Task 7: Draw boxplots of length_mm by machine</h3>
 <p><strong>Answer:</strong></p>
 <p>The boxplots below show the distribution of part lengths for each machine. The horizontal dashed lines (if present) represent the specification limits at 48.5 mm and 51.5 mm, and the target of 50 mm.</p>
-<p><img alt="Boxplots of part lengths by machine" src="../problem_06_factory_measurements/length_boxplots_by_machine.png" /></p>
+<p><img alt="Boxplots of part lengths by machine" src="problem_06_factory_measurements/length_boxplots_by_machine.png" /></p>
 <pre><code class="language-python">import matplotlib.pyplot as plt
 fig, ax = plt.subplots(figsize=(8, 5))
 df.boxplot(column='length_mm', by='machine', ax=ax)

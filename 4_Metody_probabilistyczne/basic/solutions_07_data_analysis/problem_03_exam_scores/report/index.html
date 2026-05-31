@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://dchorazkiewicz.github.io/Math_Problems_Repo/4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_03_exam_scores/report/">
+        <link rel="canonical" href="https://dariusm4.github.io/Math_Problems_Repo/4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_03_exam_scores/report/">
       
       
       
@@ -3803,10 +3803,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#description-of-the-data" class="md-nav__link">
+  <a href="#visualizations" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Description of the data
+        Visualizations
       
     </span>
   </a>
@@ -3814,10 +3814,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#overall-score-summary" class="md-nav__link">
+  <a href="#description" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Overall score summary
+        Description
       
     </span>
   </a>
@@ -3825,10 +3825,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#score-summary-by-group" class="md-nav__link">
+  <a href="#overall-summary-for-sample_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Score summary by group
+        Overall Summary for sample_1
       
     </span>
   </a>
@@ -3836,10 +3836,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pass-rates" class="md-nav__link">
+  <a href="#group-summary-for-sample_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Pass rates
+        Group Summary for sample_1
       
     </span>
   </a>
@@ -3847,10 +3847,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#plots" class="md-nav__link">
+  <a href="#pass-rate-for-sample_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Plots
+        Pass Rate for sample_1
       
     </span>
   </a>
@@ -3858,10 +3858,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#interpretation" class="md-nav__link">
+  <a href="#answers-and-interpretation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Interpretation
+        Answers and Interpretation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variation-across-samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variation Across Samples
       
     </span>
   </a>
@@ -3889,106 +3900,215 @@
 <h2 id="generated-files">Generated files</h2>
 <ul>
 <li>Dataset: <a href="../problem_03_exam_scores.csv"><code>problem_03_exam_scores.csv</code></a></li>
-<li>Overall summary: <a href="../overall_score_summary.csv"><code>overall_score_summary.csv</code></a></li>
-<li>Group summaries: <a href="../score_summary_by_group.csv"><code>score_summary_by_group.csv</code></a></li>
-<li>Pass rates: <a href="../pass_rate_by_group.csv"><code>pass_rate_by_group.csv</code></a></li>
-<li>Histograms: <a href="../score_histograms_by_group.png"><code>score_histograms_by_group.png</code></a></li>
-<li>Boxplots: <a href="../score_boxplots_by_group.png"><code>score_boxplots_by_group.png</code></a></li>
+<li>Overall summary for <code>sample_1</code>: <a href="../overall_score_summary_sample_1.csv"><code>overall_score_summary_sample_1.csv</code></a></li>
+<li>Group summary for <code>sample_1</code>: <a href="../score_summary_by_group_sample_1.csv"><code>score_summary_by_group_sample_1.csv</code></a></li>
+<li>Pass rate for <code>sample_1</code>: <a href="../pass_rate_by_group_sample_1.csv"><code>pass_rate_by_group_sample_1.csv</code></a></li>
+<li>Summary by group and sample: <a href="../score_summary_by_group_and_sample.csv"><code>score_summary_by_group_and_sample.csv</code></a></li>
+<li>Histograms: <a href="../score_histograms_by_group_sample_1.png"><code>score_histograms_by_group_sample_1.png</code></a></li>
+<li>Boxplots: <a href="../score_boxplots_by_group_sample_1.png"><code>score_boxplots_by_group_sample_1.png</code></a></li>
+<li>Pass-rate plot: <a href="../pass_rate_by_group_sample_1.png"><code>pass_rate_by_group_sample_1.png</code></a></li>
+<li>Mean-by-sample plot: <a href="../mean_score_by_group_across_samples.png"><code>mean_score_by_group_across_samples.png</code></a></li>
 </ul>
-<h2 id="description-of-the-data">Description of the data</h2>
-<p>One row represents one student who wrote the exam. The column <code>student_id</code> identifies the student, <code>group</code> shows whether the student belongs to group A or group B, <code>score</code> gives the exam result, and <code>passed</code> indicates whether the score is at least 50.</p>
-<p>The dataset contains 240 students: 120 in group A and 120 in group B.</p>
-<h2 id="overall-score-summary">Overall score summary</h2>
+<h2 id="visualizations">Visualizations</h2>
+<p><img alt="Score histograms by group for sample_1" src="../score_histograms_by_group_sample_1.png" /></p>
+<p><strong>What this shows:</strong> The histograms show the full distribution of scores in both groups. They make clear that group B has a higher center but also a wider spread, so the comparison cannot be reduced to the mean alone.</p>
+<p><img alt="Score boxplots by group for sample_1" src="../score_boxplots_by_group_sample_1.png" /></p>
+<p><strong>What this shows:</strong> The boxplots summarize median, spread, and extreme values. They support the interpretation that group B performs better on average but is more variable.</p>
+<p><img alt="Pass rate by group for sample_1" src="../pass_rate_by_group_sample_1.png" /></p>
+<p><strong>What this shows:</strong> This plot translates scores into the practical outcome of passing. It is useful because two groups with similar averages could still have different pass rates.</p>
+<p><img alt="Mean score by group across samples" src="../mean_score_by_group_across_samples.png" /></p>
+<p><strong>What this shows:</strong> This plot checks whether the group comparison is stable across repeated samples. The exact mean scores change, but the main pattern can still be compared across seeds.</p>
+<h2 id="description">Description</h2>
+<p>One row represents one student in one generated exam sample. The row records the student group, exam score, and whether the student passed.</p>
+<p>The main reproducible analysis uses <code>sample_1</code>. The other samples show whether the comparison between groups is stable when the random sample changes.</p>
+<h2 id="overall-summary-for-sample_1">Overall Summary for <code>sample_1</code></h2>
 <table>
 <thead>
 <tr>
-<th style="text-align: right;">Mean</th>
-<th style="text-align: right;">Median</th>
-<th style="text-align: right;">Minimum</th>
-<th style="text-align: right;">Maximum</th>
-<th style="text-align: right;">Variance</th>
-<th style="text-align: right;">Standard deviation</th>
+<th>count</th>
+<th>mean</th>
+<th>median</th>
+<th>minimum</th>
+<th>maximum</th>
+<th>variance</th>
+<th>standard_deviation</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: right;">71.128</td>
-<td style="text-align: right;">70.400</td>
-<td style="text-align: right;">27.600</td>
-<td style="text-align: right;">100.000</td>
-<td style="text-align: right;">230.744</td>
-<td style="text-align: right;">15.190</td>
+<td>240.0000</td>
+<td>71.1275</td>
+<td>70.4000</td>
+<td>27.6000</td>
+<td>100.0000</td>
+<td>230.7435</td>
+<td>15.1902</td>
 </tr>
 </tbody>
 </table>
-<h2 id="score-summary-by-group">Score summary by group</h2>
+<h2 id="group-summary-for-sample_1">Group Summary for <code>sample_1</code></h2>
 <table>
 <thead>
 <tr>
-<th style="text-align: center;">Group</th>
-<th style="text-align: right;">Mean</th>
-<th style="text-align: right;">Median</th>
-<th style="text-align: right;">Minimum</th>
-<th style="text-align: right;">Maximum</th>
-<th style="text-align: right;">Variance</th>
-<th style="text-align: right;">Standard deviation</th>
+<th>group</th>
+<th>count</th>
+<th>mean</th>
+<th>median</th>
+<th>minimum</th>
+<th>maximum</th>
+<th>variance</th>
+<th>standard_deviation</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;">A</td>
-<td style="text-align: right;">69.849</td>
-<td style="text-align: right;">68.900</td>
-<td style="text-align: right;">39.900</td>
-<td style="text-align: right;">94.200</td>
-<td style="text-align: right;">132.194</td>
-<td style="text-align: right;">11.498</td>
+<td>A</td>
+<td>120</td>
+<td>69.8492</td>
+<td>68.9000</td>
+<td>39.9000</td>
+<td>94.2000</td>
+<td>132.1936</td>
+<td>11.4975</td>
 </tr>
 <tr>
-<td style="text-align: center;">B</td>
-<td style="text-align: right;">72.406</td>
-<td style="text-align: right;">72.450</td>
-<td style="text-align: right;">27.600</td>
-<td style="text-align: right;">100.000</td>
-<td style="text-align: right;">327.937</td>
-<td style="text-align: right;">18.109</td>
+<td>B</td>
+<td>120</td>
+<td>72.4058</td>
+<td>72.4500</td>
+<td>27.6000</td>
+<td>100.0000</td>
+<td>327.9367</td>
+<td>18.1090</td>
 </tr>
 </tbody>
 </table>
-<h2 id="pass-rates">Pass rates</h2>
+<h2 id="pass-rate-for-sample_1">Pass Rate for <code>sample_1</code></h2>
 <table>
 <thead>
 <tr>
-<th style="text-align: center;">Group</th>
-<th style="text-align: right;">Passed students</th>
-<th style="text-align: right;">Total students</th>
-<th style="text-align: right;">Pass rate</th>
+<th>group</th>
+<th>students</th>
+<th>passed_students</th>
+<th>pass_rate</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;">A</td>
-<td style="text-align: right;">117</td>
-<td style="text-align: right;">120</td>
-<td style="text-align: right;">0.975</td>
+<td>A</td>
+<td>120</td>
+<td>117</td>
+<td>0.9750</td>
 </tr>
 <tr>
-<td style="text-align: center;">B</td>
-<td style="text-align: right;">105</td>
-<td style="text-align: right;">120</td>
-<td style="text-align: right;">0.875</td>
+<td>B</td>
+<td>120</td>
+<td>105</td>
+<td>0.8750</td>
 </tr>
 </tbody>
 </table>
-<h2 id="plots">Plots</h2>
-<p><img alt="Histograms of exam scores by group" src="../score_histograms_by_group.png" /></p>
-<p><img alt="Boxplots of exam scores by group" src="../score_boxplots_by_group.png" /></p>
-<h2 id="interpretation">Interpretation</h2>
-<p>Group B has the higher mean score: 72.406 compared with 69.849 for group A. Group B also has the higher median score: 72.450 compared with 68.900.</p>
-<p>However, group B has a much larger standard deviation: 18.109 compared with 11.498 for group A. This means that scores in group B are more spread out. The minimum score in group B is also much lower than in group A, while the maximum score reaches 100.</p>
-<p>The pass rate gives a different perspective. Group A has a pass rate of 0.975, while group B has a pass rate of 0.875. So although group B has the higher average score, group A has more consistent results and fewer students below the pass threshold.</p>
-<p>Comparing only the means would be misleading because it would hide the larger variability in group B. Group B seems stronger among high-scoring students, but it also contains more weak results. Group A performed more consistently overall.</p>
-<p>A balanced conclusion is that group B achieved the higher typical score by mean and median, but group A had the better pass rate and lower variability. Which group performed better depends on whether the main criterion is high average performance or reliable performance across most students.</p>
+<h2 id="answers-and-interpretation">Answers and Interpretation</h2>
+<p>In <code>sample_1</code>, group B has the higher mean score. Group B has the larger standard deviation.</p>
+<p>Comparing only the means may be misleading because the groups differ not only in center but also in spread. A group with a higher mean can also have more variable results, more low scores, or more extreme high scores. The histograms and boxplots show distribution shape, spread, and possible asymmetry more clearly than a single average.</p>
+<p>Overall, the conclusion is mixed. Group B has the higher mean and median, but group A has the higher pass rate in <code>sample_1</code>. A model answer should therefore not declare one group simply “better” without explaining the criterion. The answer should use more than one statistic: mean, median, standard deviation, pass rate, and the plots.</p>
+<h2 id="variation-across-samples">Variation Across Samples</h2>
+<p>The direction of the comparison is mostly stable: group B usually has the higher mean. The exact numerical gap and pass rates change from sample to sample.</p>
+<table>
+<thead>
+<tr>
+<th>sample_id</th>
+<th>group</th>
+<th>mean_score</th>
+<th>median_score</th>
+<th>standard_deviation</th>
+<th>pass_rate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sample_1</td>
+<td>A</td>
+<td>69.8492</td>
+<td>68.9000</td>
+<td>11.4975</td>
+<td>0.9750</td>
+</tr>
+<tr>
+<td>sample_1</td>
+<td>B</td>
+<td>72.4058</td>
+<td>72.4500</td>
+<td>18.1090</td>
+<td>0.8750</td>
+</tr>
+<tr>
+<td>sample_2</td>
+<td>A</td>
+<td>68.7075</td>
+<td>66.9500</td>
+<td>12.8449</td>
+<td>0.9500</td>
+</tr>
+<tr>
+<td>sample_2</td>
+<td>B</td>
+<td>72.8358</td>
+<td>73.8500</td>
+<td>15.7760</td>
+<td>0.9167</td>
+</tr>
+<tr>
+<td>sample_3</td>
+<td>A</td>
+<td>68.5125</td>
+<td>68.6500</td>
+<td>11.5207</td>
+<td>0.9750</td>
+</tr>
+<tr>
+<td>sample_3</td>
+<td>B</td>
+<td>73.9425</td>
+<td>73.9000</td>
+<td>17.6038</td>
+<td>0.9083</td>
+</tr>
+<tr>
+<td>sample_4</td>
+<td>A</td>
+<td>67.1425</td>
+<td>66.7500</td>
+<td>11.1528</td>
+<td>0.9333</td>
+</tr>
+<tr>
+<td>sample_4</td>
+<td>B</td>
+<td>72.6083</td>
+<td>72.0000</td>
+<td>17.1517</td>
+<td>0.9083</td>
+</tr>
+<tr>
+<td>sample_5</td>
+<td>A</td>
+<td>70.1367</td>
+<td>70.2500</td>
+<td>10.1291</td>
+<td>1.0000</td>
+</tr>
+<tr>
+<td>sample_5</td>
+<td>B</td>
+<td>72.8892</td>
+<td>72.9500</td>
+<td>15.3348</td>
+<td>0.9333</td>
+</tr>
+</tbody>
+</table>
+<p>This illustrates that descriptive statistics summarize one observed sample. Stable conclusions are stronger when they persist across repeated samples.</p>
 
 
 

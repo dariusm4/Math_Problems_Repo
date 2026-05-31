@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://dchorazkiewicz.github.io/Math_Problems_Repo/pl/4_Metody_probabilistyczne/basic/solutions_07_data_analysis/solution_07/">
+        <link rel="canonical" href="https://dariusm4.github.io/Math_Problems_Repo/pl/4_Metody_probabilistyczne/basic/solutions_07_data_analysis/solution_07/">
       
       
       
@@ -1551,7 +1551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../anim/4_Metody_probalistyczne/laboratory_1.html" class="md-nav__link">
+      <a href="../../../../../anim/4_Metody_probalistyczne/laboratory_1.html" class="md-nav__link">
         
   
   
@@ -1579,7 +1579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../anim/4_Metody_probalistyczne/laboratory_2.html" class="md-nav__link">
+      <a href="../../../../../anim/4_Metody_probalistyczne/laboratory_2.html" class="md-nav__link">
         
   
   
@@ -1607,7 +1607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../anim/4_Metody_probalistyczne/laboratory_3.html" class="md-nav__link">
+      <a href="../../../../../anim/4_Metody_probalistyczne/laboratory_3.html" class="md-nav__link">
         
   
   
@@ -1902,15 +1902,15 @@
 <h2 id="generated-files">Generated Files</h2>
 <ul>
 <li>Dataset: <a href="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_07_call_center_requests/problem_07_call_center_requests.csv">problem_07_call_center_requests.csv</a></li>
-<li>Overall hourly summary: <a href="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_07_call_center_requests/hourly_requests_summary.csv">hourly_requests_summary.csv</a></li>
-<li>Day-type summary: <a href="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_07_call_center_requests/requests_summary_by_day_type.csv">requests_summary_by_day_type.csv</a></li>
-<li>Average requests by hour: <a href="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_07_call_center_requests/average_requests_by_hour.csv">average_requests_by_hour.csv</a></li>
-<li>Daily totals: <a href="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_07_call_center_requests/daily_total_requests.csv">daily_total_requests.csv</a></li>
-<li>Daily total summary by day type: <a href="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_07_call_center_requests/daily_total_summary_by_day_type.csv">daily_total_summary_by_day_type.csv</a></li>
+<li>Overall hourly summary: <a href="problem_07_call_center_requests/hourly_requests_summary.csv">hourly_requests_summary.csv</a></li>
+<li>Day-type summary: <a href="problem_07_call_center_requests/requests_summary_by_day_type.csv">requests_summary_by_day_type.csv</a></li>
+<li>Average requests by hour: <a href="problem_07_call_center_requests/average_requests_by_hour.csv">average_requests_by_hour.csv</a></li>
+<li>Daily totals: <a href="problem_07_call_center_requests/daily_total_requests.csv">daily_total_requests.csv</a></li>
+<li>Daily total summary by day type: <a href="problem_07_call_center_requests/daily_total_summary_by_day_type.csv">daily_total_summary_by_day_type.csv</a></li>
 <li>Plots:</li>
-<li><a href="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_07_call_center_requests/average_requests_by_hour.png">average_requests_by_hour.png</a></li>
-<li><a href="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_07_call_center_requests/hourly_requests_histogram.png">hourly_requests_histogram.png</a></li>
-<li><a href="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_07_call_center_requests/mean_hourly_requests_by_day_type.png">mean_hourly_requests_by_day_type.png</a></li>
+<li><a href="problem_07_call_center_requests/average_requests_by_hour.png">average_requests_by_hour.png</a></li>
+<li><a href="problem_07_call_center_requests/hourly_requests_histogram.png">hourly_requests_histogram.png</a></li>
+<li><a href="problem_07_call_center_requests/mean_hourly_requests_by_day_type.png">mean_hourly_requests_by_day_type.png</a></li>
 </ul>
 <hr />
 <h2 id="solution">Solution</h2>
@@ -2230,7 +2230,7 @@ std_val  = df[&quot;requests&quot;].std()       # 3.3389
 <hr />
 <h3 id="task-5-draw-a-line-plot-showing-average-requests-by-hour">Task 5: Draw a line plot showing average requests by hour</h3>
 <p><strong>Answer:</strong></p>
-<p><img alt="Average requests by hour of day" src="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_07_call_center_requests/average_requests_by_hour.png" /></p>
+<p><img alt="Average requests by hour of day" src="problem_07_call_center_requests/average_requests_by_hour.png" /></p>
 <p>The line plot above shows the average number of requests at each hour of the day, averaged across all 30 days. The shape reveals a clear <strong>diurnal pattern</strong>:</p>
 <ol>
 <li>
@@ -2251,7 +2251,7 @@ std_val  = df[&quot;requests&quot;].std()       # 3.3389
 </ol>
 <p>This pattern is exactly what we would expect for a customer service operation. It also provides the first visual clue that a single Poisson rate <span class="arithmatex">\( \lambda \)</span> cannot describe the entire dataset: the rate clearly <strong>varies with time</strong>.</p>
 <p>Additionally, the separated weekday/weekend plot shows:</p>
-<p><img alt="Mean hourly requests by day type" src="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_07_call_center_requests/mean_hourly_requests_by_day_type.png" /></p>
+<p><img alt="Mean hourly requests by day type" src="problem_07_call_center_requests/mean_hourly_requests_by_day_type.png" /></p>
 <p>This plot confirms that weekdays have consistently higher request rates during business hours, while the nighttime baseline is similar for both day types.</p>
 <hr />
 <h3 id="task-6-compute-daily-totals">Task 6: Compute daily totals</h3>
@@ -2464,7 +2464,7 @@ daily.columns = [&quot;date&quot;, &quot;day_type&quot;, &quot;daily_total_reque
 <hr />
 <h3 id="task-7-draw-a-histogram-of-hourly-request-counts">Task 7: Draw a histogram of hourly request counts</h3>
 <p><strong>Answer:</strong></p>
-<p><img alt="Histogram of hourly request counts" src="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_07_call_center_requests/hourly_requests_histogram.png" /></p>
+<p><img alt="Histogram of hourly request counts" src="problem_07_call_center_requests/hourly_requests_histogram.png" /></p>
 <p>The histogram displays the frequency distribution of all 720 hourly request counts. Key features:</p>
 <ol>
 <li>

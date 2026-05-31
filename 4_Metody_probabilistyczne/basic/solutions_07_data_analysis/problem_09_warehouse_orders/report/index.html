@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://dchorazkiewicz.github.io/Math_Problems_Repo/4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_09_warehouse_orders/report/">
+        <link rel="canonical" href="https://dariusm4.github.io/Math_Problems_Repo/4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_09_warehouse_orders/report/">
       
       
       
@@ -3803,10 +3803,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#description-of-the-data" class="md-nav__link">
+  <a href="#visualizations" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Description of the data
+        Visualizations
       
     </span>
   </a>
@@ -3814,10 +3814,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#overall-summary" class="md-nav__link">
+  <a href="#description" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Overall summary
+        Description
       
     </span>
   </a>
@@ -3825,10 +3825,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#demand-by-warehouse" class="md-nav__link">
+  <a href="#overall-summary-for-sample_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Demand by warehouse
+        Overall Summary for sample_1
       
     </span>
   </a>
@@ -3836,10 +3836,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#demand-and-returns-by-product-group" class="md-nav__link">
+  <a href="#warehouse-summary-for-sample_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Demand and returns by product group
+        Warehouse Summary for sample_1
       
     </span>
   </a>
@@ -3847,10 +3847,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#plots" class="md-nav__link">
+  <a href="#product-group-summary-for-sample_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Plots
+        Product-Group Summary for sample_1
       
     </span>
   </a>
@@ -3858,10 +3858,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#interpretation" class="md-nav__link">
+  <a href="#answers-and-interpretation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Interpretation
+        Answers and Interpretation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variation-across-samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variation Across Samples
       
     </span>
   </a>
@@ -3889,160 +3900,214 @@
 <h2 id="generated-files">Generated files</h2>
 <ul>
 <li>Dataset: <a href="../problem_09_warehouse_orders.csv"><code>problem_09_warehouse_orders.csv</code></a></li>
-<li>Overall summary: <a href="../warehouse_orders_overall_summary.csv"><code>warehouse_orders_overall_summary.csv</code></a></li>
-<li>Warehouse summary: <a href="../summary_by_warehouse.csv"><code>summary_by_warehouse.csv</code></a></li>
-<li>Product-group summary: <a href="../summary_by_product_group.csv"><code>summary_by_product_group.csv</code></a></li>
-<li>Return rate by product group: <a href="../return_rate_by_product_group.csv"><code>return_rate_by_product_group.csv</code></a></li>
-<li>Return rate by warehouse: <a href="../return_rate_by_warehouse.csv"><code>return_rate_by_warehouse.csv</code></a></li>
-<li>Daily total quantity: <a href="../daily_total_quantity.csv"><code>daily_total_quantity.csv</code></a></li>
-<li>Plots:</li>
-<li><a href="../total_quantity_by_product_group.png"><code>total_quantity_by_product_group.png</code></a></li>
-<li><a href="../return_rate_by_product_group.png"><code>return_rate_by_product_group.png</code></a></li>
+<li>Overall summary for <code>sample_1</code>: <a href="../warehouse_orders_overall_summary_sample_1.csv"><code>warehouse_orders_overall_summary_sample_1.csv</code></a></li>
+<li>Warehouse summary for <code>sample_1</code>: <a href="../summary_by_warehouse_sample_1.csv"><code>summary_by_warehouse_sample_1.csv</code></a></li>
+<li>Product-group summary for <code>sample_1</code>: <a href="../summary_by_product_group_sample_1.csv"><code>summary_by_product_group_sample_1.csv</code></a></li>
+<li>Daily totals: <a href="../daily_total_quantity_sample_1.csv"><code>daily_total_quantity_sample_1.csv</code></a></li>
+<li>Summary by sample: <a href="../warehouse_orders_summary_by_sample.csv"><code>warehouse_orders_summary_by_sample.csv</code></a></li>
+<li>Demand and return plots: PNG files in this folder.</li>
 </ul>
-<h2 id="description-of-the-data">Description of the data</h2>
-<p>One row represents one warehouse order line. The dataset records the order identifier, date, warehouse, product group, ordered quantity, and whether the order line was returned.</p>
-<p>The dataset contains 1200 order lines.</p>
-<h2 id="overall-summary">Overall summary</h2>
+<h2 id="visualizations">Visualizations</h2>
+<p><img alt="Total quantity by warehouse for sample_1" src="../total_quantity_by_warehouse_sample_1.png" /></p>
+<p><strong>What this shows:</strong> This plot identifies which warehouses contribute most to total demand. It is useful for operational interpretation because totals matter more than line counts alone.</p>
+<p><img alt="Total quantity by product group for sample_1" src="../total_quantity_by_product_group_sample_1.png" /></p>
+<p><strong>What this shows:</strong> This plot shows demand by product group. It supports the conclusion about which groups generate the highest demand.</p>
+<p><img alt="Average quantity by product group for sample_1" src="../average_quantity_by_product_group_sample_1.png" /></p>
+<p><strong>What this shows:</strong> This plot separates order size from total demand. A product group can have high total demand because of many orders, large order sizes, or both.</p>
+<p><img alt="Return rate by product group for sample_1" src="../return_rate_by_product_group_sample_1.png" /></p>
+<p><strong>What this shows:</strong> This plot focuses on return risk by product group. It should be interpreted separately from demand, because high demand and high return rate are different business questions.</p>
+<p><img alt="Return rate by warehouse for sample_1" src="../return_rate_by_warehouse_sample_1.png" /></p>
+<p><strong>What this shows:</strong> This plot checks whether return rates differ by warehouse. It helps identify whether returns are associated with location, not only product group.</p>
+<p><img alt="Total quantity by sample" src="../total_quantity_by_sample.png" /></p>
+<p><strong>What this shows:</strong> This plot shows sample-to-sample variation in total demand. It warns against treating one generated total as a fixed, exact value.</p>
+<h2 id="description">Description</h2>
+<p>One row represents one warehouse order line in one generated sample. It records the warehouse, product group, ordered quantity, return indicator, and order date.</p>
+<p>The main reproducible solution uses <code>sample_1</code>. The other samples show how demand totals and return rates fluctuate.</p>
+<h2 id="overall-summary-for-sample_1">Overall Summary for <code>sample_1</code></h2>
 <table>
 <thead>
 <tr>
-<th style="text-align: right;">Order lines</th>
-<th style="text-align: right;">Total quantity</th>
-<th style="text-align: right;">Mean quantity per order line</th>
-<th style="text-align: right;">Returned lines</th>
-<th style="text-align: right;">Return rate</th>
+<th>order_lines</th>
+<th>total_quantity</th>
+<th>average_quantity</th>
+<th>returned_lines</th>
+<th>return_rate</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: right;">1200</td>
-<td style="text-align: right;">3646</td>
-<td style="text-align: right;">3.0383</td>
-<td style="text-align: right;">74</td>
-<td style="text-align: right;">0.0617</td>
+<td>1200.0000</td>
+<td>3646.0000</td>
+<td>3.0383</td>
+<td>74.0000</td>
+<td>0.0617</td>
 </tr>
 </tbody>
 </table>
-<p>The overall return rate is 0.0617, so about 6.17% of order lines were returned.</p>
-<h2 id="demand-by-warehouse">Demand by warehouse</h2>
+<h2 id="warehouse-summary-for-sample_1">Warehouse Summary for <code>sample_1</code></h2>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Warehouse</th>
-<th style="text-align: right;">Order lines</th>
-<th style="text-align: right;">Total quantity</th>
-<th style="text-align: right;">Average quantity</th>
-<th style="text-align: right;">Returned lines</th>
-<th style="text-align: right;">Return rate</th>
+<th>warehouse</th>
+<th>order_lines</th>
+<th>total_quantity</th>
+<th>average_quantity</th>
+<th>returned_lines</th>
+<th>return_rate</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">central</td>
-<td style="text-align: right;">336</td>
-<td style="text-align: right;">1029</td>
-<td style="text-align: right;">3.0625</td>
-<td style="text-align: right;">17</td>
-<td style="text-align: right;">0.0506</td>
+<td>central</td>
+<td>336</td>
+<td>1029</td>
+<td>3.0625</td>
+<td>17</td>
+<td>0.0506</td>
 </tr>
 <tr>
-<td style="text-align: left;">south</td>
-<td style="text-align: right;">240</td>
-<td style="text-align: right;">739</td>
-<td style="text-align: right;">3.0792</td>
-<td style="text-align: right;">13</td>
-<td style="text-align: right;">0.0542</td>
+<td>east</td>
+<td>194</td>
+<td>567</td>
+<td>2.9227</td>
+<td>14</td>
+<td>0.0722</td>
 </tr>
 <tr>
-<td style="text-align: left;">west</td>
-<td style="text-align: right;">233</td>
-<td style="text-align: right;">737</td>
-<td style="text-align: right;">3.1631</td>
-<td style="text-align: right;">17</td>
-<td style="text-align: right;">0.0730</td>
+<td>north</td>
+<td>197</td>
+<td>574</td>
+<td>2.9137</td>
+<td>13</td>
+<td>0.0660</td>
 </tr>
 <tr>
-<td style="text-align: left;">north</td>
-<td style="text-align: right;">197</td>
-<td style="text-align: right;">574</td>
-<td style="text-align: right;">2.9137</td>
-<td style="text-align: right;">13</td>
-<td style="text-align: right;">0.0660</td>
+<td>south</td>
+<td>240</td>
+<td>739</td>
+<td>3.0792</td>
+<td>13</td>
+<td>0.0542</td>
 </tr>
 <tr>
-<td style="text-align: left;">east</td>
-<td style="text-align: right;">194</td>
-<td style="text-align: right;">567</td>
-<td style="text-align: right;">2.9227</td>
-<td style="text-align: right;">14</td>
-<td style="text-align: right;">0.0722</td>
+<td>west</td>
+<td>233</td>
+<td>737</td>
+<td>3.1631</td>
+<td>17</td>
+<td>0.0730</td>
 </tr>
 </tbody>
 </table>
-<p>The central warehouse has the highest total ordered quantity, 1029 units. This is partly because it also has the largest number of order lines.</p>
-<h2 id="demand-and-returns-by-product-group">Demand and returns by product group</h2>
+<h2 id="product-group-summary-for-sample_1">Product-Group Summary for <code>sample_1</code></h2>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Product group</th>
-<th style="text-align: right;">Order lines</th>
-<th style="text-align: right;">Total quantity</th>
-<th style="text-align: right;">Average quantity</th>
-<th style="text-align: right;">Returned lines</th>
-<th style="text-align: right;">Return rate</th>
+<th>product_group</th>
+<th>order_lines</th>
+<th>total_quantity</th>
+<th>average_quantity</th>
+<th>returned_lines</th>
+<th>return_rate</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">filters</td>
-<td style="text-align: right;">353</td>
-<td style="text-align: right;">1405</td>
-<td style="text-align: right;">3.9802</td>
-<td style="text-align: right;">19</td>
-<td style="text-align: right;">0.0538</td>
+<td>brakes</td>
+<td>263</td>
+<td>825</td>
+<td>3.1369</td>
+<td>12</td>
+<td>0.0456</td>
 </tr>
 <tr>
-<td style="text-align: left;">brakes</td>
-<td style="text-align: right;">263</td>
-<td style="text-align: right;">825</td>
-<td style="text-align: right;">3.1369</td>
-<td style="text-align: right;">12</td>
-<td style="text-align: right;">0.0456</td>
+<td>electrical</td>
+<td>205</td>
+<td>488</td>
+<td>2.3805</td>
+<td>15</td>
+<td>0.0732</td>
 </tr>
 <tr>
-<td style="text-align: left;">suspension</td>
-<td style="text-align: right;">191</td>
-<td style="text-align: right;">501</td>
-<td style="text-align: right;">2.6230</td>
-<td style="text-align: right;">19</td>
-<td style="text-align: right;">0.0995</td>
+<td>engine</td>
+<td>188</td>
+<td>427</td>
+<td>2.2713</td>
+<td>9</td>
+<td>0.0479</td>
 </tr>
 <tr>
-<td style="text-align: left;">electrical</td>
-<td style="text-align: right;">205</td>
-<td style="text-align: right;">488</td>
-<td style="text-align: right;">2.3805</td>
-<td style="text-align: right;">15</td>
-<td style="text-align: right;">0.0732</td>
+<td>filters</td>
+<td>353</td>
+<td>1405</td>
+<td>3.9802</td>
+<td>19</td>
+<td>0.0538</td>
 </tr>
 <tr>
-<td style="text-align: left;">engine</td>
-<td style="text-align: right;">188</td>
-<td style="text-align: right;">427</td>
-<td style="text-align: right;">2.2713</td>
-<td style="text-align: right;">9</td>
-<td style="text-align: right;">0.0479</td>
+<td>suspension</td>
+<td>191</td>
+<td>501</td>
+<td>2.6230</td>
+<td>19</td>
+<td>0.0995</td>
 </tr>
 </tbody>
 </table>
-<h2 id="plots">Plots</h2>
-<p><img alt="Total quantity by product group" src="../total_quantity_by_product_group.png" /></p>
-<p><img alt="Return rate by product group" src="../return_rate_by_product_group.png" /></p>
-<h2 id="interpretation">Interpretation</h2>
-<p>The product groups generating the highest demand are filters and brakes. Filters have the largest total quantity, 1405 units, and the highest average quantity per order line, 3.9802.</p>
-<p>The highest return rate is for suspension, 0.0995. This means that about 9.95% of suspension order lines were returned in this generated dataset. Electrical also has a relatively high return rate, 0.0732.</p>
-<p>The central warehouse has the highest total quantity, but it does not have the highest return rate. The highest warehouse return rates are for west, 0.0730, and east, 0.0722.</p>
-<p>These summaries are empirical: they describe the observed generated data. They do not give a complete theoretical probability model. A theoretical model would specify probability distributions or assumptions before observing the data. Here, we summarize what happened in this particular sample.</p>
+<h2 id="answers-and-interpretation">Answers and Interpretation</h2>
+<p>The highest demand in <code>sample_1</code> is generated mainly by filters, brakes. Demand is best summarized with total quantity, while return problems are better summarized with return rates.</p>
+<p>The overall return rate in <code>sample_1</code> is 0.0617. Return rates differ by product group and by warehouse, but these are empirical rates from one generated sample.</p>
+<p>These empirical summaries differ from a theoretical probability model because they describe observed generated data. They estimate patterns in the sample, but they do not by themselves give the exact probability mechanism.</p>
+<h2 id="variation-across-samples">Variation Across Samples</h2>
+<p>Total demand, average quantity, and return rates fluctuate across samples. The broad product-group demand pattern is usually stable, but exact totals and return rates should not be overinterpreted from one sample.</p>
+<table>
+<thead>
+<tr>
+<th>sample_id</th>
+<th>order_lines</th>
+<th>total_quantity</th>
+<th>average_quantity</th>
+<th>return_rate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sample_1</td>
+<td>1200</td>
+<td>3646</td>
+<td>3.0383</td>
+<td>0.0617</td>
+</tr>
+<tr>
+<td>sample_2</td>
+<td>1200</td>
+<td>3687</td>
+<td>3.0725</td>
+<td>0.0617</td>
+</tr>
+<tr>
+<td>sample_3</td>
+<td>1200</td>
+<td>3740</td>
+<td>3.1167</td>
+<td>0.0642</td>
+</tr>
+<tr>
+<td>sample_4</td>
+<td>1200</td>
+<td>3618</td>
+<td>3.0150</td>
+<td>0.0767</td>
+</tr>
+<tr>
+<td>sample_5</td>
+<td>1200</td>
+<td>3649</td>
+<td>3.0408</td>
+<td>0.0675</td>
+</tr>
+</tbody>
+</table>
 
 
 

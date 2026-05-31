@@ -1,4 +1,0 @@
-event,empirical_probability
-waiting_time <= 5,0.244
-waiting_time <= 10,0.538
-waiting_time > 20,0.17

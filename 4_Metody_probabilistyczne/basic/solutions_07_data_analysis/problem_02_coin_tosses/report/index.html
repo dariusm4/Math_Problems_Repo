@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://dchorazkiewicz.github.io/Math_Problems_Repo/4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_02_coin_tosses/report/">
+        <link rel="canonical" href="https://dariusm4.github.io/Math_Problems_Repo/4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_02_coin_tosses/report/">
       
       
       
@@ -3803,10 +3803,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#description-of-the-data" class="md-nav__link">
+  <a href="#visualizations" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Description of the data
+        Visualizations
       
     </span>
   </a>
@@ -3814,10 +3814,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#frequency-table" class="md-nav__link">
+  <a href="#description" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Frequency table
+        Description
       
     </span>
   </a>
@@ -3825,10 +3825,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#relative-frequency-over-time" class="md-nav__link">
+  <a href="#frequency-table-for-sample_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Relative frequency over time
+        Frequency Table for sample_1
       
     </span>
   </a>
@@ -3836,10 +3836,32 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#interpretation" class="md-nav__link">
+  <a href="#relative-frequency-checkpoints-for-sample_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Interpretation
+        Relative-Frequency Checkpoints for sample_1
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#answers-and-interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Answers and Interpretation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variation-across-samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variation Across Samples
       
     </span>
   </a>
@@ -3867,101 +3889,139 @@
 <h2 id="generated-files">Generated files</h2>
 <ul>
 <li>Dataset: <a href="../problem_02_coin_tosses.csv"><code>problem_02_coin_tosses.csv</code></a></li>
-<li>Frequency table: <a href="../frequency_table.csv"><code>frequency_table.csv</code></a></li>
-<li>Relative frequency checkpoints: <a href="../relative_frequency_checkpoints.csv"><code>relative_frequency_checkpoints.csv</code></a></li>
-<li>Plot: <a href="../relative_frequency_heads.png"><code>relative_frequency_heads.png</code></a></li>
+<li>Frequency table for <code>sample_1</code>: <a href="../frequency_table_sample_1.csv"><code>frequency_table_sample_1.csv</code></a></li>
+<li>Relative-frequency checkpoints for <code>sample_1</code>: <a href="../relative_frequency_checkpoints_sample_1.csv"><code>relative_frequency_checkpoints_sample_1.csv</code></a></li>
+<li>Final relative frequencies by sample: <a href="../final_relative_frequencies_by_sample.csv"><code>final_relative_frequencies_by_sample.csv</code></a></li>
+<li>Relative-frequency plot: <a href="../relative_frequency_heads_by_sample.png"><code>relative_frequency_heads_by_sample.png</code></a></li>
+<li>Final-frequency plot: <a href="../final_head_frequency_by_sample.png"><code>final_head_frequency_by_sample.png</code></a></li>
 </ul>
-<h2 id="description-of-the-data">Description of the data</h2>
-<p>The dataset represents 2000 repeated coin tosses. One row corresponds to one toss. The column <code>trial</code> gives the toss number, <code>result</code> records whether the outcome was heads (<code>H</code>) or tails (<code>T</code>), and <code>is_head</code> marks whether the outcome was heads.</p>
-<p>The columns <code>cumulative_heads</code> and <code>relative_frequency_heads</code> show how many heads have appeared up to a given trial and what proportion of all tosses so far were heads.</p>
-<h2 id="frequency-table">Frequency table</h2>
+<h2 id="visualizations">Visualizations</h2>
+<p><img alt="Relative frequency of heads by sample" src="../relative_frequency_heads_by_sample.png" /></p>
+<p><strong>What this shows:</strong> This plot shows how the running relative frequency of heads stabilizes as the number of tosses grows. Early values fluctuate strongly; later values move more slowly and tend to stay near the generating probability 0.52.</p>
+<p><img alt="Final head frequency by sample" src="../final_head_frequency_by_sample.png" /></p>
+<p><strong>What this shows:</strong> This plot compares the final empirical frequency of heads across samples. The bars are close, but not equal, which illustrates the difference between theoretical probability and empirical relative frequency.</p>
+<h2 id="description">Description</h2>
+<p>One row represents one toss in one simulated sequence of coin tosses. The column <code>trial</code> gives the running order inside a sample, and <code>relative_frequency_heads</code> records the cumulative empirical proportion of heads up to that trial.</p>
+<p>The main reproducible solution uses <code>sample_1</code>. The other samples show how the empirical path changes when the random seed changes.</p>
+<h2 id="frequency-table-for-sample_1">Frequency Table for <code>sample_1</code></h2>
 <table>
 <thead>
 <tr>
-<th style="text-align: center;">Result</th>
-<th style="text-align: right;">Absolute frequency</th>
-<th style="text-align: right;">Relative frequency</th>
+<th>result</th>
+<th>frequency</th>
+<th>relative_frequency</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;">H</td>
-<td style="text-align: right;">1038</td>
-<td style="text-align: right;">0.519</td>
+<td>H</td>
+<td>1038</td>
+<td>0.5190</td>
 </tr>
 <tr>
-<td style="text-align: center;">T</td>
-<td style="text-align: right;">962</td>
-<td style="text-align: right;">0.481</td>
+<td>T</td>
+<td>962</td>
+<td>0.4810</td>
 </tr>
 </tbody>
 </table>
-<p>The final empirical relative frequency of heads is:</p>
-<div class="arithmatex">\[
-\frac{1038}{2000}=0.519.
-\]</div>
-<p>The final empirical relative frequency of tails is:</p>
-<div class="arithmatex">\[
-\frac{962}{2000}=0.481.
-\]</div>
-<h2 id="relative-frequency-over-time">Relative frequency over time</h2>
+<h2 id="relative-frequency-checkpoints-for-sample_1">Relative-Frequency Checkpoints for <code>sample_1</code></h2>
 <table>
 <thead>
 <tr>
-<th style="text-align: right;">Trial</th>
-<th style="text-align: right;">Cumulative heads</th>
-<th style="text-align: right;">Relative frequency of heads</th>
+<th>trial</th>
+<th>cumulative_heads</th>
+<th>relative_frequency_heads</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: right;">10</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">0.600</td>
+<td>10.0000</td>
+<td>6.0000</td>
+<td>0.6000</td>
 </tr>
 <tr>
-<td style="text-align: right;">20</td>
-<td style="text-align: right;">13</td>
-<td style="text-align: right;">0.650</td>
+<td>50.0000</td>
+<td>27.0000</td>
+<td>0.5400</td>
 </tr>
 <tr>
-<td style="text-align: right;">50</td>
-<td style="text-align: right;">27</td>
-<td style="text-align: right;">0.540</td>
+<td>100.0000</td>
+<td>55.0000</td>
+<td>0.5500</td>
 </tr>
 <tr>
-<td style="text-align: right;">100</td>
-<td style="text-align: right;">55</td>
-<td style="text-align: right;">0.550</td>
+<td>500.0000</td>
+<td>262.0000</td>
+<td>0.5240</td>
 </tr>
 <tr>
-<td style="text-align: right;">200</td>
-<td style="text-align: right;">105</td>
-<td style="text-align: right;">0.525</td>
+<td>1000.0000</td>
+<td>521.0000</td>
+<td>0.5210</td>
 </tr>
 <tr>
-<td style="text-align: right;">500</td>
-<td style="text-align: right;">262</td>
-<td style="text-align: right;">0.524</td>
-</tr>
-<tr>
-<td style="text-align: right;">1000</td>
-<td style="text-align: right;">521</td>
-<td style="text-align: right;">0.521</td>
-</tr>
-<tr>
-<td style="text-align: right;">2000</td>
-<td style="text-align: right;">1038</td>
-<td style="text-align: right;">0.519</td>
+<td>2000.0000</td>
+<td>1038.0000</td>
+<td>0.5190</td>
 </tr>
 </tbody>
 </table>
-<p><img alt="Relative frequency of heads over time" src="../relative_frequency_heads.png" /></p>
-<h2 id="interpretation">Interpretation</h2>
-<p>At the beginning, the relative frequency of heads changes strongly because each new toss has a large effect on the total proportion. After more tosses, the relative frequency becomes more stable.</p>
-<p>The final relative frequency of heads is 0.519. This is above 0.5, but the difference is not large. However, the data were generated with probability 0.52 for heads, so the final empirical value is very close to the generating probability.</p>
-<p>Based on these generated data, the coin does not appear to be exactly fair. Heads occur slightly more often than tails. Still, empirical data alone always contain random variation, so the conclusion should be stated carefully.</p>
-<p>The theoretical probability is the probability assumed by the model before observing the data. The empirical relative frequency is computed from the observed results. With many trials, the empirical relative frequency often gets close to the theoretical probability, but it does not have to be exactly equal to it.</p>
+<h2 id="answers-and-interpretation">Answers and Interpretation</h2>
+<p>At the beginning, the relative frequency of heads can move sharply because each new toss has a large effect on a small denominator. As the number of trials increases, the curve becomes more stable.</p>
+<p>In <code>sample_1</code>, the final relative frequency of heads is 0.5190. It is not exactly 0.5 because empirical relative frequency is computed from observed data, while 0.5 is the theoretical probability for a fair coin.</p>
+<p>The generated coin does not represent a perfectly fair coin: the data-generating probability of heads is 0.52. The empirical final frequency in <code>sample_1</code> is close to 0.52, but not exactly equal to it.</p>
+<h2 id="variation-across-samples">Variation Across Samples</h2>
+<p>All samples are generated from the same process, but their relative-frequency curves and final values are not identical.</p>
+<table>
+<thead>
+<tr>
+<th>sample_id</th>
+<th>seed</th>
+<th>trial</th>
+<th>relative_frequency_heads</th>
+<th>relative_frequency_tails</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sample_1</td>
+<td>702</td>
+<td>2000</td>
+<td>0.5190</td>
+<td>0.4810</td>
+</tr>
+<tr>
+<td>sample_2</td>
+<td>1702</td>
+<td>2000</td>
+<td>0.5355</td>
+<td>0.4645</td>
+</tr>
+<tr>
+<td>sample_3</td>
+<td>2702</td>
+<td>2000</td>
+<td>0.5330</td>
+<td>0.4670</td>
+</tr>
+<tr>
+<td>sample_4</td>
+<td>3702</td>
+<td>2000</td>
+<td>0.5055</td>
+<td>0.4945</td>
+</tr>
+<tr>
+<td>sample_5</td>
+<td>4702</td>
+<td>2000</td>
+<td>0.5295</td>
+<td>0.4705</td>
+</tr>
+</tbody>
+</table>
+<p>This illustrates the difference between theoretical probability and empirical relative frequency: theory describes the mechanism, while empirical frequency summarizes what happened in a finite sample.</p>
 
 
 
