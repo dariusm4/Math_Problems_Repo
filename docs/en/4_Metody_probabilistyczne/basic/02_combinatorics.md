@@ -325,6 +325,15 @@ For each situation determine which combinatorial model is most appropriate:
 5. Arranging the letters of the word **BANANA**.  
 6. Seating 6 people around a round table.
 
+#### Answers:
+
+1. permutation  
+2. combination  
+3. k-permutation (ordered selection without repetition)  
+4. sequence with repetition  
+5. permutation with repeated elements  
+6. circular permutation
+
 ---
 
 ## Task 2 — Permutations
