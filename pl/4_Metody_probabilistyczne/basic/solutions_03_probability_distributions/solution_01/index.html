@@ -1663,6 +1663,25 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Spis treści
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#task-1-binomial-model-quality-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 1 — Binomial Model (Quality Control)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1679,6 +1698,29 @@
 
 
 <h1 id="solution">Solution</h1>
+<h2 id="task-1-binomial-model-quality-control">Task 1 — Binomial Model (Quality Control)</h2>
+<ol>
+<li>
+<p>Random experiment: inspect 3 consecutive screws; each screw is either good (G) or defective (D).</p>
+</li>
+<li>
+<p>Sample space:</p>
+<p>\Omega = {GGG, GGD, GDG, DGG, GDD, DGD, DDG, DDD}.</p>
+</li>
+<li>
+<p>Probabilities: if p is the probability a single screw is defective, then any outcome with k defects has probability</p>
+<div class="arithmatex">\[ P(\text{sequence with }k\text{ defects}) = p^{k}(1-p)^{3-k}. \]</div>
+<p>Examples:</p>
+<ul>
+<li>P(GGG) = (1-p)^3</li>
+<li>P(GGD) = (1-p)^2 p</li>
+<li>P(DDD) = p^3</li>
+</ul>
+</li>
+<li>
+<p>Success definition: we treat a "defective screw" as a success for the binomial model (so the number of successes in 3 trials is the number of defective screws).</p>
+</li>
+</ol>
 
 
 
