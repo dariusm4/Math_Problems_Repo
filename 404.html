@@ -57,6 +57,30 @@
 
     
     
+  
+  <script>
+    // Prevent polyfill.io from loading before page load
+    if (window.location.hostname !== 'localhost') {
+      var originalFetch = window.fetch;
+      window.fetch = function(url, options) {
+        if (url && url.includes('polyfill.io')) {
+          console.log('Blocked polyfill.io request');
+          return Promise.reject(new Error('Blocked'));
+        }
+        return originalFetch.apply(this, arguments);
+      };
+      
+      var script = document.currentScript;
+      if (script) {
+        script.addEventListener('load', function() {
+          if (this.src && this.src.includes('polyfill.io')) {
+            this.remove();
+          }
+        });
+      }
+    }
+  </script>
+
   </head>
   
   

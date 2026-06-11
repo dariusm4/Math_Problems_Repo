@@ -59,6 +59,30 @@
 
     
     
+  
+  <script>
+    // Prevent polyfill.io from loading before page load
+    if (window.location.hostname !== 'localhost') {
+      var originalFetch = window.fetch;
+      window.fetch = function(url, options) {
+        if (url && url.includes('polyfill.io')) {
+          console.log('Blocked polyfill.io request');
+          return Promise.reject(new Error('Blocked'));
+        }
+        return originalFetch.apply(this, arguments);
+      };
+      
+      var script = document.currentScript;
+      if (script) {
+        script.addEventListener('load', function() {
+          if (this.src && this.src.includes('polyfill.io')) {
+            this.remove();
+          }
+        });
+      }
+    }
+  </script>
+
   </head>
   
   
@@ -1721,6 +1745,7 @@
               
               <article class="md-content__inner md-typeset">
                 
+  
                   
 
 
@@ -1783,6 +1808,33 @@
 
 
                 
+  <script>
+    // Final cleanup - remove any remaining polyfill.io scripts
+    (function() {
+      var scripts = document.querySelectorAll('script[src*="polyfill.io"]');
+      scripts.forEach(function(script) {
+        console.log('Removing polyfill.io script:', script.src);
+        script.remove();
+      });
+      
+      // Also observe for dynamically added scripts
+      var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+          if (mutation.addedNodes.length) {
+            mutation.addedNodes.forEach(function(node) {
+              if (node.tagName === 'SCRIPT' && node.src && node.src.includes('polyfill.io')) {
+                console.log('Removing dynamically added polyfill.io script');
+                node.remove();
+              }
+            });
+          }
+        });
+      });
+      
+      observer.observe(document.body, { childList: true, subtree: true });
+    })();
+  </script>
+
               </article>
             </div>
           
